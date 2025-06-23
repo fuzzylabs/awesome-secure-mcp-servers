@@ -1,0 +1,281 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Server Security Data Schema",
+  "description": "Schema for tracking security validation of MCP servers by version",
+  "type": "object",
+  "properties": {
+    "servers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MCPServer"
+      }
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last schema update"
+    },
+    "schema_version": {
+      "type": "string",
+      "description": "Version of this schema"
+    }
+  },
+  "required": ["servers", "last_updated", "schema_version"],
+  "definitions": {
+    "MCPServer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Display name of the MCP server"
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "URL-safe identifier for the server"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub repository URL"
+        },
+        "category": {
+          "type": "string",
+          "enum": ["official", "enterprise", "community", "security-tools", "under-review", "deprecated"],
+          "description": "Server category for organization"
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of server functionality"
+        },
+        "maintainer": {
+          "$ref": "#/definitions/Maintainer"
+        },
+        "versions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Version"
+          },
+          "description": "All tracked versions with security information"
+        },
+        "mcp_protocol_versions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "description": "Supported MCP protocol versions (YYYY-MM-DD format)"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Tags for categorization and filtering"
+        }
+      },
+      "required": ["name", "slug", "repository", "category", "description", "versions"]
+    },
+    "Maintainer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Maintainer name or organization"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["individual", "organization", "official"],
+          "description": "Type of maintainer"
+        },
+        "contact": {
+          "type": "string",
+          "description": "Contact information (email or URL)"
+        }
+      },
+      "required": ["name", "type"]
+    },
+    "Version": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Semantic version number"
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Release date of this version"
+        },
+        "security_status": {
+          "$ref": "#/definitions/SecurityStatus"
+        },
+        "vulnerabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Vulnerability"
+          },
+          "description": "Known vulnerabilities in this version"
+        },
+        "security_scan": {
+          "$ref": "#/definitions/SecurityScan"
+        },
+        "is_recommended": {
+          "type": "boolean",
+          "description": "Whether this version is recommended for use"
+        },
+        "deprecation_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when this version will be deprecated (if applicable)"
+        },
+        "breaking_changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Security-relevant breaking changes in this version"
+        }
+      },
+      "required": ["version", "security_status", "security_scan", "is_recommended"]
+    },
+    "SecurityStatus": {
+      "type": "string",
+      "enum": ["verified-secure", "conditional", "under-review", "not-recommended", "deprecated"],
+      "description": "Overall security status of the version"
+    },
+    "SecurityScan": {
+      "type": "object",
+      "properties": {
+        "scan_date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the security scan was performed"
+        },
+        "scanner_version": {
+          "type": "string",
+          "description": "Version of security scanning tools used"
+        },
+        "static_analysis": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "dependency_scan": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "container_scan": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "tool_poisoning_check": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "manual_review": {
+          "$ref": "#/definitions/ManualReview"
+        },
+        "overall_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Overall security score (0-100)"
+        }
+      },
+      "required": ["scan_date", "overall_score"]
+    },
+    "ScanResult": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["pass", "fail", "warning", "not-applicable"],
+          "description": "Result of the scan"
+        },
+        "details": {
+          "type": "string",
+          "description": "Detailed explanation of the scan results"
+        },
+        "score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Numerical score for this scan component"
+        },
+        "issues_found": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of issues found"
+        }
+      },
+      "required": ["status"]
+    },
+    "ManualReview": {
+      "type": "object",
+      "properties": {
+        "reviewer": {
+          "type": "string",
+          "description": "Name or ID of the security reviewer"
+        },
+        "review_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of manual security review"
+        },
+        "architecture_review": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "authentication_review": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "authorization_review": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "documentation_review": {
+          "$ref": "#/definitions/ScanResult"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional reviewer notes"
+        }
+      },
+      "required": ["reviewer", "review_date"]
+    },
+    "Vulnerability": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "CVE ID or internal vulnerability ID"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["critical", "high", "medium", "low"],
+          "description": "CVSS severity rating"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the vulnerability"
+        },
+        "discovery_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date when vulnerability was discovered"
+        },
+        "patch_available": {
+          "type": "boolean",
+          "description": "Whether a patch is available"
+        },
+        "patched_in_version": {
+          "type": "string",
+          "description": "Version where vulnerability was patched"
+        },
+        "references": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "References to vulnerability reports or advisories"
+        }
+      },
+      "required": ["id", "severity", "description", "discovery_date", "patch_available"]
+    }
+  }
+}

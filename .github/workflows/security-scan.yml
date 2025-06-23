@@ -1,0 +1,224 @@
+name: Security Validation Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'data/servers.json'
+      - 'scripts/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'data/servers.json'
+      - 'README.md'
+  schedule:
+    # Run weekly security scans on Mondays at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      server_slug:
+        description: 'Specific server to scan (optional)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  security-events: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  validate-data:
+    name: Validate Data Schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install ajv ajv-cli
+
+      - name: Validate JSON schema
+        run: |
+          npx ajv validate -s data/schema.json -d data/servers.json
+          echo "✅ JSON schema validation passed"
+
+      - name: Check for required fields
+        run: |
+          node scripts/validate-data.js
+          echo "✅ Required fields validation passed"
+
+  security-scan:
+    name: Automated Security Scanning
+    runs-on: ubuntu-latest
+    needs: validate-data
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install security scanning tools
+        run: |
+          pip install bandit safety semgrep
+          npm install -g retire @microsoft/rush-stack-compiler-3.9
+          
+          # Install additional security tools
+          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
+          curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Run security scans
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/security-scanner.py \
+            --input data/servers.json \
+            --output security/scan-results.json \
+            --server-slug "${{ inputs.server_slug }}"
+
+      - name: Generate security report
+        run: |
+          python scripts/generate-report.py \
+            --scan-results security/scan-results.json \
+            --output security/security-report.md
+
+      - name: Upload security artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-scan-results
+          path: |
+            security/scan-results.json
+            security/security-report.md
+          retention-days: 30
+
+      - name: Comment on PR with security results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'security/security-report.md';
+            
+            if (fs.existsSync(path)) {
+              const report = fs.readFileSync(path, 'utf8');
+              
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `## 🛡️ Security Validation Results\n\n${report}`
+              });
+            }
+
+  update-badges:
+    name: Update Security Badges
+    runs-on: ubuntu-latest
+    needs: security-scan
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download security scan results
+        uses: actions/download-artifact@v4
+        with:
+          name: security-scan-results
+          path: security/
+
+      - name: Update README with security badges
+        run: |
+          python scripts/update-badges.py \
+            --scan-results security/scan-results.json \
+            --readme README.md
+
+      - name: Commit updated badges
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Security Bot"
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add README.md security/
+            git commit -m "🛡️ Update security validation results [skip ci]"
+            git push
+          fi
+
+  vulnerability-monitor:
+    name: Monitor for New Vulnerabilities
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install monitoring tools
+        run: |
+          pip install requests packaging semver
+
+      - name: Check for new vulnerabilities
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/vulnerability-monitor.py \
+            --servers data/servers.json \
+            --output security/new-vulnerabilities.json
+
+      - name: Create issues for new vulnerabilities
+        if: hashFiles('security/new-vulnerabilities.json') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const vulns = JSON.parse(fs.readFileSync('security/new-vulnerabilities.json', 'utf8'));
+            
+            for (const vuln of vulns) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🚨 Security Vulnerability: ${vuln.server} v${vuln.version}`,
+                body: `## Vulnerability Details\n\n**Server**: ${vuln.server}\n**Version**: ${vuln.version}\n**Severity**: ${vuln.severity}\n**Description**: ${vuln.description}\n\n**References**: ${vuln.references.join(', ')}\n\n---\n\n*This issue was automatically created by the vulnerability monitoring system.*`,
+                labels: ['security', 'vulnerability', vuln.severity]
+              });
+            }
+
+  notify-maintainers:
+    name: Notify Server Maintainers
+    runs-on: ubuntu-latest
+    needs: security-scan
+    if: failure() && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Notify on scan failures
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '⚠️ Security Scan Failed',
+              body: `The automated security scan has failed. Please review the workflow logs and take appropriate action.\n\nWorkflow: ${context.workflow}\nRun ID: ${context.runId}`,
+              labels: ['security', 'workflow-failure']
+            });

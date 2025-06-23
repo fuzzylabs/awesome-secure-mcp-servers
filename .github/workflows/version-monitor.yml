@@ -1,0 +1,222 @@
+name: Version Monitoring
+
+on:
+  schedule:
+    # Check for new versions daily at 08:00 UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    inputs:
+      force_scan:
+        description: 'Force scan all servers'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  monitor-versions:
+    name: Monitor New Versions
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests packaging semver PyGithub
+
+      - name: Check for new versions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/version-monitor.py \
+            --servers data/servers.json \
+            --output data/new-versions.json \
+            --force-scan ${{ inputs.force_scan }}
+
+      - name: Process new versions
+        if: hashFiles('data/new-versions.json') != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/process-new-versions.py \
+            --new-versions data/new-versions.json \
+            --servers data/servers.json \
+            --output data/updated-servers.json
+
+      - name: Create pull request for new versions
+        if: hashFiles('data/updated-servers.json') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Read the updated servers data
+            const updatedServers = JSON.parse(fs.readFileSync('data/updated-servers.json', 'utf8'));
+            const newVersions = JSON.parse(fs.readFileSync('data/new-versions.json', 'utf8'));
+            
+            // Create a branch for the updates
+            const branchName = `version-updates-${new Date().toISOString().split('T')[0]}`;
+            
+            try {
+              await github.rest.git.createRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `refs/heads/${branchName}`,
+                sha: context.sha
+              });
+              
+              // Update the servers.json file
+              const content = Buffer.from(JSON.stringify(updatedServers, null, 2)).toString('base64');
+              
+              await github.rest.repos.createOrUpdateFileContents({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: 'data/servers.json',
+                message: `🔄 Add new versions for security validation\n\nNew versions detected:\n${newVersions.map(v => `- ${v.server}: ${v.version}`).join('\n')}`,
+                content: content,
+                branch: branchName
+              });
+              
+              // Create pull request
+              const prBody = `## New Versions Detected\n\nThe following new versions have been detected and added for security validation:\n\n${newVersions.map(v => `- **${v.server}**: ${v.previous_version} → ${v.version} (released ${v.release_date})`).join('\n')}\n\n### Security Validation Status\n\nAll new versions have been marked as "under-review" and will undergo automated security scanning once this PR is merged.\n\n### Next Steps\n\n1. Review the version changes\n2. Merge this PR to trigger security validation\n3. Monitor security scan results\n4. Update version recommendations based on scan results\n\n---\n\n*This PR was automatically created by the version monitoring system.*`;
+              
+              const pr = await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🔄 New versions detected for security validation`,
+                head: branchName,
+                base: 'main',
+                body: prBody
+              });
+              
+              // Add labels
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.data.number,
+                labels: ['version-update', 'security-validation-needed', 'automated']
+              });
+              
+              console.log(`Created PR #${pr.data.number}: ${pr.data.html_url}`);
+              
+            } catch (error) {
+              console.error('Error creating PR:', error);
+              
+              // Create an issue instead if PR creation fails
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '⚠️ Failed to create version update PR',
+                body: `Failed to automatically create PR for new versions. Manual intervention required.\n\nNew versions detected:\n${newVersions.map(v => `- ${v.server}: ${v.version}`).join('\n')}\n\nError: ${error.message}`,
+                labels: ['version-update', 'manual-action-required']
+              });
+            }
+
+      - name: Update version tracking data
+        if: hashFiles('data/updated-servers.json') != ''
+        run: |
+          # Update the tracking file with new versions
+          cp data/updated-servers.json data/servers.json
+          
+          # Clean up temporary files
+          rm -f data/new-versions.json data/updated-servers.json
+
+      - name: Notify about stale versions
+        run: |
+          python scripts/check-stale-versions.py \
+            --servers data/servers.json \
+            --max-age-days 90 \
+            --output security/stale-versions.json
+
+      - name: Create issues for stale versions
+        if: hashFiles('security/stale-versions.json') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const staleVersions = JSON.parse(fs.readFileSync('security/stale-versions.json', 'utf8'));
+            
+            for (const stale of staleVersions) {
+              const existingIssues = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: 'version-stale',
+                state: 'open'
+              });
+              
+              const issueExists = existingIssues.data.some(issue => 
+                issue.title.includes(stale.server)
+              );
+              
+              if (!issueExists) {
+                await github.rest.issues.create({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: `🕐 Stale version: ${stale.server} v${stale.version}`,
+                  body: `## Stale Version Alert\n\n**Server**: ${stale.server}\n**Current Listed Version**: ${stale.version}\n**Last Updated**: ${stale.last_updated}\n**Days Since Update**: ${stale.days_since_update}\n\n**Latest Available Version**: ${stale.latest_version || 'Unknown'}\n\n### Action Required\n\nThis server version hasn't been updated in over ${stale.days_since_update} days. Please:\n\n1. Check if a newer version is available\n2. Update the version information if needed\n3. Re-run security validation for the new version\n4. Update recommendations accordingly\n\n---\n\n*This issue was automatically created by the version monitoring system.*`,
+                  labels: ['version-stale', 'maintenance']
+                });
+              }
+            }
+
+  cleanup-old-branches:
+    name: Cleanup Old Version Branches
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cleanup old version update branches
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: branches } = await github.rest.repos.listBranches({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            const versionBranches = branches.filter(branch => 
+              branch.name.startsWith('version-updates-')
+            );
+            
+            const oneWeekAgo = new Date();
+            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+            
+            for (const branch of versionBranches) {
+              try {
+                const { data: commit } = await github.rest.repos.getCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: branch.commit.sha
+                });
+                
+                const commitDate = new Date(commit.commit.author.date);
+                
+                if (commitDate < oneWeekAgo) {
+                  console.log(`Deleting old branch: ${branch.name}`);
+                  
+                  await github.rest.git.deleteRef({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    ref: `heads/${branch.name}`
+                  });
+                }
+              } catch (error) {
+                console.error(`Error processing branch ${branch.name}:`, error);
+              }
+            }

@@ -1,0 +1,358 @@
+{
+  "schema_version": "1.0.0",
+  "last_updated": "2024-12-23T10:00:00Z",
+  "servers": [
+    {
+      "name": "Everything (Reference Server)",
+      "slug": "everything-reference",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+      "category": "official",
+      "description": "Reference server demonstrating all MCP features",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.5.0",
+          "release_date": "2024-12-01",
+          "security_status": "verified-secure",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-15T14:30:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "pass",
+              "details": "No critical issues found in static analysis",
+              "score": 95,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "pass",
+              "details": "All dependencies are up to date with no known vulnerabilities",
+              "score": 100,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "pass",
+              "details": "No malicious instructions detected in tool descriptions",
+              "score": 100,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "security-team-001",
+              "review_date": "2024-12-10",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Well-designed security architecture with proper separation of concerns",
+                "score": 90
+              },
+              "authentication_review": {
+                "status": "pass",
+                "details": "Proper authentication mechanisms implemented",
+                "score": 95
+              },
+              "authorization_review": {
+                "status": "pass",
+                "details": "Appropriate authorization controls in place",
+                "score": 90
+              },
+              "documentation_review": {
+                "status": "pass",
+                "details": "Comprehensive security documentation provided",
+                "score": 85
+              }
+            },
+            "overall_score": 93
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05", "2025-03-26"],
+      "tags": ["reference", "demo", "typescript", "official"]
+    },
+    {
+      "name": "Filesystem Server",
+      "slug": "filesystem",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "category": "official",
+      "description": "Secure file operations with configurable access controls",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.4.1",
+          "release_date": "2024-11-20",
+          "security_status": "verified-secure",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-14T09:15:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "pass",
+              "details": "Path traversal protections verified",
+              "score": 88,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "pass",
+              "details": "Dependencies clean, no vulnerabilities",
+              "score": 100,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "pass",
+              "details": "Tool descriptions verified safe",
+              "score": 100,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "security-team-002",
+              "review_date": "2024-12-12",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Proper sandboxing and path validation implemented",
+                "score": 92
+              },
+              "authentication_review": {
+                "status": "pass",
+                "details": "File access properly controlled",
+                "score": 88
+              },
+              "authorization_review": {
+                "status": "pass",
+                "details": "Configurable access controls working correctly",
+                "score": 90
+              },
+              "documentation_review": {
+                "status": "pass",
+                "details": "Security configuration well documented",
+                "score": 85
+              }
+            },
+            "overall_score": 91
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["filesystem", "files", "typescript", "official"]
+    },
+    {
+      "name": "Nuclei Security Scanner",
+      "slug": "nuclei-scanner",
+      "repository": "https://github.com/cyproxio/mcp-for-security/tree/main/nuclei",
+      "category": "security-tools",
+      "description": "Template-based vulnerability scanner with extensive security checks",
+      "maintainer": {
+        "name": "CyproX",
+        "type": "organization",
+        "contact": "https://github.com/cyproxio"
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "release_date": "2024-12-01",
+          "security_status": "verified-secure",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-16T11:20:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "pass",
+              "details": "Security tool wrapper properly sandboxed",
+              "score": 85,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "warning",
+              "details": "One low-severity dependency needs update",
+              "score": 85,
+              "issues_found": 1
+            },
+            "tool_poisoning_check": {
+              "status": "pass",
+              "details": "Security tool descriptions verified",
+              "score": 100,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "security-team-003",
+              "review_date": "2024-12-13",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Appropriate security tool integration",
+                "score": 88
+              },
+              "authentication_review": {
+                "status": "pass",
+                "details": "Proper access controls for security operations",
+                "score": 90
+              },
+              "authorization_review": {
+                "status": "pass",
+                "details": "Limited scope prevents misuse",
+                "score": 92
+              },
+              "documentation_review": {
+                "status": "pass",
+                "details": "Security usage guidelines provided",
+                "score": 87
+              }
+            },
+            "overall_score": 88
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["security", "vulnerability-scanning", "nuclei", "python"]
+    },
+    {
+      "name": "Docker Server",
+      "slug": "docker-server",
+      "repository": "https://github.com/docker/mcp-docker",
+      "category": "enterprise",
+      "description": "Docker container management with security controls",
+      "maintainer": {
+        "name": "Docker Inc.",
+        "type": "organization",
+        "contact": "https://docker.com"
+      },
+      "versions": [
+        {
+          "version": "1.5.2",
+          "release_date": "2024-11-15",
+          "security_status": "conditional",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-17T13:45:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "warning",
+              "details": "Requires privileged Docker access - potential security implications",
+              "score": 75,
+              "issues_found": 1
+            },
+            "dependency_scan": {
+              "status": "pass",
+              "details": "All dependencies secure",
+              "score": 95,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "pass",
+              "details": "Docker command wrappers verified safe",
+              "score": 100,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "security-team-001",
+              "review_date": "2024-12-14",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Docker socket access requires careful configuration",
+                "score": 70
+              },
+              "authentication_review": {
+                "status": "pass",
+                "details": "Docker authentication properly handled",
+                "score": 85
+              },
+              "authorization_review": {
+                "status": "warning",
+                "details": "High privileges required, document security implications",
+                "score": 75
+              },
+              "documentation_review": {
+                "status": "pass",
+                "details": "Security configuration documented",
+                "score": 80
+              },
+              "notes": "Requires privileged access. Recommend running in restricted environment with Docker socket protection."
+            },
+            "overall_score": 78
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["docker", "containers", "infrastructure", "typescript"]
+    },
+    {
+      "name": "Anthropic Computer Use",
+      "slug": "anthropic-computer-use",
+      "repository": "https://github.com/anthropics/anthropic-computer-use",
+      "category": "under-review",
+      "description": "Desktop automation with screen capture and input control",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "release_date": "2024-11-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2024-12-18T16:30:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "warning",
+              "details": "High-privilege operations detected - full desktop access",
+              "score": 60,
+              "issues_found": 3
+            },
+            "dependency_scan": {
+              "status": "pass",
+              "details": "Dependencies are secure",
+              "score": 95,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "warning",
+              "details": "Complex tool descriptions require additional review",
+              "score": 75,
+              "issues_found": 2
+            },
+            "manual_review": {
+              "reviewer": "security-team-004",
+              "review_date": "2024-12-15",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Extensive system access poses significant security risks",
+                "score": 50
+              },
+              "authentication_review": {
+                "status": "warning",
+                "details": "Authentication mechanisms need strengthening",
+                "score": 65
+              },
+              "authorization_review": {
+                "status": "fail",
+                "details": "Insufficient authorization controls for high-privilege operations",
+                "score": 40
+              },
+              "documentation_review": {
+                "status": "warning",
+                "details": "Security implications not fully documented",
+                "score": 60
+              },
+              "notes": "Requires comprehensive security review before recommendation. High-privilege desktop access needs additional safeguards."
+            },
+            "overall_score": 58
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["desktop-automation", "computer-use", "high-privilege", "python"]
+    }
+  ]
+}
