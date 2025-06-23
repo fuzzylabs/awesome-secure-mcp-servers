@@ -1,15 +1,38 @@
 # Security Validation Process
 
-This document describes the comprehensive security validation process used to evaluate MCP servers in the awesome-secure-mcp-servers list.
+This document provides complete transparency about how we assess MCP server security. Our goal is to be as open and honest as possible about our methods, capabilities, and limitations.
 
-## Overview
+## 🎯 Our Philosophy
+
+**Transparency over perfection**: We believe it's better to be completely open about our limitations than to claim false expertise. Security assessment is inherently imperfect, and community oversight makes it better.
+
+## ⚠️ Critical Limitations First
+
+**Before reading about our process, understand what we CAN'T do:**
+
+### What We Don't Do
+- **No live testing**: We don't run MCP servers or test actual functionality
+- **No penetration testing**: We don't attempt to exploit vulnerabilities
+- **No runtime analysis**: We only analyze static code and documentation
+- **No advanced cryptography audits**: We lack specialized cryptographic expertise
+- **No guarantee of completeness**: We may miss vulnerabilities or misunderstand code
+- **No business logic review**: We can't assess application-specific security requirements
+
+### What We Do
+- Run automated security scanning tools (with known limitations)
+- Perform manual code and documentation review (subjective and time-limited)
+- Check for common security anti-patterns and best practices
+- Detect MCP-specific "tool poisoning" attack patterns
+- Provide reproducible, version-specific assessments with published results
+
+## 🔍 Detailed Assessment Process
 
 Each MCP server undergoes a multi-layered security validation process that includes:
 
-1. **Automated Security Scanning**
-2. **Manual Security Review**
-3. **Version-Specific Analysis**
-4. **Continuous Monitoring**
+1. **Automated Security Scanning** (objective but limited)
+2. **Manual Security Review** (subjective and expertise-dependent)
+3. **Version-Specific Analysis** (point-in-time assessment)
+4. **Continuous Monitoring** (automated alerts for new issues)
 
 ## Automated Security Scanning
 

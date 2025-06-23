@@ -1,15 +1,80 @@
 # Contributing to Awesome Secure MCP Servers
 
-Thank you for your interest in contributing to the Awesome Secure MCP Servers list! This document outlines our contribution guidelines and security validation process.
+Thank you for helping make the MCP ecosystem more secure! This project depends on community involvement to provide trustworthy, transparent security assessments.
 
-## Table of Contents
+## 🎯 How You Can Help
 
-- [How to Contribute](#how-to-contribute)
-- [Security Validation Process](#security-validation-process)
-- [Submission Guidelines](#submission-guidelines)
-- [Security Criteria](#security-criteria)
-- [Version Management](#version-management)
-- [Reporting Issues](#reporting-issues)
+### 🔍 **Challenge Our Work**
+- Review our security assessments and tell us if you disagree
+- Test our automated scanning tools on servers you know well
+- Audit our methodology and suggest improvements
+- Point out errors or biases in our evaluations
+
+### 🛠️ **Improve Our Tools**
+- Contribute to our [open-source scanning scripts](./scripts/)
+- Add support for new programming languages or frameworks
+- Improve detection of security anti-patterns
+- Help reduce false positives/negatives
+
+### 📊 **Share Your Expertise**
+- Join our manual security review process
+- Provide expert opinions on complex security questions
+- Help develop better assessment criteria
+- Review and validate automated scan results
+
+### 🚀 **Submit Servers**
+- Nominate MCP servers for security assessment
+- Provide context about server security features
+- Help us understand real-world usage patterns
+
+## 🔍 Complete Transparency Policy
+
+**Everything we do is open:**
+- All scan results are published (including failures)
+- All tools and methodology are open source
+- All review criteria are documented
+- All assessment decisions are explained
+- Community feedback is public and tracked
+
+## 📋 Security Assessment Process
+
+### 🤖 Automated Scanning (Objective)
+
+**What our tools check:**
+- Static code analysis for common vulnerabilities
+- Dependency scanning for known CVEs
+- Tool poisoning detection (MCP-specific threat)
+- Container security configuration
+- Code quality and security practices
+
+**What our tools DON'T check:**
+- Runtime behavior or logic flaws
+- Complex business logic vulnerabilities  
+- Advanced cryptographic implementations
+- Social engineering or phishing potential
+- Zero-day vulnerabilities
+
+**Tools we use:**
+- `bandit` (Python security analysis)
+- `semgrep` (multi-language security patterns)
+- `npm audit` / `safety` (dependency vulnerabilities)
+- Custom tool poisoning detection scripts
+
+### 👥 Manual Review (Subjective)
+
+**What reviewers assess:**
+- Architecture and design security
+- Authentication/authorization implementation
+- Security documentation quality
+- Adherence to security best practices
+- Risk assessment for intended use cases
+
+**Review limitations:**
+- Based on available documentation and code
+- Limited by individual reviewer expertise
+- Subjective interpretation of security practices
+- No hands-on testing or penetration testing
+- Time-constrained review process
 
 ## How to Contribute
 
