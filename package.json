@@ -7,7 +7,8 @@
     "test": "npm run validate",
     "lint": "eslint scripts/*.js",
     "security-scan": "python scripts/security-scanner.py --input data/servers.json --output security/scan-results.json",
-    "generate-report": "python scripts/generate-report.py --scan-results security/scan-results.json --output security/security-report.md"
+    "generate-report": "python scripts/generate-report.py --scan-results security/scan-results.json --output security/security-report.md",
+    "update-readme": "python scripts/update-readme.py --readme README.md --servers data/servers.json"
   },
   "repository": {
     "type": "git",
