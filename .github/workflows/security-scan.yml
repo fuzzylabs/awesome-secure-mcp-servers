@@ -172,13 +172,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Security Bot"
           
-          # Pull latest changes to avoid conflicts
-          git pull --rebase
-          
-          if git diff --quiet; then
+          # Check if there are changes to commit
+          if git diff --quiet && git diff --cached --quiet; then
             echo "No changes to commit"
           else
+            # Stage all changes first
             git add README.md security/ data/servers.json
+            
+            # Pull latest changes to avoid conflicts (with staged changes)
+            git pull --rebase
+            
+            # Commit and push
             git commit -m "🛡️ Update security assessments and README [skip ci]"
             git push
           fi
