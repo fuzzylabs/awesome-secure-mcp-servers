@@ -42,9 +42,16 @@ class SecurityDataUpdater:
         """Convert scan result format to servers.json format."""
         version_scan = scan_result['versions'][0]  # Assuming one version per scan
         
+        # Convert scan_date to proper ISO format (max 3 decimal places, Z suffix)
+        scan_date = version_scan['scan_date']
+        if '+' in scan_date:
+            # Convert +00:00 format to Z and limit milliseconds
+            dt = datetime.fromisoformat(scan_date.replace('Z', '+00:00'))
+            scan_date = dt.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
+        
         # Map scan components to servers.json format
         security_scan = {
-            'scan_date': version_scan['scan_date'],
+            'scan_date': scan_date,
             'scanner_version': scan_result['scanner_version'],
             'static_analysis': {
                 'status': version_scan['static_analysis']['status'],
