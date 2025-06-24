@@ -172,6 +172,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Security Bot"
           
+          # Pull latest changes to avoid conflicts
+          git pull --rebase
+          
           if git diff --quiet; then
             echo "No changes to commit"
           else
