@@ -51,6 +51,19 @@ jobs:
         run: |
           node scripts/validate-data.js
           echo "✅ Required fields validation passed"
+      
+      - name: Update README if data changed
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "Checking if README needs updates..."
+          python scripts/update-readme.py --readme README.md --servers data/servers.json
+          
+          if git diff --quiet README.md; then
+            echo "README is up to date"
+          else
+            echo "README needs to be updated with latest security data"
+            echo "::warning::README.md is out of sync with security data in servers.json"
+          fi
 
   security-scan:
     name: Automated Security Scanning
@@ -149,13 +162,13 @@ jobs:
           name: security-scan-results
           path: security/
 
-      - name: Update README with security badges
+      - name: Update README with security data
         run: |
-          python scripts/update-badges.py \
-            --scan-results security/scan-results.json \
-            --readme README.md
+          python scripts/update-readme.py \
+            --readme README.md \
+            --servers data/servers.json
 
-      - name: Commit updated badges
+      - name: Commit updated README
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Security Bot"
@@ -164,7 +177,7 @@ jobs:
             echo "No changes to commit"
           else
             git add README.md security/
-            git commit -m "🛡️ Update security validation results [skip ci]"
+            git commit -m "🛡️ Update README with latest security assessments [skip ci]"
             git push
           fi
 

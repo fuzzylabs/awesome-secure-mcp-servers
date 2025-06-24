@@ -67,60 +67,51 @@ Help improve this project:
 - **Not Recommended**: Known security issues
 - **Version**: Latest validated secure version
 
-## Sample Assessments (Demo Data)
+## Security Status by Category
 
-**Important**: The servers listed below are **examples with placeholder security assessments**. These are not real security evaluations - they demonstrate the format and structure of our assessment system.
+**Last Updated:** 2025-06-24 21:56 UTC  
+**Total Servers:** 16
 
-### Official Servers (Sample)
+### Official Servers
 
-*Note: These are placeholder assessments to show the system structure*
+| Server | Version | Security Status | Description |
+|--------|---------|----------------|-------------|
+| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | 🛡️ Verified Secure (Score: 93/100) | Reference server demonstrating all MCP features |
+| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | 🔄 Under Review (Score: 50/100) | Web content fetching and conversion for efficient LLM usage |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | 🛡️ Verified Secure (Score: 91/100) | Secure file operations with configurable access controls |
+| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | 🔄 Under Review (Score: 50/100) | Tools to read, search, and manipulate Git repositories |
+| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | 🔄 Under Review (Score: 50/100) | Persistent memory using a local knowledge graph |
+| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | 🔄 Under Review (Score: 50/100) | Dynamic and reflective problem-solving through thought sequences |
+| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | 🔄 Under Review (Score: 50/100) | Time and timezone conversion capabilities |
 
-| Server | Version | Security | Description |
-|--------|---------|----------|-------------|
-| [Everything](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | Verified Secure | Reference server demonstrating all MCP features |
-| [Filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | Verified Secure | Secure file operations with configurable access controls |
-| [Fetch](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | Verified Secure | Web content fetching and conversion |
-| [Git](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | Verified Secure | Git repository operations |
-| [Memory](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | Verified Secure | Persistent memory and knowledge graphs |
+### Enterprise Servers
 
-### Enterprise Servers (Sample)
+| Server | Version | Security Status | Description |
+|--------|---------|----------------|-------------|
+| [AWS MCP Server](https://github.com/aws/aws-mcp-server) | 1.2.0 | 🔄 Under Review (Score: 50/100) | AWS service integration with IAM controls |
+| [Docker Server](https://github.com/docker/mcp-docker) | 1.5.2 | ⚠️ Conditional (Score: 78/100) | Docker container management with security controls |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | 🔄 Under Review (Score: 50/100) | GitHub's official MCP Server for repository management |
+| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | 🔄 Under Review (Score: 50/100) | Notion official MCP server for workspace integration |
+| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🔄 Under Review (Score: 50/100) | Interact with Stripe API for payments and financial data |
 
-*Note: These are placeholder assessments to demonstrate system capabilities*
+### Security Tools
 
-| Server | Version | Security | Description |
-|--------|---------|----------|-------------|
-| [AWS](https://github.com/aws/aws-mcp-server) | 1.2.0 | Verified Secure | AWS service integration with IAM controls |
-| [Google Drive](https://github.com/google/mcp-googledrive) | 0.8.1 | Verified Secure | Google Drive file operations |
-| [Kubernetes](https://github.com/kubernetes-sigs/mcp-kubernetes) | 0.6.0 | Conditional | Kubernetes cluster management (requires RBAC) |
+| Server | Version | Security Status | Description |
+|--------|---------|----------------|-------------|
+| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure (Score: 88/100) | Template-based vulnerability scanner with extensive security checks |
 
-### Security Tools (Sample)
+### Community Servers
 
-*Note: These are placeholder assessments showing security tool evaluation*
+| Server | Version | Security Status | Description |
+|--------|---------|----------------|-------------|
+| [PostgreSQL MCP Server](https://github.com/postgres/mcp-postgres) | 0.4.2 | 🔄 Under Review (Score: 50/100) | PostgreSQL database operations and query execution |
+| [Slack MCP Server](https://github.com/slack-samples/mcp-slack) | 1.0.3 | 🔄 Under Review (Score: 50/100) | Slack workspace integration for messaging and collaboration |
 
-| Server | Version | Security | Description |
-|--------|---------|----------|-------------|
-| [Nuclei](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | Verified Secure | Template-based vulnerability scanner |
-| [Nmap](https://github.com/cyproxio/mcp-for-security/tree/main/nmap) | 0.1.8 | Verified Secure | Network scanning and service detection |
-| [HTTP Security Headers](https://github.com/cyproxio/mcp-for-security/tree/main/http-headers) | 0.1.2 | Verified Secure | HTTP security header analysis |
+### Under Review
 
-### Community Servers (Sample)
-
-*Note: These are placeholder assessments demonstrating community server review*
-
-| Server | Version | Security | Description |
-|--------|---------|----------|-------------|
-| [Slack](https://github.com/slack-samples/mcp-slack) | 1.0.3 | Verified Secure | Slack workspace integration |
-| [Email](https://github.com/community/mcp-email) | 0.4.2 | Conditional | Email operations (requires OAuth) |
-| [SQLite](https://github.com/community/mcp-sqlite) | 0.7.1 | Verified Secure | SQLite database operations |
-
-### Under Review (Sample)
-
-*Note: These demonstrate the review process for complex or high-risk servers*
-
-| Server | Version | Security | Description |
-|--------|---------|----------|-------------|
-| [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | Under Review | Desktop automation (high-privilege operations) |
-| [Puppeteer](https://github.com/community/mcp-puppeteer) | 0.3.0 | Under Review | Web browser automation |
+| Server | Version | Security Status | Description |
+|--------|---------|----------------|-------------|
+| [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | 🔄 Under Review (Score: 58/100) | Desktop automation with screen capture and input control |
 
 ## Critical Disclaimers
 
