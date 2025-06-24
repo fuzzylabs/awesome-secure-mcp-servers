@@ -26,11 +26,11 @@ Help improve this project:
 ## Limitations
 
 ### What we do:
-- Run automated security scans using the `mcp-scan` validation pipeline
-- Check for known vulnerabilities in dependencies
-- Detect common security anti-patterns
-- Look for MCP-specific "tool poisoning" attacks
-- Provide reproducible, version-specific assessments
+- Run automated security scans using `mcp-scan` by Invariant Labs for MCP-specific threats
+- Check for known vulnerabilities in dependencies using language-specific tools
+- Detect common security anti-patterns with static analysis
+- Identify MCP-specific vulnerabilities including tool poisoning, cross-origin escalation, and rug pull attacks
+- Provide reproducible, version-specific assessments with detailed scoring
 
 ### What we don't do:
 - Guarantee security (no tool can do this)
@@ -42,10 +42,10 @@ Help improve this project:
 ### Security Assessment Process
 
 **Automated Scanning:**
-- **Static Analysis**: Code patterns, potential vulnerabilities
+- **MCP Security Scan**: Using `mcp-scan` for MCP-specific threats (tool poisoning, cross-origin escalation, rug pulls)
+- **Static Analysis**: Code patterns and potential vulnerabilities using language-specific tools
 - **Dependency Scanning**: Known CVEs in third-party packages  
-- **Tool Poisoning Detection**: Malicious instructions in MCP tool descriptions
-- **Container Security**: Dockerfile and image analysis
+- **Container Security**: Dockerfile and image analysis when applicable
 
 **Manual Review:**
 - Architecture and design review
@@ -54,9 +54,10 @@ Help improve this project:
 - Security best practices compliance
 
 **Scoring Method:**
-- Weighted combination of scan results (see [methodology](./security/README.md))
+- Weighted combination of scan results: MCP Security (35%), Dependencies (25%), Static Analysis (20%), Container (10%), Documentation (10%)
 - Scores are indicative, not definitive
 - Multiple reviewers for subjective assessments (see [review team](./REVIEWERS.md))
+- See [detailed methodology](./security/README.md) for complete scoring breakdown
 
 ## Legend
 

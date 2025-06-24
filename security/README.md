@@ -19,10 +19,10 @@ This document provides complete transparency about how we assess MCP server secu
 - **No business logic review**: We can't assess application-specific security requirements
 
 ### What We Do
-- Run automated security scanning tools (with known limitations)
+- Run automated security scanning tools including `mcp-scan` by Invariant Labs (with known limitations)
 - Perform manual code and documentation review (subjective and time-limited)
 - Check for common security anti-patterns and best practices
-- Detect MCP-specific "tool poisoning" attack patterns
+- Detect MCP-specific vulnerabilities including tool poisoning, cross-origin escalation, and rug pull attacks
 - Provide reproducible, version-specific assessments with published results
 
 ## 🔍 Detailed Assessment Process
@@ -66,25 +66,32 @@ We scan all project dependencies for known vulnerabilities:
 - High vulnerabilities: Fix recommended before approval
 - Medium/Low vulnerabilities: Documented and monitored
 
-### Tool Poisoning Detection
+### MCP Security Scanning
 
-Specialized checks for Model Context Protocol specific attacks:
+Primary security assessment using `mcp-scan` by Invariant Labs for MCP-specific threats:
 
-**Patterns Detected:**
-- Hidden instructions in tool descriptions
-- Unicode zero-width characters
-- Malicious comments or metadata
-- Instruction injection attempts
-- Social engineering patterns
+**Tool Capabilities:**
+- **Static Scanning**: Analyzes MCP tool descriptions and configurations
+- **Tool Poisoning Detection**: Identifies malicious instructions in tool descriptions
+- **Cross-Origin Escalation**: Detects attempts to escalate permissions across contexts
+- **Rug Pull Attack Detection**: Identifies servers that may change behavior after trust is established
+- **PII and Secrets Detection**: Scans for exposed sensitive information
 
-**Examples of Suspicious Patterns:**
+**Fallback Detection (when mcp-scan unavailable):**
+Basic pattern matching for common tool poisoning indicators:
 ```
 "ignore previous instructions"
 "disregard the above"
 "new instructions:"
 "secret command:"
-<!-- hidden: do something malicious -->
+"override security"
+"bypass restrictions"
 ```
+
+**Scoring:**
+- Uses mcp-scan's severity ratings: Critical, High, Medium, Low
+- Falls back to basic pattern detection with reduced confidence scores
+- Comprehensive scoring weighted more heavily due to MCP-specific focus
 
 ### Container Security Analysis
 
@@ -174,9 +181,9 @@ When a new version is detected:
 
 The overall score is calculated using weighted components:
 
-- **Static Analysis (25%):** Code security assessment
+- **MCP Security Scan (35%):** MCP-specific threats using `mcp-scan`
 - **Dependency Scan (25%):** Third-party risk evaluation
-- **Tool Poisoning Check (30%):** MCP-specific security
+- **Static Analysis (20%):** General code security assessment
 - **Container Security (10%):** Deployment security
 - **Documentation (10%):** Security guidance quality
 
@@ -194,11 +201,11 @@ The overall score is calculated using weighted components:
 ```python
 def calculate_score(scan_results):
     weights = {
-        'static_analysis': 0.25,
-        'dependency_scan': 0.25,
-        'tool_poisoning_check': 0.30,
-        'container_scan': 0.10,
-        'security_documentation': 0.10
+        'mcp_security_scan': 0.35,      # Primary MCP-specific security using mcp-scan
+        'dependency_scan': 0.25,        # Third-party vulnerability assessment
+        'static_analysis': 0.20,        # General code security patterns
+        'container_scan': 0.10,         # Container/deployment security
+        'security_documentation': 0.10  # Security guidance quality
     }
     
     weighted_score = 0

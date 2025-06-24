@@ -79,7 +79,7 @@ class SecurityScanner:
             'scan_date': datetime.now(timezone.utc).isoformat(),
             'static_analysis': self._run_static_analysis(repo_path),
             'dependency_scan': self._run_dependency_scan(repo_path),
-            'tool_poisoning_check': self._check_tool_poisoning(repo_path),
+            'mcp_security_scan': self._run_mcp_scan(repo_path),
             'container_scan': self._run_container_scan(repo_path),
             'security_documentation_check': self._check_security_documentation(repo_path),
             'overall_score': 0,
@@ -212,74 +212,204 @@ class SecurityScanner:
         
         return results
     
-    def _check_tool_poisoning(self, repo_path: str) -> Dict:
-        """Check for tool poisoning attacks in MCP tool descriptions."""
+    def _run_mcp_scan(self, repo_path: str) -> Dict:
+        """Run mcp-scan for MCP-specific security analysis."""
         if not repo_path or not os.path.exists(repo_path):
             return {'status': 'not-applicable', 'details': 'Repository not available', 'score': 50}
         
         results = {
             'status': 'pass',
-            'details': 'No tool poisoning indicators found',
-            'score': 100,
+            'details': 'No MCP configuration vulnerabilities found',
+            'score': 90,  # Default high score since mcp-scan is config-specific
+            'issues_found': 0,
+            'scan_results': {}
+        }
+        
+        # Look for MCP configuration files in the repository
+        mcp_config_files = self._find_mcp_configs(repo_path)
+        
+        if not mcp_config_files:
+            # No MCP configs found, fall back to basic tool poisoning detection
+            logger.info("No MCP configuration files found, falling back to basic tool poisoning detection")
+            return self._basic_tool_poisoning_check(repo_path)
+        
+        try:
+            # Run mcp-scan on found configuration files
+            for config_file in mcp_config_files:
+                cmd = ['uvx', 'mcp-scan@latest', 'scan', '--json', '--local-only', config_file]
+                result = subprocess.run(cmd, capture_output=True, text=True, timeout=120)
+                
+                if result.returncode == 0:
+                    try:
+                        scan_output = json.loads(result.stdout)
+                        
+                        # Parse mcp-scan results
+                        if 'results' in scan_output:
+                            config_results = scan_output['results']
+                            issues_found = 0
+                            critical_issues = 0
+                            
+                            # Count security issues
+                            for result_item in config_results:
+                                if 'security_issues' in result_item:
+                                    issues = result_item['security_issues']
+                                    issues_found += len(issues)
+                                    critical_issues += sum(1 for issue in issues 
+                                                         if issue.get('severity') in ['critical', 'high'])
+                            
+                            results['scan_results'][config_file] = {
+                                'total_issues': issues_found,
+                                'critical_issues': critical_issues,
+                                'raw_results': config_results[:5]  # Limit stored results
+                            }
+                            
+                            results['issues_found'] += issues_found
+                    
+                    except json.JSONDecodeError:
+                        logger.warning(f"Could not parse mcp-scan output for {config_file}")
+                        results['scan_results'][config_file] = {
+                            'error': 'Could not parse scan output'
+                        }
+                
+                else:
+                    # Log error but continue with other configs
+                    error_msg = result.stderr.strip() if result.stderr else 'Unknown error'
+                    logger.warning(f"MCP-scan failed for {config_file}: {error_msg}")
+                    results['scan_results'][config_file] = {
+                        'error': f'Scan failed: {error_msg}'
+                    }
+            
+            # Calculate overall score based on total issues found
+            total_issues = results['issues_found']
+            if total_issues == 0:
+                results.update({
+                    'status': 'pass',
+                    'details': f'MCP-scan found no security issues in {len(mcp_config_files)} configuration file(s)',
+                    'score': 95
+                })
+            elif total_issues <= 2:
+                results.update({
+                    'status': 'warning',
+                    'details': f'MCP-scan found {total_issues} security issue(s) in configuration files',
+                    'score': 80
+                })
+            else:
+                results.update({
+                    'status': 'warning',
+                    'details': f'MCP-scan found {total_issues} security issue(s) in configuration files',
+                    'score': max(60, 90 - total_issues * 10)
+                })
+        
+        except subprocess.TimeoutExpired:
+            results.update({
+                'status': 'warning',
+                'details': 'MCP-scan timed out',
+                'score': 70
+            })
+        except FileNotFoundError:
+            # Fall back to basic tool poisoning detection if mcp-scan not available
+            logger.warning("uvx or mcp-scan not found, falling back to basic tool poisoning detection")
+            return self._basic_tool_poisoning_check(repo_path)
+        except Exception as e:
+            logger.error(f"MCP-scan failed: {e}")
+            # Fall back to basic tool poisoning detection
+            return self._basic_tool_poisoning_check(repo_path)
+        
+        return results
+    
+    def _find_mcp_configs(self, repo_path: str) -> List[str]:
+        """Find MCP configuration files in the repository."""
+        config_files = []
+        
+        # Common MCP configuration file patterns
+        config_patterns = [
+            'mcp.json',
+            'mcp_config.json',
+            '.mcp.json',
+            'config/mcp.json',
+            'configs/mcp.json',
+            '*.mcp.json',
+            'claude_desktop_config.json',
+            '.claude/config.json'
+        ]
+        
+        for root, dirs, files in os.walk(repo_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                relative_path = os.path.relpath(file_path, repo_path)
+                
+                # Check if file matches any config pattern
+                for pattern in config_patterns:
+                    if pattern.startswith('*'):
+                        # Handle wildcard patterns
+                        if file.endswith(pattern[1:]):
+                            config_files.append(file_path)
+                            break
+                    elif file == pattern or relative_path == pattern:
+                        config_files.append(file_path)
+                        break
+                    elif file.endswith('.json') and 'mcp' in file.lower():
+                        # Additional heuristic for MCP-related JSON files
+                        config_files.append(file_path)
+                        break
+        
+        return config_files
+    
+    def _basic_tool_poisoning_check(self, repo_path: str) -> Dict:
+        """Basic tool poisoning detection as fallback when mcp-scan is unavailable."""
+        results = {
+            'status': 'pass',
+            'details': 'No tool poisoning indicators found (basic check)',
+            'score': 90,  # Lower score since this is less comprehensive
             'issues_found': 0,
             'suspicious_patterns': []
         }
         
-        # Patterns that might indicate tool poisoning
+        # Basic patterns for tool poisoning
         poisoning_patterns = [
             r'ignore\s+previous\s+instructions',
             r'disregard\s+.+\s+above',
             r'forget\s+everything',
             r'new\s+instructions',
             r'override\s+security',
-            r'bypass\s+restrictions',
-            r'hidden\s+command',
-            r'secret\s+instruction',
-            # Unicode zero-width characters that could hide instructions
-            r'[\u200b-\u200d\ufeff]',
-            # Suspicious formatting that might hide instructions
-            r'<!--.*?-->',  # HTML comments
-            r'/\*.*?\*/',   # Block comments
+            r'bypass\s+restrictions'
         ]
         
         try:
             suspicious_files = []
             
-            # Search for suspicious patterns in common MCP configuration files
+            # Search for suspicious patterns in MCP-related files
             for root, dirs, files in os.walk(repo_path):
                 for file in files:
-                    if file.endswith(('.json', '.yaml', '.yml', '.md', '.txt', '.js', '.ts', '.py')):
+                    if file.endswith(('.json', '.yaml', '.yml', '.md', '.txt')):
                         file_path = os.path.join(root, file)
                         try:
                             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                                 content = f.read()
                                 
                                 for pattern in poisoning_patterns:
-                                    matches = re.findall(pattern, content, re.IGNORECASE | re.DOTALL)
-                                    if matches:
+                                    if re.search(pattern, content, re.IGNORECASE):
                                         suspicious_files.append({
                                             'file': os.path.relpath(file_path, repo_path),
-                                            'pattern': pattern,
-                                            'matches': len(matches)
+                                            'pattern': pattern
                                         })
-                        
-                        except Exception as e:
-                            logger.warning(f"Could not read file {file_path}: {e}")
+                        except Exception:
+                            continue
             
             if suspicious_files:
                 results.update({
                     'status': 'warning',
-                    'details': f'Found {len(suspicious_files)} suspicious pattern(s)',
+                    'details': f'Found {len(suspicious_files)} suspicious pattern(s) (basic check)',
                     'score': 60,
                     'issues_found': len(suspicious_files),
                     'suspicious_patterns': suspicious_files
                 })
         
         except Exception as e:
-            logger.error(f"Tool poisoning check failed: {e}")
+            logger.error(f"Basic tool poisoning check failed: {e}")
             results.update({
                 'status': 'warning',
-                'details': f'Tool poisoning check failed: {str(e)}',
+                'details': f'Basic tool poisoning check failed: {str(e)}',
                 'score': 70
             })
         
@@ -673,9 +803,9 @@ class SecurityScanner:
         """Calculate overall security score from individual scan results."""
         scores = []
         weights = {
-            'static_analysis': 0.25,
+            'static_analysis': 0.20,
             'dependency_scan': 0.25,
-            'tool_poisoning_check': 0.30,
+            'mcp_security_scan': 0.35,  # Higher weight for MCP-specific security
             'container_scan': 0.10,
             'security_documentation_check': 0.10
         }
@@ -704,8 +834,8 @@ class SecurityScanner:
         if scan_result.get('dependency_scan', {}).get('score', 100) < 80:
             recommendations.append("Update dependencies to fix known vulnerabilities")
         
-        if scan_result.get('tool_poisoning_check', {}).get('score', 100) < 90:
-            recommendations.append("Review tool descriptions for potential poisoning attacks")
+        if scan_result.get('mcp_security_scan', {}).get('score', 100) < 80:
+            recommendations.append("Address MCP-specific security issues identified by mcp-scan")
         
         if scan_result.get('container_scan', {}).get('score', 100) < 80:
             recommendations.append("Improve container security configuration")

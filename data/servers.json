@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2024-12-23T10:00:00Z",
+  "last_updated": "2024-06-24T12:00:00Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -353,6 +353,622 @@
       ],
       "mcp_protocol_versions": ["2024-11-05"],
       "tags": ["desktop-automation", "computer-use", "high-privilege", "python"]
+    },
+    {
+      "name": "Fetch Server",
+      "slug": "fetch",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "category": "official",
+      "description": "Web content fetching and conversion for efficient LLM usage",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.3.2",
+          "release_date": "2024-12-01",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2024-12-24T10:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Static analysis not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Server can access local/internal IP addresses - security risk",
+                "score": 60
+              },
+              "notes": "Requires security review due to potential SSRF vulnerabilities"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["web-fetch", "http", "security-risk", "python", "official"]
+    },
+    {
+      "name": "Git Server",
+      "slug": "git",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+      "category": "official",
+      "description": "Tools to read, search, and manipulate Git repositories",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.2.1",
+          "release_date": "2024-11-25",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2024-12-24T10:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Static analysis not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Early development status, Git command execution requires review",
+                "score": 65
+              },
+              "notes": "Currently in early development - requires comprehensive security review"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["git", "repository", "vcs", "python", "official"]
+    },
+    {
+      "name": "Memory Server",
+      "slug": "memory",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "category": "official",
+      "description": "Persistent memory using a local knowledge graph",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "release_date": "2024-11-20",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-24T10:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Static analysis not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Knowledge graph storage appears architecturally sound",
+                "score": 80
+              },
+              "notes": "Local storage system, lower security risk profile"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["memory", "knowledge-graph", "storage", "typescript", "official"]
+    },
+    {
+      "name": "Sequential Thinking Server",
+      "slug": "sequential-thinking",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "category": "official",
+      "description": "Dynamic and reflective problem-solving through thought sequences",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "release_date": "2024-11-15",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-24T10:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Static analysis not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Thinking tool has minimal external dependencies",
+                "score": 85
+              },
+              "notes": "Low security risk - primarily computational tool"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["thinking", "reasoning", "analysis", "typescript", "official"]
+    },
+    {
+      "name": "Time Server",
+      "slug": "time",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "category": "official",
+      "description": "Time and timezone conversion capabilities",
+      "maintainer": {
+        "name": "Anthropic",
+        "type": "official",
+        "contact": "https://anthropic.com"
+      },
+      "versions": [
+        {
+          "version": "0.1.2",
+          "release_date": "2024-11-10",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-12-24T10:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Static analysis not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Time utilities are low risk",
+                "score": 90
+              },
+              "notes": "Minimal security concerns for time/timezone operations"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["time", "timezone", "utility", "python", "official"]
+    },
+    {
+      "name": "GitHub MCP Server",
+      "slug": "github",
+      "repository": "https://github.com/github/github-mcp-server",
+      "category": "enterprise",
+      "description": "GitHub's official MCP Server for repository management",
+      "maintainer": {
+        "name": "GitHub",
+        "type": "organization",
+        "contact": "https://github.com"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "release_date": "2024-12-01",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Official GitHub integration, likely well-maintained",
+                "score": 80
+              },
+              "notes": "Official GitHub server - high trust, requires security validation"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["github", "git", "repository", "enterprise", "official"]
+    },
+    {
+      "name": "Stripe MCP Server",
+      "slug": "stripe",
+      "repository": "https://github.com/stripe/agent-toolkit",
+      "category": "enterprise",
+      "description": "Interact with Stripe API for payments and financial data",
+      "maintainer": {
+        "name": "Stripe",
+        "type": "organization",
+        "contact": "https://stripe.com"
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "release_date": "2024-11-15",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Financial API integration requires comprehensive security review",
+                "score": 70
+              },
+              "notes": "High-value financial data - requires thorough security assessment"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["stripe", "payments", "financial", "api", "enterprise"]
+    },
+    {
+      "name": "Notion MCP Server",
+      "slug": "notion",
+      "repository": "https://github.com/makenotion/notion-mcp-server",
+      "category": "enterprise",
+      "description": "Notion official MCP server for workspace integration",
+      "maintainer": {
+        "name": "Notion",
+        "type": "organization",
+        "contact": "https://notion.so"
+      },
+      "versions": [
+        {
+          "version": "0.3.1",
+          "release_date": "2024-11-20",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Official Notion integration for document management",
+                "score": 75
+              },
+              "notes": "Official Notion server - document access requires security review"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["notion", "documents", "productivity", "api", "enterprise"]
+    },
+    {
+      "name": "Slack MCP Server",
+      "slug": "slack",
+      "repository": "https://github.com/slack-samples/mcp-slack",
+      "category": "community",
+      "description": "Slack workspace integration for messaging and collaboration",
+      "maintainer": {
+        "name": "Slack",
+        "type": "organization",
+        "contact": "https://slack.com"
+      },
+      "versions": [
+        {
+          "version": "1.0.3",
+          "release_date": "2024-10-15",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Slack sample server with OAuth integration",
+                "score": 75
+              },
+              "notes": "Popular collaboration tool - requires OAuth security review"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["slack", "messaging", "collaboration", "oauth", "community"]
+    },
+    {
+      "name": "PostgreSQL MCP Server", 
+      "slug": "postgresql",
+      "repository": "https://github.com/postgres/mcp-postgres",
+      "category": "community",
+      "description": "PostgreSQL database operations and query execution",
+      "maintainer": {
+        "name": "PostgreSQL Community",
+        "type": "organization",
+        "contact": "https://postgresql.org"
+      },
+      "versions": [
+        {
+          "version": "0.4.2",
+          "release_date": "2024-11-05",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "warning",
+                "details": "Database access requires careful SQL injection prevention",
+                "score": 60
+              },
+              "notes": "Database operations - high security risk, requires comprehensive review"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["postgresql", "database", "sql", "data", "community"]
+    },
+    {
+      "name": "AWS MCP Server",
+      "slug": "aws",
+      "repository": "https://github.com/aws/aws-mcp-server",
+      "category": "enterprise",
+      "description": "AWS service integration with IAM controls",
+      "maintainer": {
+        "name": "Amazon Web Services",
+        "type": "organization",
+        "contact": "https://aws.amazon.com"
+      },
+      "versions": [
+        {
+          "version": "1.2.0",
+          "release_date": "2024-12-10",
+          "security_status": "under-review",
+          "is_recommended": true,
+          "security_scan": {
+            "scan_date": "2024-06-24T12:00:00Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan pending",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-placeholder",
+              "review_date": "2024-06-24",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Official AWS integration with IAM-based access control",
+                "score": 85
+              },
+              "notes": "Official AWS server - likely well-secured with IAM integration"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": ["2024-11-05"],
+      "tags": ["aws", "cloud", "infrastructure", "iam", "enterprise"]
     }
   ]
 }

@@ -1,0 +1,202 @@
+name: Automated Server Discovery
+
+on:
+  schedule:
+    # Run weekly server discovery on Sundays at 12:00 UTC
+    - cron: '0 12 * * 0'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum number of servers to discover'
+        required: false
+        type: number
+        default: 50
+      force_discovery:
+        description: 'Force discovery even if recent run exists'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  discover-servers:
+    name: Discover New MCP Servers
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests packaging semver PyGithub
+
+      - name: Run server discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/server-discovery.py \
+            --output security/discovered-servers.json \
+            --limit ${{ inputs.limit || 50 }} \
+            --github-token ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Process discovered servers
+        run: |
+          python scripts/process-discovered-servers.py \
+            --discovered security/discovered-servers.json \
+            --existing data/servers.json \
+            --output data/new-servers-candidates.json
+
+      - name: Create pull request for new servers
+        if: hashFiles('data/new-servers-candidates.json') != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            // Read the discovered servers
+            const candidates = JSON.parse(fs.readFileSync('data/new-servers-candidates.json', 'utf8'));
+            const discoveryData = JSON.parse(fs.readFileSync('security/discovered-servers.json', 'utf8'));
+            
+            if (candidates.new_servers.length === 0) {
+              console.log('No new servers to add');
+              return;
+            }
+            
+            // Create a branch for the new servers
+            const branchName = `server-discovery-${new Date().toISOString().split('T')[0]}`;
+            
+            try {
+              await github.rest.git.createRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `refs/heads/${branchName}`,
+                sha: context.sha
+              });
+              
+              // Update the servers.json file with new candidates
+              const content = Buffer.from(JSON.stringify(candidates.updated_servers, null, 2)).toString('base64');
+              
+              await github.rest.repos.createOrUpdateFileContents({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: 'data/servers.json',
+                message: `🔍 Add newly discovered MCP servers for security validation\n\nDiscovered ${candidates.new_servers.length} new servers:\n${candidates.new_servers.map(s => `- ${s.name}`).join('\n')}`,
+                content: content,
+                branch: branchName
+              });
+              
+              // Create pull request
+              const prBody = `## Newly Discovered MCP Servers\n\nThe automated discovery system found ${candidates.new_servers.length} new MCP servers that may be worth including:\n\n${candidates.new_servers.map(s => `### ${s.name}\n- **Repository**: ${s.repository}\n- **Description**: ${s.description}\n- **Source**: ${s.source}\n- **Discovery Score**: ${s.discovery_score}\n- **Language**: ${s.language}\n- **Stars**: ${s.stars || 'N/A'}\n`).join('\n')}\n\n### Discovery Summary\n\n- **Total Discovered**: ${discoveryData.total_discovered}\n- **New Candidates**: ${candidates.new_servers.length}\n- **Discovery Sources**: ${discoveryData.discovery_sources.join(', ')}\n- **Discovery Date**: ${discoveryData.discovery_timestamp}\n\n### Security Validation Status\n\nAll newly discovered servers have been marked as "under-review" and will undergo comprehensive security validation once this PR is merged.\n\n### Next Steps\n\n1. Review the discovered servers for relevance and quality\n2. Remove any servers that don't meet inclusion criteria\n3. Merge this PR to trigger security validation\n4. Monitor security scan results\n5. Update server recommendations based on scan results\n\n---\n\n*This PR was automatically created by the server discovery system.*`;
+              
+              const pr = await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `🔍 Add ${candidates.new_servers.length} newly discovered MCP servers`,
+                head: branchName,
+                base: 'main',
+                body: prBody
+              });
+              
+              // Add labels
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr.data.number,
+                labels: ['server-discovery', 'security-validation-needed', 'automated', 'new-servers']
+              });
+              
+              console.log(`Created PR #${pr.data.number}: ${pr.data.html_url}`);
+              
+            } catch (error) {
+              console.error('Error creating PR:', error);
+              
+              // Create an issue instead if PR creation fails
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '⚠️ Failed to create server discovery PR',
+                body: `Failed to automatically create PR for newly discovered servers. Manual intervention required.\n\nDiscovered servers:\n${candidates.new_servers.map(s => `- ${s.name}: ${s.repository}`).join('\n')}\n\nError: ${error.message}`,
+                labels: ['server-discovery', 'manual-action-required']
+              });
+            }
+
+      - name: Upload discovery artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: server-discovery-results
+          path: |
+            security/discovered-servers.json
+            data/new-servers-candidates.json
+          retention-days: 30
+
+      - name: Update discovery tracking
+        run: |
+          # Create or update discovery tracking file
+          echo '{"last_discovery": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'", "total_discovered": '${{ fromJson(hashFiles('security/discovered-servers.json') && 'fromJsonFile("security/discovered-servers.json").total_discovered') || 0 }}'}' > security/discovery-tracking.json
+          
+          git config --local user.email "action@github.com"
+          git config --local user.name "Discovery Bot"
+          
+          if ! git diff --quiet security/discovery-tracking.json; then
+            git add security/discovery-tracking.json
+            git commit -m "📊 Update server discovery tracking data [skip ci]"
+            git push
+          fi
+
+  cleanup-discovery-branches:
+    name: Cleanup Old Discovery Branches
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    
+    steps:
+      - name: Cleanup old discovery branches
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: branches } = await github.rest.repos.listBranches({
+              owner: context.repo.owner,
+              repo: context.repo.repo
+            });
+            
+            const discoveryBranches = branches.filter(branch => 
+              branch.name.startsWith('server-discovery-')
+            );
+            
+            const twoWeeksAgo = new Date();
+            twoWeeksAgo.setDate(twoWeeksAgo.getDate() - 14);
+            
+            for (const branch of discoveryBranches) {
+              try {
+                const { data: commit } = await github.rest.repos.getCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ref: branch.commit.sha
+                });
+                
+                const commitDate = new Date(commit.commit.author.date);
+                
+                if (commitDate < twoWeeksAgo) {
+                  console.log(`Deleting old discovery branch: ${branch.name}`);
+                  
+                  await github.rest.git.deleteRef({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    ref: `heads/${branch.name}`
+                  });
+                }
+              } catch (error) {
+                console.error(`Error processing branch ${branch.name}:`, error);
+              }
+            }
