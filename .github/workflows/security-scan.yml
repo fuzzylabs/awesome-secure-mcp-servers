@@ -172,17 +172,23 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "Security Bot"
           
-          # Check if there are changes to commit
+          # Check if there are any changes
           if git diff --quiet && git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            # Stage all changes first
-            git add README.md security/ data/servers.json
+            echo "Changes detected, stashing and pulling latest..."
             
-            # Pull latest changes to avoid conflicts (with staged changes)
+            # Stash any changes
+            git stash --include-untracked
+            
+            # Pull latest changes
             git pull --rebase
             
-            # Commit and push
+            # Pop stashed changes
+            git stash pop
+            
+            # Stage and commit
+            git add README.md security/ data/servers.json
             git commit -m "🛡️ Update security assessments and README [skip ci]"
             git push
           fi
