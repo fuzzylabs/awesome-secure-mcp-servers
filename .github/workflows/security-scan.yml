@@ -42,12 +42,10 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install ajv ajv-cli
+        run: npm install ajv ajv-formats
 
       - name: Validate JSON schema
-        run: |
-          npx ajv validate -s data/schema.json -d data/servers.json
-          echo "✅ JSON schema validation passed"
+        run: node scripts/validate-schema.js
 
       - name: Check for required fields
         run: |

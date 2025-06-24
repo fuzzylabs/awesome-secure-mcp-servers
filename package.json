@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A curated list of security-validated Model Context Protocol (MCP) servers",
   "scripts": {
-    "validate": "node scripts/validate-data.js",
+    "validate": "node scripts/validate-schema.js && node scripts/validate-data.js",
     "test": "npm run validate",
     "lint": "eslint scripts/*.js",
     "security-scan": "python scripts/security-scanner.py --input data/servers.json --output security/scan-results.json",
@@ -25,11 +25,14 @@
   "author": "Fuzzy Labs",
   "license": "MIT",
   "devDependencies": {
-    "ajv": "^8.12.0",
+    "ajv": "^8.17.1",
     "ajv-cli": "^5.0.0",
     "eslint": "^8.55.0"
   },
   "engines": {
     "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "ajv-formats": "^3.0.1"
   }
 }
