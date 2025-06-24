@@ -1,0 +1,10 @@
+# Core dependencies for security scanning
+bandit>=1.7.0
+safety>=2.0.0
+semgrep>=1.0.0
+requests>=2.25.0
+packaging>=21.0
+PyGithub>=1.55.0
+
+# Note: mcp-scan is installed separately via uvx
+# See setup.sh for installation instructions

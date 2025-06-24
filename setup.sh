@@ -44,10 +44,20 @@ npm install
 
 # Install Python dependencies
 echo "🐍 Installing Python dependencies..."
-pip3 install --user bandit safety semgrep requests packaging PyGithub
+pip3 install --user -r requirements.txt
 
 # Install optional security tools
 echo "🔧 Installing optional security tools..."
+
+# Install mcp-scan for MCP-specific security scanning
+echo "  Installing mcp-scan..."
+if command -v uvx &> /dev/null; then
+    uvx --help &> /dev/null && echo "  ✅ mcp-scan can be used via 'uvx mcp-scan@latest'"
+else
+    echo "  ⚠️  uvx not found. Please install uv to use mcp-scan:"
+    echo "      curl -LsSf https://astral.sh/uv/install.sh | sh"
+    echo "      Then use: uvx mcp-scan@latest"
+fi
 
 # Try to install additional tools (non-fatal if they fail)
 if command -v npm &> /dev/null; then

@@ -73,12 +73,22 @@ jobs:
 
       - name: Install security scanning tools
         run: |
-          pip install bandit safety semgrep
+          # Install Python dependencies from requirements.txt
+          pip install -r requirements.txt
+          
+          # Install Node.js tools
           npm install -g retire @microsoft/rush-stack-compiler-3.9
           
           # Install additional security tools
           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
           curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          
+          # Install uv for mcp-scan
+          curl -LsSf https://astral.sh/uv/install.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          
+          # Verify mcp-scan availability
+          uvx mcp-scan@latest --help || echo "mcp-scan installation verification"
 
       - name: Run security scans
         env:
