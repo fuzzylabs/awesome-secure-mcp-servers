@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2024-06-24T12:00:00Z",
+  "last_updated": "2025-06-24T22:26:03Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -69,8 +69,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05", "2025-03-26"],
-      "tags": ["reference", "demo", "typescript", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05",
+        "2025-03-26"
+      ],
+      "tags": [
+        "reference",
+        "demo",
+        "typescript",
+        "official"
+      ]
     },
     {
       "name": "Filesystem Server",
@@ -87,60 +95,53 @@
         {
           "version": "0.4.1",
           "release_date": "2024-11-20",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-14T09:15:00Z",
+            "scan_date": "2025-06-24T21:24:50.739280+00:00",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "Path traversal protections verified",
-              "score": 88,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Bandit found 17 potential security issue(s)",
+              "score": 60,
+              "issues_found": 17
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "Dependencies clean, no vulnerabilities",
-              "score": 100,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "Tool descriptions verified safe",
-              "score": 100,
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "security-team-002",
-              "review_date": "2024-12-12",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Proper sandboxing and path validation implemented",
-                "score": 92
-              },
-              "authentication_review": {
-                "status": "pass",
-                "details": "File access properly controlled",
-                "score": 88
-              },
-              "authorization_review": {
-                "status": "pass",
-                "details": "Configurable access controls working correctly",
-                "score": 90
-              },
-              "documentation_review": {
-                "status": "pass",
-                "details": "Security configuration well documented",
-                "score": 85
-              }
+            "overall_score": 78,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 91
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["filesystem", "files", "typescript", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "filesystem",
+        "files",
+        "typescript",
+        "official"
+      ]
     },
     {
       "name": "Nuclei Security Scanner",
@@ -209,8 +210,15 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["security", "vulnerability-scanning", "nuclei", "python"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "security",
+        "vulnerability-scanning",
+        "nuclei",
+        "python"
+      ]
     },
     {
       "name": "Docker Server",
@@ -280,8 +288,15 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["docker", "containers", "infrastructure", "typescript"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "docker",
+        "containers",
+        "infrastructure",
+        "typescript"
+      ]
     },
     {
       "name": "Anthropic Computer Use",
@@ -351,8 +366,15 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["desktop-automation", "computer-use", "high-privilege", "python"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "desktop-automation",
+        "computer-use",
+        "high-privilege",
+        "python"
+      ]
     },
     {
       "name": "Fetch Server",
@@ -407,8 +429,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["web-fetch", "http", "security-risk", "python", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "web-fetch",
+        "http",
+        "security-risk",
+        "python",
+        "official"
+      ]
     },
     {
       "name": "Git Server",
@@ -463,8 +493,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["git", "repository", "vcs", "python", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "git",
+        "repository",
+        "vcs",
+        "python",
+        "official"
+      ]
     },
     {
       "name": "Memory Server",
@@ -519,8 +557,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["memory", "knowledge-graph", "storage", "typescript", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "memory",
+        "knowledge-graph",
+        "storage",
+        "typescript",
+        "official"
+      ]
     },
     {
       "name": "Sequential Thinking Server",
@@ -575,8 +621,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["thinking", "reasoning", "analysis", "typescript", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "thinking",
+        "reasoning",
+        "analysis",
+        "typescript",
+        "official"
+      ]
     },
     {
       "name": "Time Server",
@@ -631,8 +685,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["time", "timezone", "utility", "python", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "time",
+        "timezone",
+        "utility",
+        "python",
+        "official"
+      ]
     },
     {
       "name": "GitHub MCP Server",
@@ -687,8 +749,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["github", "git", "repository", "enterprise", "official"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "github",
+        "git",
+        "repository",
+        "enterprise",
+        "official"
+      ]
     },
     {
       "name": "Stripe MCP Server",
@@ -743,8 +813,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["stripe", "payments", "financial", "api", "enterprise"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "stripe",
+        "payments",
+        "financial",
+        "api",
+        "enterprise"
+      ]
     },
     {
       "name": "Notion MCP Server",
@@ -799,8 +877,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["notion", "documents", "productivity", "api", "enterprise"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "notion",
+        "documents",
+        "productivity",
+        "api",
+        "enterprise"
+      ]
     },
     {
       "name": "Slack MCP Server",
@@ -855,11 +941,19 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["slack", "messaging", "collaboration", "oauth", "community"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "slack",
+        "messaging",
+        "collaboration",
+        "oauth",
+        "community"
+      ]
     },
     {
-      "name": "PostgreSQL MCP Server", 
+      "name": "PostgreSQL MCP Server",
       "slug": "postgresql",
       "repository": "https://github.com/postgres/mcp-postgres",
       "category": "community",
@@ -911,8 +1005,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["postgresql", "database", "sql", "data", "community"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "postgresql",
+        "database",
+        "sql",
+        "data",
+        "community"
+      ]
     },
     {
       "name": "AWS MCP Server",
@@ -967,8 +1069,16 @@
           "vulnerabilities": []
         }
       ],
-      "mcp_protocol_versions": ["2024-11-05"],
-      "tags": ["aws", "cloud", "infrastructure", "iam", "enterprise"]
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "aws",
+        "cloud",
+        "infrastructure",
+        "iam",
+        "enterprise"
+      ]
     }
   ]
 }

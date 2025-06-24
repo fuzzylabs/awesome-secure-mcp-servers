@@ -1,0 +1,74 @@
+{
+  "scan_timestamp": "2025-06-24T21:24:49.475394+00:00",
+  "scanner_version": "1.2.0",
+  "total_servers_scanned": 1,
+  "results": [
+    {
+      "server_name": "Filesystem Server",
+      "server_slug": "filesystem",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "scan_timestamp": "2025-06-24T21:24:49.476043+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "scan_date": "2025-06-24T21:24:50.739280+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit found 17 potential security issue(s)",
+            "score": 60,
+            "issues_found": 17,
+            "tools_used": [
+              "bandit"
+            ]
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 78,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    }
+  ]
+}

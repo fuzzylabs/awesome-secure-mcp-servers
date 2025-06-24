@@ -8,7 +8,8 @@
     "lint": "eslint scripts/*.js",
     "security-scan": "python scripts/security-scanner.py --input data/servers.json --output security/scan-results.json",
     "generate-report": "python scripts/generate-report.py --scan-results security/scan-results.json --output security/security-report.md",
-    "update-readme": "python scripts/update-readme.py --readme README.md --servers data/servers.json"
+    "update-readme": "python scripts/update-readme.py --readme README.md --servers data/servers.json",
+    "update-security-data": "python scripts/update-security-data.py --servers data/servers.json --scan-results security/scan-results.json"
   },
   "repository": {
     "type": "git",

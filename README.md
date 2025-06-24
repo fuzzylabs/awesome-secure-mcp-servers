@@ -69,7 +69,7 @@ Help improve this project:
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-24 21:17 UTC  
+**Last Updated:** 2025-06-24 22:26 UTC  
 **Total Servers:** 16
 
 ### Official Servers
@@ -78,7 +78,7 @@ Help improve this project:
 |--------|---------|----------------|-------------|
 | [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | 🛡️ Verified Secure (Score: 93/100) | Reference server demonstrating all MCP features |
 | [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | 🔄 Under Review (Score: 50/100) | Web content fetching and conversion for efficient LLM usage |
-| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | 🛡️ Verified Secure (Score: 91/100) | Secure file operations with configurable access controls |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional (Score: 78/100) | Secure file operations with configurable access controls |
 | [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | 🔄 Under Review (Score: 50/100) | Tools to read, search, and manipulate Git repositories |
 | [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | 🔄 Under Review (Score: 50/100) | Persistent memory using a local knowledge graph |
 | [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | 🔄 Under Review (Score: 50/100) | Dynamic and reflective problem-solving through thought sequences |

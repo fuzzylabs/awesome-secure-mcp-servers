@@ -103,6 +103,12 @@ jobs:
             --scan-results security/scan-results.json \
             --output security/security-report.md
 
+      - name: Update servers.json with scan results
+        run: |
+          python scripts/update-security-data.py \
+            --servers data/servers.json \
+            --scan-results security/scan-results.json
+
       - name: Upload security artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -169,8 +175,8 @@ jobs:
           if git diff --quiet; then
             echo "No changes to commit"
           else
-            git add README.md security/
-            git commit -m "🛡️ Update README with latest security assessments [skip ci]"
+            git add README.md security/ data/servers.json
+            git commit -m "🛡️ Update security assessments and README [skip ci]"
             git push
           fi
 
