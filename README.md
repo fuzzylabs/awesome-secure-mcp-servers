@@ -28,7 +28,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-25 16:02 UTC  
+**Last Updated:** 2025-06-25 15:05 UTC  
 **Total Servers:** 16
 
 ### Official Servers
