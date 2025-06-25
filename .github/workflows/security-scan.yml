@@ -29,28 +29,22 @@ permissions:
 
 jobs:
   validate-data:
-    name: Validate Data Schema
+    name: Validate Data
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          python-version: '3.11'
 
       - name: Install dependencies
-        run: npm install ajv ajv-formats
+        run: pip install jsonschema
 
-      - name: Validate JSON schema
-        run: node scripts/validate-schema.js
-
-      - name: Check for required fields
-        run: |
-          node scripts/validate-data.js
-          echo "✅ Required fields validation passed"
+      - name: Validate data
+        run: python scripts/validate.py
 
   security-scan:
     name: Automated Security Scanning
@@ -103,12 +97,6 @@ jobs:
             --scan-results security/scan-results.json \
             --output security/security-report.md
 
-      - name: Update servers.json with scan results
-        run: |
-          python scripts/update-security-data.py \
-            --servers data/servers.json \
-            --scan-results security/scan-results.json
-
       - name: Upload security artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -137,8 +125,8 @@ jobs:
               });
             }
 
-  update-badges:
-    name: Update Security Badges
+  update-artifacts:
+    name: Update Artifacts
     runs-on: ubuntu-latest
     needs: security-scan
     if: github.ref == 'refs/heads/main'
@@ -161,13 +149,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Update README with security data
+      - name: Update artifacts
         run: |
-          python scripts/update-readme.py \
-            --readme README.md \
-            --servers data/servers.json
+          python scripts/update-artifacts.py \
+            --servers data/servers.json \
+            --scan-results security/scan-results.json \
+            --readme README.md
 
-      - name: Commit updated README
+      - name: Commit updated artifacts
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Security Bot"
@@ -188,8 +177,8 @@ jobs:
             git stash pop
             
             # Stage and commit
-            git add README.md security/ data/servers.json
-            git commit -m "🛡️ Update security assessments and README [skip ci]"
+            git add README.md data/servers.json
+            git commit -m "🛡️ Update security assessments and artifacts [skip ci]"
             git push
           fi
 
