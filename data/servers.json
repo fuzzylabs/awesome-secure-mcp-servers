@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-06-24T22:48:25Z",
+  "last_updated": "2025-06-25T09:15:22Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -17,54 +17,40 @@
         {
           "version": "0.5.0",
           "release_date": "2024-12-01",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-15T14:30:00Z",
+            "scan_date": "2025-06-25T08:03:46.728Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical issues found in static analysis",
-              "score": 95,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "All dependencies are up to date with no known vulnerabilities",
-              "score": 100,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No malicious instructions detected in tool descriptions",
-              "score": 100,
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "security-team-001",
-              "review_date": "2024-12-10",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Well-designed security architecture with proper separation of concerns",
-                "score": 90
-              },
-              "authentication_review": {
-                "status": "pass",
-                "details": "Proper authentication mechanisms implemented",
-                "score": 95
-              },
-              "authorization_review": {
-                "status": "pass",
-                "details": "Appropriate authorization controls in place",
-                "score": 90
-              },
-              "documentation_review": {
-                "status": "pass",
-                "details": "Comprehensive security documentation provided",
-                "score": 85
-              }
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 93
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -98,13 +84,13 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-24T21:24:50.739Z",
+            "scan_date": "2025-06-25T08:03:49.058Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
-              "details": "Bandit found 17 potential security issue(s)",
-              "score": 60,
-              "issues_found": 17
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
+              "issues_found": 0
             },
             "dependency_scan": {
               "status": "warning",
@@ -118,7 +104,7 @@
               "score": 90,
               "issues_found": 0
             },
-            "overall_score": 78,
+            "overall_score": 80,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -161,51 +147,37 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-16T11:20:00Z",
+            "scan_date": "2025-06-25T08:03:50.359Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "Security tool wrapper properly sandboxed",
-              "score": 85,
+              "status": "warning",
+              "details": "Static analysis partially failed: 'SecurityScanner' object has no attribute '_run_eslint_security'",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "warning",
-              "details": "One low-severity dependency needs update",
-              "score": 85,
-              "issues_found": 1
-            },
-            "tool_poisoning_check": {
-              "status": "pass",
-              "details": "Security tool descriptions verified",
+              "status": "not-applicable",
+              "details": "No recognized dependency files found",
               "score": 100,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "security-team-003",
-              "review_date": "2024-12-13",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Appropriate security tool integration",
-                "score": 88
-              },
-              "authentication_review": {
-                "status": "pass",
-                "details": "Proper access controls for security operations",
-                "score": 90
-              },
-              "authorization_review": {
-                "status": "pass",
-                "details": "Limited scope prevents misuse",
-                "score": 92
-              },
-              "documentation_review": {
-                "status": "pass",
-                "details": "Security usage guidelines provided",
-                "score": 87
-              }
+            "tool_poisoning_check": {
+              "status": "pass",
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
+              "issues_found": 0
             },
-            "overall_score": 88
+            "overall_score": 85,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
+            },
+            "security_documentation": {
+              "status": "warning",
+              "details": "No dedicated security documentation found",
+              "score": 80
+            }
           },
           "vulnerabilities": []
         }
@@ -223,7 +195,7 @@
     {
       "name": "Docker Server",
       "slug": "docker-server",
-      "repository": "https://github.com/docker/mcp-docker",
+      "repository": "https://github.com/QuantGeekDev/docker-mcp",
       "category": "enterprise",
       "description": "Docker container management with security controls",
       "maintainer": {
@@ -235,55 +207,40 @@
         {
           "version": "1.5.2",
           "release_date": "2024-11-15",
-          "security_status": "conditional",
-          "is_recommended": true,
+          "security_status": "under-review",
+          "is_recommended": false,
           "security_scan": {
-            "scan_date": "2024-12-17T13:45:00Z",
+            "scan_date": "2025-06-25T08:03:55.922Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Requires privileged Docker access - potential security implications",
-              "score": 75,
-              "issues_found": 1
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
+              "issues_found": 0
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "All dependencies secure",
-              "score": 95,
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
-              "status": "pass",
-              "details": "Docker command wrappers verified safe",
-              "score": 100,
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "security-team-001",
-              "review_date": "2024-12-14",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Docker socket access requires careful configuration",
-                "score": 70
-              },
-              "authentication_review": {
-                "status": "pass",
-                "details": "Docker authentication properly handled",
-                "score": 85
-              },
-              "authorization_review": {
-                "status": "warning",
-                "details": "High privileges required, document security implications",
-                "score": 75
-              },
-              "documentation_review": {
-                "status": "pass",
-                "details": "Security configuration documented",
-                "score": 80
-              },
-              "notes": "Requires privileged access. Recommend running in restricted environment with Docker socket protection."
+            "overall_score": 50,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
             },
-            "overall_score": 78
+            "security_documentation": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
+            }
           },
           "vulnerabilities": []
         }
@@ -316,52 +273,37 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2024-12-18T16:30:00Z",
+            "scan_date": "2025-06-25T08:03:56.714Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "High-privilege operations detected - full desktop access",
-              "score": 60,
-              "issues_found": 3
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
+              "issues_found": 0
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "Dependencies are secure",
-              "score": 95,
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
-              "status": "warning",
-              "details": "Complex tool descriptions require additional review",
-              "score": 75,
-              "issues_found": 2
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50,
+              "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "security-team-004",
-              "review_date": "2024-12-15",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Extensive system access poses significant security risks",
-                "score": 50
-              },
-              "authentication_review": {
-                "status": "warning",
-                "details": "Authentication mechanisms need strengthening",
-                "score": 65
-              },
-              "authorization_review": {
-                "status": "fail",
-                "details": "Insufficient authorization controls for high-privilege operations",
-                "score": 40
-              },
-              "documentation_review": {
-                "status": "warning",
-                "details": "Security implications not fully documented",
-                "score": 60
-              },
-              "notes": "Requires comprehensive security review before recommendation. High-privilege desktop access needs additional safeguards."
+            "overall_score": 50,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
             },
-            "overall_score": 58
+            "security_documentation": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
+            }
           },
           "vulnerabilities": []
         }
@@ -391,40 +333,40 @@
         {
           "version": "0.3.2",
           "release_date": "2024-12-01",
-          "security_status": "under-review",
-          "is_recommended": false,
+          "security_status": "conditional",
+          "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-24T10:00:00Z",
+            "scan_date": "2025-06-25T08:03:57.730Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Static analysis not yet performed",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan not yet performed",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan not yet performed",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Server can access local/internal IP addresses - security risk",
-                "score": 60
-              },
-              "notes": "Requires security review due to potential SSRF vulnerabilities"
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -455,40 +397,40 @@
         {
           "version": "0.2.1",
           "release_date": "2024-11-25",
-          "security_status": "under-review",
-          "is_recommended": false,
+          "security_status": "conditional",
+          "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-24T10:00:00Z",
+            "scan_date": "2025-06-25T08:03:59.115Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Static analysis not yet performed",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan not yet performed",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan not yet performed",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Early development status, Git command execution requires review",
-                "score": 65
-              },
-              "notes": "Currently in early development - requires comprehensive security review"
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -519,40 +461,40 @@
         {
           "version": "0.1.3",
           "release_date": "2024-11-20",
-          "security_status": "under-review",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-24T10:00:00Z",
+            "scan_date": "2025-06-25T08:04:00.371Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Static analysis not yet performed",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan not yet performed",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan not yet performed",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Knowledge graph storage appears architecturally sound",
-                "score": 80
-              },
-              "notes": "Local storage system, lower security risk profile"
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -583,40 +525,40 @@
         {
           "version": "0.1.0",
           "release_date": "2024-11-15",
-          "security_status": "under-review",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-24T10:00:00Z",
+            "scan_date": "2025-06-25T08:04:01.682Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Static analysis not yet performed",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan not yet performed",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan not yet performed",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Thinking tool has minimal external dependencies",
-                "score": 85
-              },
-              "notes": "Low security risk - primarily computational tool"
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -647,40 +589,40 @@
         {
           "version": "0.1.2",
           "release_date": "2024-11-10",
-          "security_status": "under-review",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-12-24T10:00:00Z",
+            "scan_date": "2025-06-25T08:04:03.017Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Static analysis not yet performed",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan not yet performed",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan not yet performed",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Time utilities are low risk",
-                "score": 90
-              },
-              "notes": "Minimal security concerns for time/timezone operations"
+            "overall_score": 80,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -711,40 +653,40 @@
         {
           "version": "1.0.0",
           "release_date": "2024-12-01",
-          "security_status": "under-review",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:04.398Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Security scan pending",
-              "score": 50,
+              "status": "warning",
+              "details": "Semgrep not available for security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
               "status": "not-applicable",
-              "details": "Dependency scan pending",
+              "details": "Go dependency scanning not yet implemented",
               "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan pending",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Official GitHub integration, likely well-maintained",
-                "score": 80
-              },
-              "notes": "Official GitHub server - high trust, requires security validation"
+            "overall_score": 78,
+            "container_scan": {
+              "status": "pass",
+              "details": "Container configuration appears secure",
+              "score": 100
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -775,40 +717,40 @@
         {
           "version": "0.2.0",
           "release_date": "2024-11-15",
-          "security_status": "under-review",
-          "is_recommended": false,
+          "security_status": "verified-secure",
+          "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:05.344Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Security scan pending",
-              "score": 50,
+              "status": "warning",
+              "details": "Bandit not available for Python security analysis",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
               "status": "not-applicable",
-              "details": "Dependency scan pending",
-              "score": 50,
+              "details": "No recognized dependency files found",
+              "score": 100,
               "issues_found": 0
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan pending",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Financial API integration requires comprehensive security review",
-                "score": 70
-              },
-              "notes": "High-value financial data - requires thorough security assessment"
+            "overall_score": 85,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "No container configurations found",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100
+            }
           },
           "vulnerabilities": []
         }
@@ -839,40 +781,40 @@
         {
           "version": "0.3.1",
           "release_date": "2024-11-20",
-          "security_status": "under-review",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:06.261Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "not-applicable",
-              "details": "Security scan pending",
-              "score": 50,
+              "status": "warning",
+              "details": "Static analysis partially failed: 'SecurityScanner' object has no attribute '_run_eslint_security'",
+              "score": 70,
               "issues_found": 0
             },
             "dependency_scan": {
-              "status": "not-applicable",
-              "details": "Dependency scan pending",
-              "score": 50,
-              "issues_found": 0
+              "status": "warning",
+              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 2
             },
             "tool_poisoning_check": {
-              "status": "not-applicable",
-              "details": "MCP security scan pending",
-              "score": 50,
+              "status": "pass",
+              "details": "No tool poisoning indicators found (basic check)",
+              "score": 90,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Official Notion integration for document management",
-                "score": 75
-              },
-              "notes": "Official Notion server - document access requires security review"
+            "overall_score": 83,
+            "container_scan": {
+              "status": "pass",
+              "details": "Container configuration appears secure",
+              "score": 100
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "warning",
+              "details": "No dedicated security documentation found",
+              "score": 80
+            }
           },
           "vulnerabilities": []
         }
@@ -891,7 +833,7 @@
     {
       "name": "Slack MCP Server",
       "slug": "slack",
-      "repository": "https://github.com/slack-samples/mcp-slack",
+      "repository": "https://github.com/korotovsky/slack-mcp-server",
       "category": "community",
       "description": "Slack workspace integration for messaging and collaboration",
       "maintainer": {
@@ -904,39 +846,39 @@
           "version": "1.0.3",
           "release_date": "2024-10-15",
           "security_status": "under-review",
-          "is_recommended": true,
+          "is_recommended": false,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:07.318Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
-              "details": "Security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "dependency_scan": {
               "status": "not-applicable",
-              "details": "Dependency scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
               "status": "not-applicable",
-              "details": "MCP security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Slack sample server with OAuth integration",
-                "score": 75
-              },
-              "notes": "Popular collaboration tool - requires OAuth security review"
+            "overall_score": 50,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
+            }
           },
           "vulnerabilities": []
         }
@@ -955,7 +897,7 @@
     {
       "name": "PostgreSQL MCP Server",
       "slug": "postgresql",
-      "repository": "https://github.com/postgres/mcp-postgres",
+      "repository": "https://github.com/crystaldba/postgres-mcp",
       "category": "community",
       "description": "PostgreSQL database operations and query execution",
       "maintainer": {
@@ -970,37 +912,37 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:07.925Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
-              "details": "Security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "dependency_scan": {
               "status": "not-applicable",
-              "details": "Dependency scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
               "status": "not-applicable",
-              "details": "MCP security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "warning",
-                "details": "Database access requires careful SQL injection prevention",
-                "score": 60
-              },
-              "notes": "Database operations - high security risk, requires comprehensive review"
+            "overall_score": 50,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
+            }
           },
           "vulnerabilities": []
         }
@@ -1019,7 +961,7 @@
     {
       "name": "AWS MCP Server",
       "slug": "aws",
-      "repository": "https://github.com/aws/aws-mcp-server",
+      "repository": "https://github.com/awslabs/mcp",
       "category": "enterprise",
       "description": "AWS service integration with IAM controls",
       "maintainer": {
@@ -1032,39 +974,39 @@
           "version": "1.2.0",
           "release_date": "2024-12-10",
           "security_status": "under-review",
-          "is_recommended": true,
+          "is_recommended": false,
           "security_scan": {
-            "scan_date": "2024-06-24T12:00:00Z",
+            "scan_date": "2025-06-25T08:04:08.550Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
-              "details": "Security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "dependency_scan": {
               "status": "not-applicable",
-              "details": "Dependency scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
             "tool_poisoning_check": {
               "status": "not-applicable",
-              "details": "MCP security scan pending",
+              "details": "Repository not available",
               "score": 50,
               "issues_found": 0
             },
-            "manual_review": {
-              "reviewer": "automated-placeholder",
-              "review_date": "2024-06-24",
-              "architecture_review": {
-                "status": "pass",
-                "details": "Official AWS integration with IAM-based access control",
-                "score": 85
-              },
-              "notes": "Official AWS server - likely well-secured with IAM integration"
+            "overall_score": 50,
+            "container_scan": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
             },
-            "overall_score": 50
+            "security_documentation": {
+              "status": "not-applicable",
+              "details": "Repository not available",
+              "score": 50
+            }
           },
           "vulnerabilities": []
         }

@@ -848,6 +848,129 @@ class SecurityScanner:
             recommendations.append("Consider additional security review before recommendation")
         
         return recommendations
+    
+    def _run_eslint_security(self, repo_path: str) -> Dict:
+        """Run ESLint security analysis for JavaScript."""
+        results = {
+            'status': 'not-applicable',
+            'details': 'ESLint security scanning not available',
+            'score': 70,
+            'issues_found': 0,
+            'tools_used': []
+        }
+        
+        # Check if eslint is available
+        try:
+            subprocess.run(['eslint', '--version'], capture_output=True, check=True)
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            return results
+        
+        try:
+            # Run eslint with basic security rules
+            cmd = [
+                'eslint',
+                '--format', 'json',
+                '--no-eslintrc',  # Don't use project config
+                '--rule', 'no-eval:error',
+                '--rule', 'no-implied-eval:error', 
+                '--rule', 'no-new-func:error',
+                repo_path
+            ]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+            
+            if result.stdout:
+                try:
+                    output = json.loads(result.stdout)
+                    total_issues = sum(len(file.get('messages', [])) for file in output)
+                    
+                    if total_issues > 0:
+                        results.update({
+                            'status': 'warning',
+                            'details': f'ESLint found {total_issues} potential security issue(s)',
+                            'score': max(50, 90 - total_issues * 5),
+                            'issues_found': total_issues,
+                            'tools_used': ['eslint']
+                        })
+                    else:
+                        results.update({
+                            'status': 'pass',
+                            'details': 'No security issues found by ESLint',
+                            'score': 85,
+                            'issues_found': 0,
+                            'tools_used': ['eslint']
+                        })
+                        
+                except json.JSONDecodeError:
+                    logger.warning("Failed to parse ESLint output")
+                    
+        except subprocess.TimeoutExpired:
+            logger.warning("ESLint scan timed out")
+        except Exception as e:
+            logger.warning(f"ESLint scan failed: {e}")
+            
+        return results
+    
+    def _run_tslint_security(self, repo_path: str) -> Dict:
+        """Run TypeScript security analysis."""
+        results = {
+            'status': 'not-applicable',
+            'details': 'TypeScript security scanning not available',
+            'score': 70,
+            'issues_found': 0,
+            'tools_used': []
+        }
+        
+        # Try ESLint with TypeScript support
+        try:
+            subprocess.run(['eslint', '--version'], capture_output=True, check=True)
+            
+            cmd = [
+                'eslint',
+                '--ext', '.ts,.tsx',
+                '--format', 'json',
+                '--no-eslintrc',
+                '--rule', 'no-eval:error',
+                '--rule', 'no-implied-eval:error',
+                repo_path
+            ]
+            
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+            
+            if result.stdout:
+                try:
+                    output = json.loads(result.stdout)
+                    total_issues = sum(len(file.get('messages', [])) for file in output)
+                    
+                    if total_issues > 0:
+                        results.update({
+                            'status': 'warning',
+                            'details': f'TypeScript analysis found {total_issues} potential security issue(s)',
+                            'score': max(50, 90 - total_issues * 5),
+                            'issues_found': total_issues,
+                            'tools_used': ['eslint-typescript']
+                        })
+                    else:
+                        results.update({
+                            'status': 'pass',
+                            'details': 'No security issues found in TypeScript analysis',
+                            'score': 85,
+                            'issues_found': 0,
+                            'tools_used': ['eslint-typescript']
+                        })
+                        
+                except json.JSONDecodeError:
+                    logger.warning("Failed to parse TypeScript analysis output")
+                    
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            # Fallback to Semgrep if ESLint not available
+            return self._run_semgrep(repo_path)
+        except subprocess.TimeoutExpired:
+            logger.warning("TypeScript analysis timed out")
+        except Exception as e:
+            logger.warning(f"TypeScript analysis failed: {e}")
+            
+        return results
 
 
 def main():
