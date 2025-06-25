@@ -1,75 +1,36 @@
 # Awesome Secure MCP Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Model Context Protocol (MCP) servers with comprehensive security validation using the `mcp-scan` security assessment pipeline.
+> **Secure Model Context Protocol (MCP) servers** with automated security validation, vulnerability scanning, and tool poisoning detection. Browse 16+ vetted MCP servers for Claude AI, ChatGPT, and other AI applications with confidence.
 
-## Mission
+**Keywords**: MCP servers, Model Context Protocol, Claude AI, ChatGPT integration, secure AI tools, vulnerability scanning, tool poisoning detection, AI security, LLM integrations
 
-This project provides transparent, reproducible security assessments of MCP servers using automated scanning tools to help developers make informed decisions about MCP server security.
+## 🛡️ Security-First MCP Server Directory
 
-## Transparency
+Find **secure MCP servers** for your AI applications with confidence. Each server undergoes automated security scanning including dependency vulnerability checks, static analysis, and MCP-specific threat detection (tool poisoning, cross-origin attacks).
 
-All assessment components are publicly available:
-- [Scan results](./security/) are published
-- [Security scanning tools](./scripts/) are open source
-- [Raw security data](./data/servers.json) is machine-readable
-- [GitHub Actions workflows](./.github/workflows/) run publicly
-- [Detailed methodology](./security/README.md) is documented
+### 🚀 Quick Start
+1. **Browse servers** by category below
+2. **Check security status** - look for 🛡️ Verified Secure or ⚠️ Conditional ratings
+3. **Review scores** - higher scores indicate better security posture
+4. **Follow repository links** for installation instructions
 
-## Community Involvement
+### 📊 Security Status Legend
+- **🛡️ Verified Secure** (85-100): Comprehensive validation passed
+- **⚠️ Conditional** (70-84): Secure with specific configuration requirements  
+- **⏳ Awaiting Scan**: Repository currently inaccessible for scanning
+- **❌ Not Recommended** (0-49): Known security issues
 
-Help improve this project:
-- **Found an error?** [Open an issue](../../issues/new)
-- **Disagree with an assessment?** [Start a discussion](../../discussions)
-- **Suggest improvements?** [Submit a PR](./CONTRIBUTING.md)
-- **Security expert?** [Join our review process](./CONTRIBUTING.md#manual-security-review)
-
-## Limitations
-
-### What we do:
-- Run automated security scans using `mcp-scan` by Invariant Labs for MCP-specific threats
-- Check for known vulnerabilities in dependencies using language-specific tools
-- Detect common security anti-patterns with static analysis
-- Identify MCP-specific vulnerabilities including tool poisoning, cross-origin escalation, and rug pull attacks
-- Provide reproducible, version-specific assessments with detailed scoring
-
-### What we don't do:
-- Guarantee security (no tool can do this)
-- Test runtime behavior or complex attack scenarios
-- Audit cryptographic implementations in detail
-- Check for zero-day vulnerabilities
-- Replace your own security assessment
-
-### Security Assessment Process
-
-**Automated Scanning:**
-- **MCP Security Scan**: Using `mcp-scan` for MCP-specific threats (tool poisoning, cross-origin escalation, rug pulls)
-- **Static Analysis**: Code patterns and potential vulnerabilities using language-specific tools
-- **Dependency Scanning**: Known CVEs in third-party packages  
-- **Container Security**: Dockerfile and image analysis when applicable
-
-**Manual Review:**
-- Architecture and design review
-- Authentication/authorization assessment
-- Documentation quality evaluation
-- Security best practices compliance
-
-**Scoring Method:**
-- Weighted combination of scan results: MCP Security (35%), Dependencies (25%), Static Analysis (20%), Container (10%), Documentation (10%)
-- Scores are indicative, not definitive
-- Multiple reviewers for subjective assessments (see [review team](./REVIEWERS.md))
-- See [detailed methodology](./security/README.md) for complete scoring breakdown
-
-## Legend
-
-- **Verified Secure**: Passed comprehensive security validation
-- **Conditional**: Secure with specific configuration requirements  
-- **Under Review**: Currently undergoing security validation
-- **Not Recommended**: Known security issues
-- **Version**: Latest validated secure version
+## 📚 Table of Contents
+- [🏢 Official Servers](#official-servers) - Anthropic-maintained MCP servers
+- [🏭 Enterprise Servers](#enterprise-servers) - Company-backed integrations 
+- [🛡️ Security Tools](#security-tools) - Cybersecurity & vulnerability scanning
+- [👥 Community Servers](#community-servers) - Open source community projects
+- [🔄 Under Review](#under-review) - Servers currently being assessed
+- [📖 About This Project](#-about-this-project) - Methodology & contributing
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-25 14:27 UTC  
+**Last Updated:** 2025-06-25 15:39 UTC  
 **Total Servers:** 16
 
 ### Official Servers
@@ -112,73 +73,3 @@ Help improve this project:
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
-
-## Critical Disclaimers
-
-### Security Assessment Limitations
-This list provides security indicators, not guarantees:
-
-- **Automated scans** catch common issues but miss complex vulnerabilities
-- **Manual reviews** are subjective and limited by reviewer expertise  
-- **No runtime testing** - we don't test actual MCP server behavior
-- **No penetration testing** - we don't attempt to exploit vulnerabilities
-- **No guarantees** - security status can change at any time
-
-### Your Responsibility
-You must still:
-- Perform your own security assessment for production use
-- Keep servers updated and monitor for new vulnerabilities
-- Follow the principle of least privilege
-- Implement proper monitoring and incident response
-
-## How to Help
-
-### Review Our Work
-- **Challenge our assessments** - if you disagree, tell us why
-- **Audit our tools** - all scanning code is open source
-- **Verify our data** - check scan results against actual repositories
-- **Test our methodology** - try our tools on servers you know well
-
-### Get Involved
-- **Join discussions** on security assessment methodology
-- **Submit servers** for community review
-- **Contribute code** to improve our scanning tools
-- **Share expertise** through manual security reviews
-
-### Report Issues
-- **Assessment errors** - wrong security status or score
-- **Missing servers** - suggest additions with justification
-- **Tool bugs** - problems with our scanning scripts
-- **Process improvements** - better ways to assess security
-
-## Community & Resources
-
-### Official MCP Resources
-- [Model Context Protocol Specification](https://modelcontextprotocol.io)
-- [Official MCP Servers](https://github.com/modelcontextprotocol/servers)
-- [MCP Documentation](https://docs.anthropic.com/claude/docs/mcp)
-
-### Related Security Projects
-- [MCP for Security](https://github.com/cyproxio/mcp-for-security) - Security-focused MCP servers
-- [Awesome MCP Servers](https://github.com/wong2/awesome-mcp-servers) - Comprehensive MCP server list
-
-### Security Research
-- [MCP Security Best Practices](./security/README.md) - Our detailed methodology
-- [Tool Poisoning Research](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
-
----
-
-## Contact & Support
-
-- **General questions**: [Open a discussion](../../discussions)
-- **Bug reports**: [Create an issue](../../issues)
-- **Security vulnerabilities**: Create a private security advisory
-- **Direct contact**: maintainers@fuzzylabs.ai
-
-## License & Legal
-
-This project is published under the [MIT License](LICENSE).
-
-**Important**: We are not affiliated with Anthropic or the official MCP project. This is an independent community initiative focused on security assessment of MCP servers.
-
-**Final Reminder**: Security assessments are performed to the best of our ability using available tools and methods. This list does not guarantee the security of any MCP server. Always perform your own security evaluation before using any software in production environments.
