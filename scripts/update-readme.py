@@ -92,7 +92,7 @@ class ReadmeGenerator:
         if not scan:
             return ""
         
-        details = [f"### Security Details: {server_slug}", ""]
+        details = [f"### Security Assessment: {scan.get('scan_date', 'Unknown date')[:10]}", ""]
         
         # MCP Security Analysis
         mcp_scan = scan.get('tool_poisoning_check', {})
@@ -100,10 +100,26 @@ class ReadmeGenerator:
             status = mcp_scan.get('status', 'unknown')
             score = mcp_scan.get('score', 0)
             details_text = mcp_scan.get('details', 'No details')
+            issues = mcp_scan.get('issues_found', 0)
             status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
-            details.append(f"**🔍 MCP Security**: {score}/100 {status_emoji}")
-            details.append(f"- Status: {status}")
-            details.append(f"- Details: {details_text}")
+            
+            details.append(f"**🔍 MCP-Specific Security**: {score}/100 {status_emoji}")
+            details.append(f"*Scans for MCP-specific threats like tool poisoning attacks*")
+            details.append("")
+            if status == "pass":
+                details.append(f"✅ **No MCP security threats detected**")
+                details.append(f"- Tool descriptions checked for malicious instructions")
+                details.append(f"- No hidden Unicode characters or injection attempts found") 
+                details.append(f"- MCP protocol usage follows security best practices")
+            elif status == "warning":
+                details.append(f"⚠️ **Potential MCP security concerns found** ({issues} issues)")
+                details.append(f"- {details_text}")
+                details.append(f"- Review tool descriptions for suspicious patterns")
+                details.append(f"- Consider additional MCP security hardening")
+            else:  # fail
+                details.append(f"❌ **MCP security vulnerabilities detected** ({issues} critical issues)")
+                details.append(f"- {details_text}")
+                details.append(f"- **Action required**: Fix MCP security issues before use")
             details.append("")
         
         # Dependency Scan
@@ -112,10 +128,47 @@ class ReadmeGenerator:
             status = dep_scan.get('status', 'unknown')
             score = dep_scan.get('score', 0)
             issues = dep_scan.get('issues_found', 0)
+            vulns = dep_scan.get('vulnerabilities', {})
+            details_text = dep_scan.get('details', '')
             status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
-            details.append(f"**📦 Dependencies**: {score}/100 {status_emoji}")
-            details.append(f"- Status: {status}")
-            details.append(f"- Issues found: {issues}")
+            
+            details.append(f"**📦 Third-Party Dependencies**: {score}/100 {status_emoji}")
+            details.append(f"*Scans package.json, requirements.txt, etc. for known CVEs*")
+            details.append("")
+            
+            if status == "pass":
+                details.append(f"✅ **All dependencies are secure**")
+                details.append(f"- No known vulnerabilities in third-party packages")
+                details.append(f"- Dependencies are up-to-date")
+            elif status == "warning":
+                if isinstance(vulns, dict) and vulns:
+                    high = vulns.get('high', 0)
+                    moderate = vulns.get('moderate', 0) 
+                    low = vulns.get('low', 0)
+                    critical = vulns.get('critical', 0)
+                    
+                    details.append(f"⚠️ **{issues} known vulnerabilities in dependencies**")
+                    if critical > 0:
+                        details.append(f"- 🚨 {critical} critical severity vulnerabilities")
+                    if high > 0:
+                        details.append(f"- 🔴 {high} high severity vulnerabilities")
+                    if moderate > 0:
+                        details.append(f"- 🟡 {moderate} moderate severity vulnerabilities")
+                    if low > 0:
+                        details.append(f"- 🟢 {low} low severity vulnerabilities")
+                    details.append(f"- **Action**: Run `npm audit fix` or `pip-audit --fix` to update vulnerable packages")
+                else:
+                    details.append(f"⚠️ **{issues} dependency issues found**")
+                    details.append(f"- {details_text}")
+                    details.append(f"- **Action**: Update dependencies to latest secure versions")
+            elif status == "not-applicable":
+                details.append(f"➖ **No dependency files found**")
+                details.append(f"- No package.json, requirements.txt, or similar files detected")
+                details.append(f"- Server may use different dependency management")
+            else:  # fail
+                details.append(f"❌ **Critical dependency vulnerabilities**")
+                details.append(f"- {details_text}")
+                details.append(f"- **Action required**: Update all dependencies before use")
             details.append("")
         
         # Static Analysis
@@ -124,10 +177,35 @@ class ReadmeGenerator:
             status = static.get('status', 'unknown')
             score = static.get('score', 0)
             issues = static.get('issues_found', 0)
+            details_text = static.get('details', '')
+            tools = static.get('tools_used', [])
             status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
-            details.append(f"**🐛 Static Analysis**: {score}/100 {status_emoji}")
-            details.append(f"- Status: {status}")
-            details.append(f"- Issues found: {issues}")
+            
+            details.append(f"**🐛 Code Security Analysis**: {score}/100 {status_emoji}")
+            details.append(f"*Static analysis for common security vulnerabilities in source code*")
+            details.append("")
+            
+            if status == "pass":
+                details.append(f"✅ **No security issues in source code**")
+                details.append(f"- Scanned with: {', '.join(tools) if tools else 'security tools'}")
+                details.append(f"- No SQL injection, XSS, or other common vulnerabilities found")
+                details.append(f"- Code follows security best practices")
+            elif status == "warning":
+                details.append(f"⚠️ **{issues} potential security issues in code**")
+                details.append(f"- Scanned with: {', '.join(tools) if tools else 'security tools'}")
+                if "Bandit not available" in details_text:
+                    details.append(f"- Python security scanner (Bandit) not available - basic checks only")
+                    details.append(f"- **Recommendation**: Install Bandit for comprehensive Python security analysis")
+                elif "Static analysis partially failed" in details_text:
+                    details.append(f"- Some security tools encountered errors during analysis")
+                    details.append(f"- **Recommendation**: Manual security review recommended")
+                else:
+                    details.append(f"- Issues may include: hardcoded secrets, injection vulnerabilities, unsafe functions")
+                    details.append(f"- **Action**: Review and fix identified security issues")
+            elif status == "not-applicable":
+                details.append(f"➖ **Static analysis not available**")
+                details.append(f"- {details_text}")
+                details.append(f"- **Recommendation**: Manual security review recommended")
             details.append("")
         
         # Container Security
@@ -135,9 +213,26 @@ class ReadmeGenerator:
         if container:
             status = container.get('status', 'unknown')
             score = container.get('score', 0)
+            details_text = container.get('details', '')
             status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌" if status == "fail" else "➖"
-            details.append(f"**🐳 Container**: {score}/100 {status_emoji}")
-            details.append(f"- Status: {status}")
+            
+            details.append(f"**🐳 Container Security**: {score}/100 {status_emoji}")
+            details.append(f"*Analyzes Dockerfile and container configurations for security issues*")
+            details.append("")
+            
+            if status == "pass":
+                details.append(f"✅ **Container configuration is secure**")
+                details.append(f"- Dockerfile follows security best practices")
+                details.append(f"- No privileged containers or unsafe configurations")
+                details.append(f"- Base images are secure and up-to-date")
+            elif status == "warning":
+                details.append(f"⚠️ **Container security concerns**")
+                details.append(f"- {details_text}")
+                details.append(f"- **Action**: Review container configuration for security hardening")
+            elif status == "not-applicable":
+                details.append(f"➖ **No container configuration found**")
+                details.append(f"- No Dockerfile or container configurations detected")
+                details.append(f"- Server likely runs as standalone application")
             details.append("")
         
         # Documentation
@@ -145,9 +240,26 @@ class ReadmeGenerator:
         if docs:
             status = docs.get('status', 'unknown')
             score = docs.get('score', 0)
+            found_docs = docs.get('documentation_found', [])
+            missing_docs = docs.get('missing_documentation', [])
             status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
-            details.append(f"**📋 Documentation**: {score}/100 {status_emoji}")
-            details.append(f"- Status: {status}")
+            
+            details.append(f"**📋 Security Documentation**: {score}/100 {status_emoji}")
+            details.append(f"*Checks for security guidelines, vulnerability reporting, and usage instructions*")
+            details.append("")
+            
+            if status == "pass":
+                details.append(f"✅ **Comprehensive security documentation**")
+                details.append(f"- Found: {', '.join(found_docs[:3])}{'...' if len(found_docs) > 3 else ''}")
+                details.append(f"- Includes security guidelines and vulnerability reporting")
+                details.append(f"- Clear instructions for secure usage")
+            elif status == "warning":
+                details.append(f"⚠️ **Security documentation needs improvement**")
+                if found_docs:
+                    details.append(f"- Found: {', '.join(found_docs[:2])}")
+                if missing_docs:
+                    details.append(f"- Missing: {', '.join(missing_docs)}")
+                details.append(f"- **Recommendation**: Add dedicated SECURITY.md file with vulnerability reporting process")
             details.append("")
         
         return "\n".join(details)

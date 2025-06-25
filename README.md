@@ -28,7 +28,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-25 14:59 UTC  
+**Last Updated:** 2025-06-25 16:02 UTC  
 **Total Servers:** 16
 
 ### Official Servers
@@ -81,25 +81,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-everything-reference">
 <summary><strong>Everything (Reference Server)</strong> Security Assessment</summary>
 
-### Security Details: everything-reference
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -107,25 +127,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-filesystem">
 <summary><strong>Filesystem Server</strong> Security Assessment</summary>
 
-### Security Details: filesystem
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -133,25 +173,43 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-nuclei-scanner">
 <summary><strong>Nuclei Security Scanner</strong> Security Assessment</summary>
 
-### Security Details: nuclei-scanner
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 95/100 ✅
-- Status: pass
-- Details: MCP-scan found no security issues in 1 configuration file(s)
+**🔍 MCP-Specific Security**: 95/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 100/100 ❌
-- Status: not-applicable
-- Issues found: 0
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 100/100 ❌
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+➖ **No dependency files found**
+- No package.json, requirements.txt, or similar files detected
+- Server may use different dependency management
 
-**📋 Documentation**: 80/100 ⚠️
-- Status: warning
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Some security tools encountered errors during analysis
+- **Recommendation**: Manual security review recommended
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 80/100 ⚠️
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+⚠️ **Security documentation needs improvement**
+- **Recommendation**: Add dedicated SECURITY.md file with vulnerability reporting process
 
 
 </details>
@@ -159,25 +217,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-fetch">
 <summary><strong>Fetch Server</strong> Security Assessment</summary>
 
-### Security Details: fetch
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -185,25 +263,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-git">
 <summary><strong>Git Server</strong> Security Assessment</summary>
 
-### Security Details: git
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -211,25 +309,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-memory">
 <summary><strong>Memory Server</strong> Security Assessment</summary>
 
-### Security Details: memory
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -237,25 +355,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-sequential-thinking">
 <summary><strong>Sequential Thinking Server</strong> Security Assessment</summary>
 
-### Security Details: sequential-thinking
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -263,25 +401,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-time">
 <summary><strong>Time Server</strong> Security Assessment</summary>
 
-### Security Details: time
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -289,25 +447,46 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-github">
 <summary><strong>GitHub MCP Server</strong> Security Assessment</summary>
 
-### Security Details: github
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 50/100 ❌
-- Status: not-applicable
-- Issues found: 0
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 50/100 ❌
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 100/100 ✅
-- Status: pass
+➖ **No dependency files found**
+- No package.json, requirements.txt, or similar files detected
+- Server may use different dependency management
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Issues may include: hardcoded secrets, injection vulnerabilities, unsafe functions
+- **Action**: Review and fix identified security issues
+
+**🐳 Container Security**: 100/100 ✅
+*Analyzes Dockerfile and container configurations for security issues*
+
+✅ **Container configuration is secure**
+- Dockerfile follows security best practices
+- No privileged containers or unsafe configurations
+- Base images are secure and up-to-date
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -315,25 +494,45 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-stripe">
 <summary><strong>Stripe MCP Server</strong> Security Assessment</summary>
 
-### Security Details: stripe
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 100/100 ❌
-- Status: not-applicable
-- Issues found: 0
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 100/100 ❌
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 50/100 ➖
-- Status: not-applicable
+➖ **No dependency files found**
+- No package.json, requirements.txt, or similar files detected
+- Server may use different dependency management
 
-**📋 Documentation**: 100/100 ✅
-- Status: pass
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Python security scanner (Bandit) not available - basic checks only
+- **Recommendation**: Install Bandit for comprehensive Python security analysis
+
+**🐳 Container Security**: 50/100 ➖
+*Analyzes Dockerfile and container configurations for security issues*
+
+➖ **No container configuration found**
+- No Dockerfile or container configurations detected
+- Server likely runs as standalone application
+
+**📋 Security Documentation**: 100/100 ✅
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+✅ **Comprehensive security documentation**
+- Found: 
+- Includes security guidelines and vulnerability reporting
+- Clear instructions for secure usage
 
 
 </details>
@@ -341,25 +540,44 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-notion">
 <summary><strong>Notion MCP Server</strong> Security Assessment</summary>
 
-### Security Details: notion
+### Security Assessment: 2025-06-25
 
-**🔍 MCP Security**: 90/100 ✅
-- Status: pass
-- Details: No tool poisoning indicators found (basic check)
+**🔍 MCP-Specific Security**: 90/100 ✅
+*Scans for MCP-specific threats like tool poisoning attacks*
 
-**📦 Dependencies**: 80/100 ⚠️
-- Status: warning
-- Issues found: 2
+✅ **No MCP security threats detected**
+- Tool descriptions checked for malicious instructions
+- No hidden Unicode characters or injection attempts found
+- MCP protocol usage follows security best practices
 
-**🐛 Static Analysis**: 70/100 ⚠️
-- Status: warning
-- Issues found: 0
+**📦 Third-Party Dependencies**: 80/100 ⚠️
+*Scans package.json, requirements.txt, etc. for known CVEs*
 
-**🐳 Container**: 100/100 ✅
-- Status: pass
+⚠️ **2 dependency issues found**
+- Found 2 vulnerability/vulnerabilities in dependencies
+- **Action**: Update dependencies to latest secure versions
 
-**📋 Documentation**: 80/100 ⚠️
-- Status: warning
+**🐛 Code Security Analysis**: 70/100 ⚠️
+*Static analysis for common security vulnerabilities in source code*
+
+⚠️ **0 potential security issues in code**
+- Scanned with: security tools
+- Some security tools encountered errors during analysis
+- **Recommendation**: Manual security review recommended
+
+**🐳 Container Security**: 100/100 ✅
+*Analyzes Dockerfile and container configurations for security issues*
+
+✅ **Container configuration is secure**
+- Dockerfile follows security best practices
+- No privileged containers or unsafe configurations
+- Base images are secure and up-to-date
+
+**📋 Security Documentation**: 80/100 ⚠️
+*Checks for security guidelines, vulnerability reporting, and usage instructions*
+
+⚠️ **Security documentation needs improvement**
+- **Recommendation**: Add dedicated SECURITY.md file with vulnerability reporting process
 
 
 </details>
