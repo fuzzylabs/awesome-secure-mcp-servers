@@ -1,12 +1,10 @@
 # Awesome Secure MCP Servers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> **Secure Model Context Protocol (MCP) servers** with automated security validation, vulnerability scanning, and tool poisoning detection. Browse 16+ vetted MCP servers for Claude AI, ChatGPT, and other AI applications with confidence.
-
-**Keywords**: MCP servers, Model Context Protocol, Claude AI, ChatGPT integration, secure AI tools, vulnerability scanning, tool poisoning detection, AI security, LLM integrations
+> **Secure Model Context Protocol (MCP) servers** with automated security validation, vulnerability scanning, and tool poisoning detection. Browse 16+ vetted MCP servers for building secure agentic AI systems.
 
 ## 🛡️ Security-First MCP Server Directory
 
-Find **secure MCP servers** for your AI applications with confidence. Each server undergoes automated security scanning including dependency vulnerability checks, static analysis, and MCP-specific threat detection (tool poisoning, cross-origin attacks).
+Find **secure MCP servers** for your agentic AI applications with confidence. Model Context Protocol is the USB-C of building agentic systems - providing standardized, secure connections between AI agents and external tools. Each server undergoes automated security scanning including dependency vulnerability checks, static analysis, and MCP-specific threat detection (tool poisoning, cross-origin attacks).
 
 ### 🚀 Quick Start
 1. **Browse servers** by category below
@@ -30,20 +28,20 @@ Find **secure MCP servers** for your AI applications with confidence. Each serve
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-25 15:39 UTC  
+**Last Updated:** 2025-06-25 15:56 UTC  
 **Total Servers:** 16
 
 ### Official Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | ⚠️ Conditional (Score: 80/100) | Reference server demonstrating all MCP features |
-| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | ⚠️ Conditional (Score: 80/100) | Web content fetching and conversion for efficient LLM usage |
-| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional (Score: 80/100) | Secure file operations with configurable access controls |
-| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | ⚠️ Conditional (Score: 80/100) | Tools to read, search, and manipulate Git repositories |
-| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | ⚠️ Conditional (Score: 80/100) | Persistent memory using a local knowledge graph |
-| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | ⚠️ Conditional (Score: 80/100) | Dynamic and reflective problem-solving through thought sequences |
-| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | ⚠️ Conditional (Score: 80/100) | Time and timezone conversion capabilities |
+| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-everything-reference)) | Reference server demonstrating all MCP features |
+| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-fetch)) | Web content fetching and conversion for efficient LLM usage |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-filesystem)) | Secure file operations with configurable access controls |
+| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-git)) | Tools to read, search, and manipulate Git repositories |
+| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-memory)) | Persistent memory using a local knowledge graph |
+| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-sequential-thinking)) | Dynamic and reflective problem-solving through thought sequences |
+| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-time)) | Time and timezone conversion capabilities |
 
 ### Enterprise Servers
 
@@ -51,15 +49,15 @@ Find **secure MCP servers** for your AI applications with confidence. Each serve
 |--------|---------|----------------|-------------|
 | [AWS MCP Server](https://github.com/awslabs/mcp) | 1.2.0 | ⏳ Awaiting Scan | AWS service integration with IAM controls |
 | [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | ⏳ Awaiting Scan | Docker container management with security controls |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional (Score: 78/100) | GitHub's official MCP Server for repository management |
-| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional (Score: 83/100) | Notion official MCP server for workspace integration |
-| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure (Score: 85/100) | Interact with Stripe API for payments and financial data |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional ([📊 Score: 78/100](#security-details-github)) | GitHub's official MCP Server for repository management |
+| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional ([📊 Score: 83/100](#security-details-notion)) | Notion official MCP server for workspace integration |
+| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 85/100](#security-details-stripe)) | Interact with Stripe API for payments and financial data |
 
 ### Security Tools
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure (Score: 85/100) | Template-based vulnerability scanner with extensive security checks |
+| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 85/100](#security-details-nuclei-scanner)) | Template-based vulnerability scanner with extensive security checks |
 
 ### Community Servers
 
@@ -73,3 +71,295 @@ Find **secure MCP servers** for your AI applications with confidence. Each serve
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+
+---
+
+## 📊 Detailed Security Assessments
+
+_Click on server scores above to jump to detailed security breakdowns:_
+
+<details id="security-details-everything-reference">
+<summary><strong>Everything (Reference Server)</strong> Security Assessment</summary>
+
+### Security Details: everything-reference
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-filesystem">
+<summary><strong>Filesystem Server</strong> Security Assessment</summary>
+
+### Security Details: filesystem
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-nuclei-scanner">
+<summary><strong>Nuclei Security Scanner</strong> Security Assessment</summary>
+
+### Security Details: nuclei-scanner
+
+**🔍 MCP Security**: 95/100 ✅
+- Status: pass
+- Details: MCP-scan found no security issues in 1 configuration file(s)
+
+**📦 Dependencies**: 100/100 ❌
+- Status: not-applicable
+- Issues found: 0
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 80/100 ⚠️
+- Status: warning
+
+
+</details>
+
+<details id="security-details-fetch">
+<summary><strong>Fetch Server</strong> Security Assessment</summary>
+
+### Security Details: fetch
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-git">
+<summary><strong>Git Server</strong> Security Assessment</summary>
+
+### Security Details: git
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-memory">
+<summary><strong>Memory Server</strong> Security Assessment</summary>
+
+### Security Details: memory
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-sequential-thinking">
+<summary><strong>Sequential Thinking Server</strong> Security Assessment</summary>
+
+### Security Details: sequential-thinking
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-time">
+<summary><strong>Time Server</strong> Security Assessment</summary>
+
+### Security Details: time
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-github">
+<summary><strong>GitHub MCP Server</strong> Security Assessment</summary>
+
+### Security Details: github
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 50/100 ❌
+- Status: not-applicable
+- Issues found: 0
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 100/100 ✅
+- Status: pass
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-stripe">
+<summary><strong>Stripe MCP Server</strong> Security Assessment</summary>
+
+### Security Details: stripe
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 100/100 ❌
+- Status: not-applicable
+- Issues found: 0
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 50/100 ➖
+- Status: not-applicable
+
+**📋 Documentation**: 100/100 ✅
+- Status: pass
+
+
+</details>
+
+<details id="security-details-notion">
+<summary><strong>Notion MCP Server</strong> Security Assessment</summary>
+
+### Security Details: notion
+
+**🔍 MCP Security**: 90/100 ✅
+- Status: pass
+- Details: No tool poisoning indicators found (basic check)
+
+**📦 Dependencies**: 80/100 ⚠️
+- Status: warning
+- Issues found: 2
+
+**🐛 Static Analysis**: 70/100 ⚠️
+- Status: warning
+- Issues found: 0
+
+**🐳 Container**: 100/100 ✅
+- Status: pass
+
+**📋 Documentation**: 80/100 ⚠️
+- Status: warning
+
+
+</details>

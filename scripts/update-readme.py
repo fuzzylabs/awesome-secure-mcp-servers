@@ -69,8 +69,8 @@ class ReadmeGenerator:
         status = version.get('security_status', 'under-review')
         return self.security_badges.get(status, f'🔄 {status.title()}')
     
-    def get_security_score(self, version: Dict[str, Any]) -> str:
-        """Get formatted security score."""
+    def get_security_score(self, version: Dict[str, Any], server_slug: str) -> str:
+        """Get formatted security score with clickable details."""
         # Don't show scores for servers awaiting scan
         if self.is_awaiting_scan(version):
             return ""
@@ -78,19 +78,91 @@ class ReadmeGenerator:
         scan = version.get('security_scan', {})
         score = scan.get('overall_score')
         if score is not None:
-            return f" (Score: {score}/100)"
+            # Create expandable details section
+            details = self.generate_security_details(version, server_slug)
+            if details:
+                return f" ([📊 Score: {score}/100](#security-details-{server_slug}))"
+            else:
+                return f" (Score: {score}/100)"
         return ""
+    
+    def generate_security_details(self, version: Dict[str, Any], server_slug: str) -> str:
+        """Generate detailed security breakdown section."""
+        scan = version.get('security_scan', {})
+        if not scan:
+            return ""
+        
+        details = [f"### Security Details: {server_slug}", ""]
+        
+        # MCP Security Analysis
+        mcp_scan = scan.get('tool_poisoning_check', {})
+        if mcp_scan:
+            status = mcp_scan.get('status', 'unknown')
+            score = mcp_scan.get('score', 0)
+            details_text = mcp_scan.get('details', 'No details')
+            status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
+            details.append(f"**🔍 MCP Security**: {score}/100 {status_emoji}")
+            details.append(f"- Status: {status}")
+            details.append(f"- Details: {details_text}")
+            details.append("")
+        
+        # Dependency Scan
+        dep_scan = scan.get('dependency_scan', {})
+        if dep_scan:
+            status = dep_scan.get('status', 'unknown')
+            score = dep_scan.get('score', 0)
+            issues = dep_scan.get('issues_found', 0)
+            status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
+            details.append(f"**📦 Dependencies**: {score}/100 {status_emoji}")
+            details.append(f"- Status: {status}")
+            details.append(f"- Issues found: {issues}")
+            details.append("")
+        
+        # Static Analysis
+        static = scan.get('static_analysis', {})
+        if static:
+            status = static.get('status', 'unknown')
+            score = static.get('score', 0)
+            issues = static.get('issues_found', 0)
+            status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
+            details.append(f"**🐛 Static Analysis**: {score}/100 {status_emoji}")
+            details.append(f"- Status: {status}")
+            details.append(f"- Issues found: {issues}")
+            details.append("")
+        
+        # Container Security
+        container = scan.get('container_scan', {})
+        if container:
+            status = container.get('status', 'unknown')
+            score = container.get('score', 0)
+            status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌" if status == "fail" else "➖"
+            details.append(f"**🐳 Container**: {score}/100 {status_emoji}")
+            details.append(f"- Status: {status}")
+            details.append("")
+        
+        # Documentation
+        docs = scan.get('security_documentation', {})
+        if docs:
+            status = docs.get('status', 'unknown')
+            score = docs.get('score', 0)
+            status_emoji = "✅" if status == "pass" else "⚠️" if status == "warning" else "❌"
+            details.append(f"**📋 Documentation**: {score}/100 {status_emoji}")
+            details.append(f"- Status: {status}")
+            details.append("")
+        
+        return "\n".join(details)
     
     def generate_server_table_row(self, server: Dict[str, Any]) -> str:
         """Generate a table row for a server."""
         name = server.get('name', 'Unknown')
         repo = server.get('repository', '#')
         description = server.get('description', 'No description')
+        server_slug = server.get('slug', 'unknown')
         
         version_data = self.get_latest_version(server)
         version = version_data.get('version', 'N/A')
         security_status = self.format_security_status(version_data)
-        score = self.get_security_score(version_data)
+        score = self.get_security_score(version_data, server_slug)
         
         # Create clickable name with repository link
         name_link = f"[{name}]({repo})"
@@ -150,7 +222,7 @@ class ReadmeGenerator:
         return lines
     
     def generate_security_tables(self, servers_data: Dict[str, Any]) -> List[str]:
-        """Generate all security status tables."""
+        """Generate all security status tables and detailed breakdowns."""
         servers = servers_data.get('servers', [])
         categories = self.group_servers_by_category(servers)
         
@@ -171,6 +243,32 @@ class ReadmeGenerator:
         for category in category_order:
             if categories[category]:  # Only include categories with servers
                 lines.extend(self.generate_category_section(category, categories[category]))
+        
+        # Add security details sections for servers with scores
+        lines.extend([
+            "---",
+            "",
+            "## 📊 Detailed Security Assessments",
+            "",
+            "_Click on server scores above to jump to detailed security breakdowns:_",
+            "",
+        ])
+        
+        for server in servers:
+            version_data = self.get_latest_version(server)
+            if not self.is_awaiting_scan(version_data):
+                server_slug = server.get('slug', 'unknown')
+                details = self.generate_security_details(version_data, server_slug)
+                if details:
+                    lines.extend([
+                        f'<details id="security-details-{server_slug}">',
+                        f'<summary><strong>{server.get("name", "Unknown")}</strong> Security Assessment</summary>',
+                        "",
+                        details,
+                        "",
+                        "</details>",
+                        ""
+                    ])
         
         return lines
     
