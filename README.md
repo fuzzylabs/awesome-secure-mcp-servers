@@ -69,49 +69,49 @@ Help improve this project:
 
 ## Security Status by Category
 
-**Last Updated:** 2025-06-24 22:02 UTC  
+**Last Updated:** 2025-06-25 09:30 UTC  
 **Total Servers:** 16
 
 ### Official Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | 🛡️ Verified Secure (Score: 93/100) | Reference server demonstrating all MCP features |
-| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | 🔄 Under Review (Score: 50/100) | Web content fetching and conversion for efficient LLM usage |
-| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional (Score: 78/100) | Secure file operations with configurable access controls |
-| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | 🔄 Under Review (Score: 50/100) | Tools to read, search, and manipulate Git repositories |
-| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | 🔄 Under Review (Score: 50/100) | Persistent memory using a local knowledge graph |
-| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | 🔄 Under Review (Score: 50/100) | Dynamic and reflective problem-solving through thought sequences |
-| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | 🔄 Under Review (Score: 50/100) | Time and timezone conversion capabilities |
+| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | ⚠️ Conditional (Score: 80/100) | Reference server demonstrating all MCP features |
+| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | ⚠️ Conditional (Score: 80/100) | Web content fetching and conversion for efficient LLM usage |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional (Score: 80/100) | Secure file operations with configurable access controls |
+| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | ⚠️ Conditional (Score: 80/100) | Tools to read, search, and manipulate Git repositories |
+| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | ⚠️ Conditional (Score: 80/100) | Persistent memory using a local knowledge graph |
+| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | ⚠️ Conditional (Score: 80/100) | Dynamic and reflective problem-solving through thought sequences |
+| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | ⚠️ Conditional (Score: 80/100) | Time and timezone conversion capabilities |
 
 ### Enterprise Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [AWS MCP Server](https://github.com/aws/aws-mcp-server) | 1.2.0 | 🔄 Under Review (Score: 50/100) | AWS service integration with IAM controls |
-| [Docker Server](https://github.com/docker/mcp-docker) | 1.5.2 | ⚠️ Conditional (Score: 78/100) | Docker container management with security controls |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | 🔄 Under Review (Score: 50/100) | GitHub's official MCP Server for repository management |
-| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | 🔄 Under Review (Score: 50/100) | Notion official MCP server for workspace integration |
-| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🔄 Under Review (Score: 50/100) | Interact with Stripe API for payments and financial data |
+| [AWS MCP Server](https://github.com/awslabs/mcp) | 1.2.0 | ⏳ Awaiting Scan | AWS service integration with IAM controls |
+| [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | ⏳ Awaiting Scan | Docker container management with security controls |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional (Score: 78/100) | GitHub's official MCP Server for repository management |
+| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional (Score: 83/100) | Notion official MCP server for workspace integration |
+| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure (Score: 85/100) | Interact with Stripe API for payments and financial data |
 
 ### Security Tools
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure (Score: 88/100) | Template-based vulnerability scanner with extensive security checks |
+| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure (Score: 85/100) | Template-based vulnerability scanner with extensive security checks |
 
 ### Community Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [PostgreSQL MCP Server](https://github.com/postgres/mcp-postgres) | 0.4.2 | 🔄 Under Review (Score: 50/100) | PostgreSQL database operations and query execution |
-| [Slack MCP Server](https://github.com/slack-samples/mcp-slack) | 1.0.3 | 🔄 Under Review (Score: 50/100) | Slack workspace integration for messaging and collaboration |
+| [PostgreSQL MCP Server](https://github.com/crystaldba/postgres-mcp) | 0.4.2 | ⏳ Awaiting Scan | PostgreSQL database operations and query execution |
+| [Slack MCP Server](https://github.com/korotovsky/slack-mcp-server) | 1.0.3 | ⏳ Awaiting Scan | Slack workspace integration for messaging and collaboration |
 
 ### Under Review
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | 🔄 Under Review (Score: 58/100) | Desktop automation with screen capture and input control |
+| [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
 
 ## Critical Disclaimers
 

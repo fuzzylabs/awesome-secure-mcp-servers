@@ -23,7 +23,8 @@ class ReadmeGenerator:
             'conditional': '⚠️ Conditional', 
             'under-review': '🔄 Under Review',
             'not-recommended': '❌ Not Recommended',
-            'deprecated': '🗑️ Deprecated'
+            'deprecated': '🗑️ Deprecated',
+            'awaiting-scan': '⏳ Awaiting Scan'
         }
         
     def load_servers_data(self, servers_file: str) -> Dict[str, Any]:
@@ -53,13 +54,27 @@ class ReadmeGenerator:
         # Fall back to first version (assuming sorted by recency)
         return versions[0]
     
+    def is_awaiting_scan(self, version: Dict[str, Any]) -> bool:
+        """Check if server is awaiting scan (repository not available)."""
+        scan = version.get('security_scan', {})
+        static_analysis = scan.get('static_analysis', {})
+        return static_analysis.get('details', '').strip() == 'Repository not available'
+    
     def format_security_status(self, version: Dict[str, Any]) -> str:
         """Format security status with badge."""
+        # Check if this is an unscanned server (repository not available)
+        if self.is_awaiting_scan(version):
+            return self.security_badges['awaiting-scan']
+        
         status = version.get('security_status', 'under-review')
         return self.security_badges.get(status, f'🔄 {status.title()}')
     
     def get_security_score(self, version: Dict[str, Any]) -> str:
         """Get formatted security score."""
+        # Don't show scores for servers awaiting scan
+        if self.is_awaiting_scan(version):
+            return ""
+        
         scan = version.get('security_scan', {})
         score = scan.get('overall_score')
         if score is not None:

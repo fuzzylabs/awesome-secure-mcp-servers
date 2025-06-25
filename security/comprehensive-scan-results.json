@@ -1,0 +1,941 @@
+{
+  "scan_timestamp": "2025-06-25T08:03:45.911773+00:00",
+  "scanner_version": "1.2.0",
+  "total_servers_scanned": 16,
+  "results": [
+    {
+      "server_name": "Everything (Reference Server)",
+      "server_slug": "everything-reference",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/everything",
+      "scan_timestamp": "2025-06-25T08:03:45.911961+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "scan_date": "2025-06-25T08:03:46.728313+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Filesystem Server",
+      "server_slug": "filesystem",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "scan_timestamp": "2025-06-25T08:03:47.309696+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "scan_date": "2025-06-25T08:03:49.058342+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Nuclei Security Scanner",
+      "server_slug": "nuclei-scanner",
+      "repository": "https://github.com/cyproxio/mcp-for-security/tree/main/nuclei",
+      "scan_timestamp": "2025-06-25T08:03:49.559602+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "scan_date": "2025-06-25T08:03:50.359242+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Static analysis partially failed: 'SecurityScanner' object has no attribute '_run_eslint_security'",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "No recognized dependency files found",
+            "score": 100,
+            "issues_found": 0,
+            "vulnerabilities": []
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "MCP-scan found no security issues in 1 configuration file(s)",
+            "score": 95,
+            "issues_found": 0,
+            "scan_results": {
+              "/var/folders/8t/kxl_vqv90lb9r4r9ky_hg5280000gn/T/mcp-scan-mcp-for-security-0l8hndym/smuggler-mcp/mcp.json": {
+                "error": "Scan failed: Installed 102 packages in 193ms\nTraceback (most recent call last):\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ~~~^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ~~~~^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tom/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/asyncio/runners.py\", line 195, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"/Users/tom/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"/Users/tom/.local/share/uv/python/cpython-3.13.5-macos-aarch64-none/lib/python3.13/asyncio/base_events.py\", line 725, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ~~~~~~~~~~^^\n  File \"/Users/tom/.cache/uv/archive-v0/lVfFIjPiaRx_pvfZDlQl1/lib/python3.13/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ~~~~^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+              }
+            }
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "warning",
+            "details": "No dedicated security documentation found",
+            "score": 80,
+            "documentation_found": [
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": [
+              "Dedicated security documentation"
+            ]
+          },
+          "overall_score": 85,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Docker Server",
+      "server_slug": "docker-server",
+      "repository": "https://github.com/docker/mcp-docker",
+      "scan_timestamp": "2025-06-25T08:03:55.241351+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "1.5.2",
+          "scan_date": "2025-06-25T08:03:55.922630+00:00",
+          "static_analysis": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "mcp_security_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "overall_score": 50,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities",
+            "Address MCP-specific security issues identified by mcp-scan",
+            "Improve container security configuration",
+            "Add comprehensive security documentation",
+            "Consider additional security review before recommendation"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Anthropic Computer Use",
+      "server_slug": "anthropic-computer-use",
+      "repository": "https://github.com/anthropics/anthropic-computer-use",
+      "scan_timestamp": "2025-06-25T08:03:55.922840+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "scan_date": "2025-06-25T08:03:56.714831+00:00",
+          "static_analysis": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "mcp_security_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "overall_score": 50,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities",
+            "Address MCP-specific security issues identified by mcp-scan",
+            "Improve container security configuration",
+            "Add comprehensive security documentation",
+            "Consider additional security review before recommendation"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Fetch Server",
+      "server_slug": "fetch",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "scan_timestamp": "2025-06-25T08:03:56.714952+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.3.2",
+          "scan_date": "2025-06-25T08:03:57.730253+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Git Server",
+      "server_slug": "git",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+      "scan_timestamp": "2025-06-25T08:03:58.244340+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "scan_date": "2025-06-25T08:03:59.115836+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Memory Server",
+      "server_slug": "memory",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "scan_timestamp": "2025-06-25T08:03:59.613128+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.1.3",
+          "scan_date": "2025-06-25T08:04:00.371873+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Sequential Thinking Server",
+      "server_slug": "sequential-thinking",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "scan_timestamp": "2025-06-25T08:04:00.893623+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "scan_date": "2025-06-25T08:04:01.682602+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Time Server",
+      "server_slug": "time",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "scan_timestamp": "2025-06-25T08:04:02.174726+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "scan_date": "2025-06-25T08:04:03.017287+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 80,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "GitHub MCP Server",
+      "server_slug": "github",
+      "repository": "https://github.com/github/github-mcp-server",
+      "scan_timestamp": "2025-06-25T08:04:03.509499+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "scan_date": "2025-06-25T08:04:04.398563+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Semgrep not available for security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Go dependency scanning not yet implemented",
+            "score": 50,
+            "issues_found": 0,
+            "vulnerabilities": []
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "pass",
+            "details": "Container configuration appears secure",
+            "score": 100,
+            "issues_found": 0,
+            "security_issues": []
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 78,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Stripe MCP Server",
+      "server_slug": "stripe",
+      "repository": "https://github.com/stripe/agent-toolkit",
+      "scan_timestamp": "2025-06-25T08:04:04.442188+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "scan_date": "2025-06-25T08:04:05.344481+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Bandit not available for Python security analysis",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "No recognized dependency files found",
+            "score": 100,
+            "issues_found": 0,
+            "vulnerabilities": []
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "No container configurations found",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "pass",
+            "details": "Security documentation is adequate",
+            "score": 100,
+            "documentation_found": [
+              "SECURITY.md",
+              "security.md",
+              "Security.md",
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": []
+          },
+          "overall_score": 85,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Improve container security configuration"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Notion MCP Server",
+      "server_slug": "notion",
+      "repository": "https://github.com/makenotion/notion-mcp-server",
+      "scan_timestamp": "2025-06-25T08:04:05.392286+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "scan_date": "2025-06-25T08:04:06.261603+00:00",
+          "static_analysis": {
+            "status": "warning",
+            "details": "Static analysis partially failed: 'SecurityScanner' object has no attribute '_run_eslint_security'",
+            "score": 70,
+            "issues_found": 0,
+            "tools_used": []
+          },
+          "dependency_scan": {
+            "status": "warning",
+            "details": "Found 2 vulnerability/vulnerabilities in dependencies",
+            "score": 80,
+            "issues_found": 2,
+            "vulnerabilities": {
+              "info": 0,
+              "low": 1,
+              "moderate": 0,
+              "high": 0,
+              "critical": 0,
+              "total": 1
+            }
+          },
+          "mcp_security_scan": {
+            "status": "pass",
+            "details": "No tool poisoning indicators found (basic check)",
+            "score": 90,
+            "issues_found": 0,
+            "suspicious_patterns": []
+          },
+          "container_scan": {
+            "status": "pass",
+            "details": "Container configuration appears secure",
+            "score": 100,
+            "issues_found": 0,
+            "security_issues": []
+          },
+          "security_documentation_check": {
+            "status": "warning",
+            "details": "No dedicated security documentation found",
+            "score": 80,
+            "documentation_found": [
+              "README.md (security section)",
+              "readme.md (security section)",
+              "Readme.md (security section)"
+            ],
+            "missing_documentation": [
+              "Dedicated security documentation"
+            ]
+          },
+          "overall_score": 83,
+          "recommendations": [
+            "Address static analysis security findings"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "Slack MCP Server",
+      "server_slug": "slack",
+      "repository": "https://github.com/slack-samples/mcp-slack",
+      "scan_timestamp": "2025-06-25T08:04:06.725933+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "scan_date": "2025-06-25T08:04:07.318936+00:00",
+          "static_analysis": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "mcp_security_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "overall_score": 50,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities",
+            "Address MCP-specific security issues identified by mcp-scan",
+            "Improve container security configuration",
+            "Add comprehensive security documentation",
+            "Consider additional security review before recommendation"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "PostgreSQL MCP Server",
+      "server_slug": "postgresql",
+      "repository": "https://github.com/postgres/mcp-postgres",
+      "scan_timestamp": "2025-06-25T08:04:07.319067+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "0.4.2",
+          "scan_date": "2025-06-25T08:04:07.925453+00:00",
+          "static_analysis": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "mcp_security_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "overall_score": 50,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities",
+            "Address MCP-specific security issues identified by mcp-scan",
+            "Improve container security configuration",
+            "Add comprehensive security documentation",
+            "Consider additional security review before recommendation"
+          ]
+        }
+      ]
+    },
+    {
+      "server_name": "AWS MCP Server",
+      "server_slug": "aws",
+      "repository": "https://github.com/aws/aws-mcp-server",
+      "scan_timestamp": "2025-06-25T08:04:07.925606+00:00",
+      "scanner_version": "1.2.0",
+      "versions": [
+        {
+          "version": "1.2.0",
+          "scan_date": "2025-06-25T08:04:08.550388+00:00",
+          "static_analysis": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "dependency_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "mcp_security_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "container_scan": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "security_documentation_check": {
+            "status": "not-applicable",
+            "details": "Repository not available",
+            "score": 50
+          },
+          "overall_score": 50,
+          "recommendations": [
+            "Address static analysis security findings",
+            "Update dependencies to fix known vulnerabilities",
+            "Address MCP-specific security issues identified by mcp-scan",
+            "Improve container security configuration",
+            "Add comprehensive security documentation",
+            "Consider additional security review before recommendation"
+          ]
+        }
+      ]
+    }
+  ]
+}
