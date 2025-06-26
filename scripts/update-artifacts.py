@@ -366,12 +366,16 @@ class ArtifactsUpdater:
         if start_idx == -1:
             return len(lines) - 1, len(lines) - 1
 
-        end_markers = ["---", "## 📊 Detailed Security Assessments"]
+        # Find the end after security assessments section ends
+        end_markers = ["</details>"]
         end_idx = len(lines)
+        in_assessments = False
         for i in range(start_idx + 1, len(lines)):
-            if any(marker in lines[i] for marker in end_markers):
-                end_idx = i
-                break
+            if "## 📊 Detailed Security Assessments" in lines[i]:
+                in_assessments = True
+            elif in_assessments and lines[i].strip() == "</details>":
+                # Look for the last closing details tag
+                end_idx = i + 1
         return start_idx, end_idx
 
 def main():
