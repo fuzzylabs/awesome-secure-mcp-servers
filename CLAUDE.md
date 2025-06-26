@@ -25,16 +25,35 @@ The security validation system consists of three main components:
 
 ### Security Status Scoring
 Each server version receives a weighted security score (0-100) based on:
-- Static Analysis (25%)
-- Dependency Scan (25%) 
-- Tool Poisoning Check (30%) - MCP-specific security concern
-- Container Security (10%)
-- Security Documentation (10%)
+- MCP-Specific Security (35%) - Tool poisoning detection using mcp-scan from Invariant Labs
+- Dependencies (25%) - Known CVE scanning of package.json, requirements.txt, etc.
+- Static Analysis (20%) - Code vulnerability scanning (Bandit, ESLint, Semgrep)
+- Container Security (10%) - Dockerfile and container configuration analysis
+- Security Documentation (10%) - Presence of SECURITY.md and vulnerability reporting
 
 Scores map to security statuses: Verified Secure (🛡️ 85-100), Conditional (⚠️ 70-84), Under Review (🔄 50-69), Not Recommended (❌ 0-49).
 
 ## Common Commands
 
+### Using Makefile (Recommended)
+```bash
+# Validate data integrity and schema compliance
+make validate
+
+# Run all pipeline steps
+make all
+
+# Update artifacts (data and README) with scan results
+make update
+
+# Generate security report
+make report
+
+# Clean generated files
+make clean
+```
+
+### Legacy npm commands
 ```bash
 # Validate data integrity and schema compliance
 npm run validate
@@ -59,6 +78,9 @@ npm run lint
 ```bash
 # Scan specific server by slug
 python scripts/security-scanner.py --input data/servers.json --output security/scan-results.json --server-slug filesystem
+
+# Update artifacts with scan results (replaces separate update scripts)
+python scripts/update-artifacts.py --servers data/servers.json --scan-results security/scan-results.json --readme README.md
 
 # Generate report from existing scan results
 python scripts/generate-report.py --scan-results security/scan-results.json --output security/security-report.md
@@ -106,11 +128,14 @@ New versions trigger the security validation pipeline:
 
 ## Tool Poisoning Detection
 
-This repository includes specialized detection for MCP-specific "tool poisoning" attacks where malicious instructions are embedded in tool descriptions. The scanner checks for patterns like:
-- "ignore previous instructions"
-- Hidden Unicode characters
-- Malicious comments or metadata
-- Social engineering patterns
+This repository includes specialized detection for MCP-specific "tool poisoning" attacks where malicious instructions are embedded in tool descriptions. The security pipeline uses:
+
+1. **mcp-scan tool** (Invariant Labs): Specialized MCP security scanner that validates configuration files and detects protocol-specific vulnerabilities
+2. **Pattern-based detection**: Checks for common attack patterns like:
+   - "ignore previous instructions"
+   - Hidden Unicode characters
+   - Malicious comments or metadata
+   - Social engineering patterns
 
 ## Security Validation Requirements
 
@@ -122,7 +147,19 @@ When reviewing or adding servers, ensure they meet the security criteria defined
 
 ## Development Notes
 
-- Always run `npm run validate` before committing changes to `data/servers.json`
-- Security scanner requires Python 3.8+ and various security tools (bandit, safety, semgrep)
-- Node.js 16+ required for validation scripts
+- Always run `make validate` (or `npm run validate`) before committing changes to `data/servers.json`
+- Security scanner requires Python 3.8+ and various security tools (bandit, safety, semgrep, mcp-scan)
+- Node.js 16+ required for validation scripts  
+- Use `make all` to run the complete pipeline: validate → discover → process → scan → update → report
+- The consolidated `scripts/update-artifacts.py` replaces separate update-security-data.py and update-readme.py scripts
+- Security assessments include actionable recommendations and links to security details
 - The repository is designed to be defensive-security focused only - never add servers with offensive capabilities
+
+## Current Infrastructure Status
+
+- **16 MCP servers** currently tracked with real security scan results
+- **Automated scanning pipeline** running weekly via GitHub Actions
+- **Script consolidation** completed with Makefile orchestration (PR #5)
+- **Enhanced README** with clickable security scores and detailed assessments
+- **"Awaiting Scan" status** for repositories that are currently inaccessible
+- **mcp-scan integration** for MCP-specific threat detection
