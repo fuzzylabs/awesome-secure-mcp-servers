@@ -1,6 +1,6 @@
 # Makefile for Awesome Secure MCP Servers
 
-.PHONY: all discover process scan update report validate
+.PHONY: all discover process scan update report validate test test-validation
 
 # Configuration
 PYTHON = python3
@@ -41,6 +41,14 @@ update:
 report:
 	@echo "Generating report..."
 	$(PYTHON) $(SCRIPTS_DIR)/generate-report.py --scan-results $(SCAN_RESULTS) --output $(REPORT)
+
+test:
+	@echo "Running tests..."
+	$(PYTHON) test_runner.py
+
+test-validation:
+	@echo "Running validation tests..."
+	$(PYTHON) -m unittest tests.test_validate -v
 
 clean:
 	@echo "Cleaning up generated files..."

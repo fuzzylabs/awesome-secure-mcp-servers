@@ -1,0 +1,1 @@
+# Test package for awesome-secure-mcp-servers

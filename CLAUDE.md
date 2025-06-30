@@ -35,6 +35,20 @@ Scores map to security statuses: Verified Secure (🛡️ 85-100), Conditional (
 
 ## Common Commands
 
+### Testing Commands
+```bash
+# Run all basic functionality tests
+make test
+npm test
+
+# Run validation-specific tests  
+make test-validation
+npm run test-validation
+
+# Run complete test suite (requires proper imports)
+npm run test-full
+```
+
 ### Using Makefile (Recommended)
 ```bash
 # Validate data integrity and schema compliance
@@ -63,9 +77,6 @@ npm run security-scan
 
 # Generate human-readable security reports
 npm run generate-report
-
-# Run all tests (currently just validation)
-npm test
 
 # Lint JavaScript code
 npm run lint
@@ -145,8 +156,57 @@ When reviewing or adding servers, ensure they meet the security criteria defined
 - Authorization controls
 - Security documentation completeness
 
+## Testing Infrastructure
+
+### Test Coverage
+
+This project includes comprehensive tests to ensure the security infrastructure works correctly:
+
+- **Data Validation Tests** (`tests/test_validate.py`)
+  - Schema validation with actual project files
+  - Duplicate detection (slugs, names)
+  - Version format validation
+  - Error handling for invalid data
+
+- **Update Artifacts Tests** (`tests/test_update_artifacts.py`)
+  - README generation without duplication
+  - Security score calculations and mappings
+  - Section boundary detection
+  - Dry-run mode functionality
+  - Security assessment formatting
+
+- **Security Scanner Tests** (`tests/test_security_scanner.py`)
+  - Score calculation and weighting
+  - Tool integration (Bandit, Safety, mcp-scan)
+  - Error handling for unavailable repositories
+  - Docker security scanning
+  - Tool poisoning detection
+
+- **Basic Functionality Tests** (`test_runner.py`)
+  - Core component functionality verification
+  - Project data validation
+  - Makefile command testing
+
+### Testing Requirements
+
+When adding new features or making changes:
+
+1. **Create corresponding tests** for new scripts in `tests/` directory
+2. **Follow naming conventions**: `test_<script_name>.py`
+3. **Include both success and error cases** in test coverage
+4. **Run test suite before committing**: `make test`
+5. **Update test documentation** in both README.md and CLAUDE.md
+
+### Test Execution
+
+Tests use Python's unittest framework and can be run via:
+- `make test` - Basic functionality tests
+- `make test-validation` - Data validation tests specifically
+- `npm run test-full` - Complete test suite (requires imports)
+
 ## Development Notes
 
+- **Always run `make test`** before committing any changes
 - Always run `make validate` (or `npm run validate`) before committing changes to `data/servers.json`
 - Security scanner requires Python 3.8+ and various security tools (bandit, safety, semgrep, mcp-scan)
 - Node.js 16+ required for validation scripts  
@@ -154,6 +214,38 @@ When reviewing or adding servers, ensure they meet the security criteria defined
 - The consolidated `scripts/update-artifacts.py` replaces separate update-security-data.py and update-readme.py scripts
 - Security assessments include actionable recommendations and links to security details
 - The repository is designed to be defensive-security focused only - never add servers with offensive capabilities
+
+## Documentation Maintenance
+
+**⚠️ Critical Requirement**: When adding new features or making changes to the codebase:
+
+### Required Documentation Updates
+
+1. **Always update README.md** with:
+   - New functionality and commands
+   - Usage instructions and examples
+   - Test coverage information
+   - Contributing guidelines
+
+2. **Always update CLAUDE.md** with:
+   - Development notes and architecture changes
+   - Testing requirements and procedures
+   - New script descriptions and usage
+   - Infrastructure status updates
+
+3. **Version tracking** in both documentation files:
+   - Update Current Infrastructure Status section
+   - Document script changes and consolidations
+   - Note any breaking changes or deprecations
+
+### Documentation Standards
+
+- **Keep examples current**: Update command examples when scripts change
+- **Maintain accuracy**: Ensure documentation reflects actual implementation
+- **Include context**: Explain why changes were made, not just what changed
+- **Test instructions**: Verify all documented commands actually work
+
+This ensures the documentation stays synchronized with the codebase and new contributors can understand the current state of the project.
 
 ## Current Infrastructure Status
 
@@ -163,3 +255,4 @@ When reviewing or adding servers, ensure they meet the security criteria defined
 - **Enhanced README** with clickable security scores and detailed assessments
 - **"Awaiting Scan" status** for repositories that are currently inaccessible
 - **mcp-scan integration** for MCP-specific threat detection
+- **Comprehensive testing infrastructure** with unit tests for all major scripts

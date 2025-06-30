@@ -496,3 +496,103 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 </details>
 
+
+---
+
+## 🧪 Testing
+
+This project includes comprehensive tests to ensure the security infrastructure works correctly:
+
+### Running Tests
+
+```bash
+# Run all basic functionality tests
+make test
+npm test
+
+# Run validation-specific tests  
+make test-validation
+npm run test-validation
+
+# Run complete test suite (requires proper imports)
+npm run test-full
+```
+
+### Test Coverage
+
+- **Data Validation Tests** (`tests/test_validate.py`)
+  - Schema validation with actual project files
+  - Duplicate detection (slugs, names)
+  - Version format validation
+  - Error handling for invalid data
+
+- **Update Artifacts Tests** (`tests/test_update_artifacts.py`)
+  - README generation without duplication
+  - Security score calculations and mappings
+  - Section boundary detection
+  - Dry-run mode functionality
+  - Security assessment formatting
+
+- **Security Scanner Tests** (`tests/test_security_scanner.py`)
+  - Score calculation and weighting
+  - Tool integration (Bandit, Safety, mcp-scan)
+  - Error handling for unavailable repositories
+  - Docker security scanning
+  - Tool poisoning detection
+
+### Adding New Tests
+
+When adding new features or scripts:
+
+1. Create corresponding test files in `tests/`
+2. Follow the naming convention `test_<script_name>.py`
+3. Include tests for both success and error cases
+4. Update this README with test descriptions
+5. Ensure tests pass with `make test`
+
+---
+
+## 📖 About This Project
+
+### Methodology
+
+Our security validation process combines multiple approaches:
+
+1. **Automated Scanning**: Static analysis, dependency checks, and container security
+2. **MCP-Specific Analysis**: Tool poisoning detection using specialized mcp-scan tool
+3. **Manual Review**: Architecture assessment and security documentation review
+4. **Continuous Monitoring**: Regular rescans and vulnerability tracking
+
+### Security Scoring
+
+Each server receives a weighted score (0-100) based on:
+- **MCP-Specific Security** (35%): Tool poisoning and protocol-specific threats
+- **Dependencies** (25%): Known CVE scanning of third-party packages  
+- **Static Analysis** (20%): Code vulnerability detection
+- **Container Security** (10%): Docker configuration analysis
+- **Documentation** (10%): Security guidelines and reporting processes
+
+### Contributing
+
+We welcome contributions\! Please:
+
+1. **Test your changes**: Run `make test` before submitting
+2. **Update documentation**: Keep README.md and CLAUDE.md current with new features
+3. **Follow security practices**: All servers must pass our validation pipeline
+4. **Validate data**: Use `make validate` to check data/servers.json changes
+
+### Repository Maintenance
+
+**⚠️ Important**: When adding new features or making changes:
+
+- **Always update README.md** with new functionality, commands, and usage instructions
+- **Always update CLAUDE.md** with development notes, architecture changes, and testing requirements
+- **Run the test suite** to ensure nothing breaks
+- **Update version tracking** in both documentation files
+
+This ensures the documentation stays synchronized with the codebase and new contributors can understand the current state of the project.
+
+### License
+
+MIT License - see [LICENSE](LICENSE) for details.
+EOF < /dev/null
