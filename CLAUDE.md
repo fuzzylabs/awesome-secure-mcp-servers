@@ -124,18 +124,30 @@ New versions trigger the security validation pipeline:
 
 ## GitHub Actions Workflows
 
+### Continuous Integration Pipeline (`ci.yml`)
+- **Triggers**: All pushes and PRs affecting code/tests
+- **Test Coverage**: Comprehensive test suite across Python 3.8-3.11
+- **Code Quality**: Linting and formatting checks
+- **Integration Tests**: Full pipeline simulation
+- **PR Comments**: Automated test result reporting
+
 ### Security Validation Pipeline (`security-scan.yml`)
-- Triggers on data changes, PRs, and weekly schedule
-- Runs automated security scans
-- Updates security badges in README.md
-- Creates issues for vulnerabilities
-- Comments scan results on PRs
+- **Triggers**: Data changes, PRs, and weekly schedule
+- **Test Integration**: Runs test suite before security scanning
+- **Security Scanning**: Automated vulnerability detection
+- **Artifact Updates**: README.md and security badge updates
+- **Issue Creation**: Automatic vulnerability reporting
 
 ### Version Monitoring (`version-monitor.yml`)
 - Daily checks for new MCP server versions
 - Creates PRs for new versions requiring validation
 - Manages stale version alerts
 - Cleans up old branches
+
+### Server Discovery (`server-discovery.yml`)
+- Weekly automated discovery of new MCP servers
+- Creates PRs for newly discovered servers
+- Manages discovery tracking and cleanup
 
 ## Tool Poisoning Detection
 

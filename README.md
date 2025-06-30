@@ -540,6 +540,17 @@ npm run test-full
   - Docker security scanning
   - Tool poisoning detection
 
+### CI/CD Integration
+
+Tests are automatically executed in GitHub Actions:
+
+- **All PRs and pushes** trigger comprehensive test suite via `ci.yml`
+- **Multiple Python versions** (3.8-3.11) ensure compatibility
+- **Code quality checks** including linting and formatting
+- **Integration testing** validates full pipeline functionality
+- **Test failure blocks** security scanning and deployment
+- **Coverage reporting** tracks test effectiveness
+
 ### Adding New Tests
 
 When adding new features or scripts:
