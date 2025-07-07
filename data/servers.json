@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-06-30T06:02:56Z",
+  "last_updated": "2025-07-07T06:02:47Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,7 +20,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:06.264Z",
+            "scan_date": "2025-07-07T06:01:55.346Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -33,16 +33,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -52,7 +52,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -101,7 +101,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:07.669Z",
+            "scan_date": "2025-07-07T06:01:56.698Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -114,16 +114,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -133,7 +133,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -181,7 +181,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:08.972Z",
+            "scan_date": "2025-07-07T06:01:57.906Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -203,16 +203,18 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-dlpztn8e/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: Installed 103 packages in 56ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/y0dCpfmwxKCm6Yw5CLUiZ/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+                "/tmp/mcp-scan-mcp-for-security-4vt4ohcj/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: Installed 103 packages in 66ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
                 }
               }
             },
-            "overall_score": 85,
+            "overall_score": 90,
             "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
+              "status": "pass",
+              "details": "Container configuration appears secure",
+              "score": 100,
+              "issues_found": 0,
+              "security_issues": []
             },
             "security_documentation": {
               "status": "warning",
@@ -257,7 +259,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:12.227Z",
+            "scan_date": "2025-07-07T06:02:00.997Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -330,7 +332,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:12.626Z",
+            "scan_date": "2025-07-07T06:02:01.323Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -390,7 +392,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:13.081Z",
+            "scan_date": "2025-07-07T06:02:01.648Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -403,16 +405,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -422,7 +424,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -471,7 +473,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:14.374Z",
+            "scan_date": "2025-07-07T06:02:02.834Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -484,16 +486,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -503,7 +505,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -552,7 +554,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:15.673Z",
+            "scan_date": "2025-07-07T06:02:04.028Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -565,16 +567,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -584,7 +586,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -633,7 +635,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:16.997Z",
+            "scan_date": "2025-07-07T06:02:05.213Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -646,16 +648,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -665,7 +667,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -714,7 +716,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:18.322Z",
+            "scan_date": "2025-07-07T06:02:06.450Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -727,16 +729,16 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 2 vulnerability/vulnerabilities in dependencies",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 60,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
                 "moderate": 0,
-                "high": 0,
+                "high": 1,
                 "critical": 0,
-                "total": 1
+                "total": 2
               }
             },
             "tool_poisoning_check": {
@@ -746,7 +748,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
+            "overall_score": 73,
             "container_scan": {
               "status": "not-applicable",
               "details": "No container configurations found",
@@ -795,7 +797,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:19.681Z",
+            "scan_date": "2025-07-07T06:02:07.696Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -871,7 +873,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:29.955Z",
+            "scan_date": "2025-07-07T06:02:18.820Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -945,7 +947,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:30.798Z",
+            "scan_date": "2025-07-07T06:02:19.559Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -1027,7 +1029,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:31.813Z",
+            "scan_date": "2025-07-07T06:02:20.378Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -1102,7 +1104,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:32.254Z",
+            "scan_date": "2025-07-07T06:02:20.771Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -1179,7 +1181,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-06-30T06:02:34.467Z",
+            "scan_date": "2025-07-07T06:02:22.804Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
