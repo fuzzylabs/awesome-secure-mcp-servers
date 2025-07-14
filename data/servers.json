@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-07-07T06:02:47Z",
+  "last_updated": "2025-07-14T06:03:07Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,7 +20,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:01:55.346Z",
+            "scan_date": "2025-07-14T06:02:06.516Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -101,7 +101,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:01:56.698Z",
+            "scan_date": "2025-07-14T06:02:07.881Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -181,7 +181,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:01:57.906Z",
+            "scan_date": "2025-07-14T06:02:09.093Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -199,12 +199,15 @@
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-4vt4ohcj/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: Installed 103 packages in 66ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/2vQo1jPzBZ0LP_2tZNEH0/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+                "/tmp/mcp-scan-mcp-for-security-tg2wtc9i/mcp-config.json": {
+                  "error": "Scan failed: Installed 103 packages in 68ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+                },
+                "/tmp/mcp-scan-mcp-for-security-tg2wtc9i/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: Installed 103 packages in 69ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
                 }
               }
             },
@@ -259,7 +262,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:00.997Z",
+            "scan_date": "2025-07-14T06:02:15.062Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -332,7 +335,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:01.323Z",
+            "scan_date": "2025-07-14T06:02:15.392Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -392,7 +395,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:01.648Z",
+            "scan_date": "2025-07-14T06:02:15.705Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -473,7 +476,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:02.834Z",
+            "scan_date": "2025-07-14T06:02:17.735Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -554,7 +557,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:04.028Z",
+            "scan_date": "2025-07-14T06:02:18.943Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -635,7 +638,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:05.213Z",
+            "scan_date": "2025-07-14T06:02:20.148Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -716,7 +719,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:06.450Z",
+            "scan_date": "2025-07-14T06:02:21.374Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -797,7 +800,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:07.696Z",
+            "scan_date": "2025-07-14T06:02:22.632Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -873,7 +876,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:18.820Z",
+            "scan_date": "2025-07-14T06:02:33.564Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -947,7 +950,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:19.559Z",
+            "scan_date": "2025-07-14T06:02:34.280Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -1029,7 +1032,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:20.378Z",
+            "scan_date": "2025-07-14T06:02:35.280Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -1052,7 +1055,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 76,
+            "overall_score": 78,
             "container_scan": {
               "status": "pass",
               "details": "Container configuration appears secure",
@@ -1061,15 +1064,14 @@
               "security_issues": []
             },
             "security_documentation": {
-              "status": "warning",
-              "details": "No dedicated security documentation found",
-              "score": 80,
+              "status": "pass",
+              "details": "Security documentation is adequate",
+              "score": 100,
               "documentation_found": [
+                "SECURITY.md",
                 "README.md (security section)"
               ],
-              "missing_documentation": [
-                "Dedicated security documentation"
-              ]
+              "missing_documentation": []
             }
           },
           "vulnerabilities": []
@@ -1104,7 +1106,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:20.771Z",
+            "scan_date": "2025-07-14T06:02:35.608Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -1181,7 +1183,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-07T06:02:22.804Z",
+            "scan_date": "2025-07-14T06:02:37.815Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
