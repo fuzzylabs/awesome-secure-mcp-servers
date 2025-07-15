@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-07-14T06:03:07Z",
+  "last_updated": "2025-07-15T09:35:12Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,15 +20,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:06.516Z",
+            "scan_date": "2025-07-15T09:34:14.279Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -52,22 +53,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -101,15 +87,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:07.881Z",
+            "scan_date": "2025-07-15T09:34:15.670Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -133,22 +120,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -181,13 +153,14 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:09.093Z",
+            "scan_date": "2025-07-15T09:34:16.997Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
               "details": "ESLint security scanning not available",
               "score": 70,
               "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": []
             },
             "dependency_scan": {
@@ -203,33 +176,15 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-tg2wtc9i/mcp-config.json": {
-                  "error": "Scan failed: Installed 103 packages in 68ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/lECFgDoOWkcGKf75F3TzM/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+                "/tmp/mcp-scan-mcp-for-security-f8xgoymr/mcp-config.json": {
+                  "error": "Scan failed: Installed 103 packages in 64ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/H4ljVYe4WN_9j0QMByDeU/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
                 },
-                "/tmp/mcp-scan-mcp-for-security-tg2wtc9i/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: Installed 103 packages in 69ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/4A9bsN5dlhVrpZH4Ce6Yg/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
+                "/tmp/mcp-scan-mcp-for-security-f8xgoymr/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: Installed 103 packages in 63ms\nTraceback (most recent call last):\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/bin/mcp-scan\", line 12, in <module>\n    sys.exit(run())\n             ^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/run.py\", line 7, in run\n    asyncio.run(main())\n                ^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/cli.py\", line 475, in main\n    asyncio.run(run_scan_inspect(args=args))\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 190, in run\n    return runner.run(main)\n           ^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/runners.py\", line 118, in run\n    return self._loop.run_until_complete(task)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/asyncio/base_events.py\", line 654, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/cli.py\", line 499, in run_scan_inspect\n    result = await scanner.scan()\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 210, in scan\n    result_awaited = await asyncio.gather(*result)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/MCPScanner.py\", line 193, in scan_path\n    path_result = await verify_scan_path(path_result, base_url=self.base_url, run_locally=self.local_only)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 99, in verify_scan_path\n    return await verify_scan_path_locally(scan_path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 76, in verify_scan_path_locally\n    policy = LocalPolicy.from_string(get_policy())\n                                     ^^^^^^^^^^^^\n  File \"/home/runner/.cache/uv/archive-v0/KpP8bYlAgRbaWWkODMuYP/lib/python3.11/site-packages/mcp_scan/verify_api.py\", line 61, in get_policy\n    with open(POLICY_PATH) as f:\n         ^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'src/mcp_scan/policy.gr'"
                 }
               }
             },
-            "overall_score": 90,
-            "container_scan": {
-              "status": "pass",
-              "details": "Container configuration appears secure",
-              "score": 100,
-              "issues_found": 0,
-              "security_issues": []
-            },
-            "security_documentation": {
-              "status": "warning",
-              "details": "No dedicated security documentation found",
-              "score": 80,
-              "documentation_found": [
-                "readme.md (security section)"
-              ],
-              "missing_documentation": [
-                "Dedicated security documentation"
-              ]
-            }
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -259,18 +214,19 @@
         {
           "version": "1.5.2",
           "release_date": "2024-11-15",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:15.062Z",
+            "scan_date": "2025-07-15T09:34:23.261Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
-              "details": "Bandit found 1 potential security issue(s)",
-              "score": 80,
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
               "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -287,22 +243,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 83,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "warning",
-              "details": "No security documentation found",
-              "score": 60,
-              "documentation_found": [],
-              "missing_documentation": [
-                "Security documentation",
-                "Security section in README"
-              ]
-            }
+            "overall_score": 91
           },
           "vulnerabilities": []
         }
@@ -335,7 +276,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:15.392Z",
+            "scan_date": "2025-07-15T09:34:23.592Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -352,17 +293,7 @@
               "details": "Repository not available",
               "score": 50
             },
-            "overall_score": 50,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "Repository not available",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "not-applicable",
-              "details": "Repository not available",
-              "score": 50
-            }
+            "overall_score": 50
           },
           "vulnerabilities": []
         }
@@ -395,15 +326,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:15.705Z",
+            "scan_date": "2025-07-15T09:34:23.927Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -427,22 +359,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -476,15 +393,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:17.735Z",
+            "scan_date": "2025-07-15T09:34:25.172Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -508,22 +426,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -557,15 +460,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:18.943Z",
+            "scan_date": "2025-07-15T09:34:26.462Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -589,22 +493,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -638,15 +527,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:20.148Z",
+            "scan_date": "2025-07-15T09:34:27.704Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -670,22 +560,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -719,15 +594,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:21.374Z",
+            "scan_date": "2025-07-15T09:34:28.943Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 24 potential security issue(s)",
-              "score": 60,
-              "issues_found": 24,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -751,22 +627,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 73,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -800,15 +661,16 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:22.632Z",
+            "scan_date": "2025-07-15T09:34:30.249Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Semgrep found 6 potential security issue(s)",
-              "score": 70,
-              "issues_found": 6,
+              "status": "pass",
+              "details": "No critical security vulnerabilities found",
+              "score": 100,
+              "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "semgrep"
+                "semgrep-critical"
               ]
             },
             "dependency_scan": {
@@ -825,24 +687,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
-            "container_scan": {
-              "status": "pass",
-              "details": "Container configuration appears secure",
-              "score": 100,
-              "issues_found": 0,
-              "security_issues": []
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 81
           },
           "vulnerabilities": []
         }
@@ -876,15 +721,16 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:33.564Z",
+            "scan_date": "2025-07-15T09:34:34.939Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
-              "details": "Bandit found 2 potential security issue(s)",
-              "score": 80,
-              "issues_found": 2,
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -901,22 +747,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 87,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 91
           },
           "vulnerabilities": []
         }
@@ -950,13 +781,14 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:34.280Z",
+            "scan_date": "2025-07-15T09:34:35.690Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
               "details": "ESLint security scanning not available",
               "score": 70,
               "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": []
             },
             "dependency_scan": {
@@ -980,25 +812,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 83,
-            "container_scan": {
-              "status": "pass",
-              "details": "Container configuration appears secure",
-              "score": 100,
-              "issues_found": 0,
-              "security_issues": []
-            },
-            "security_documentation": {
-              "status": "warning",
-              "details": "No dedicated security documentation found",
-              "score": 80,
-              "documentation_found": [
-                "README.md (security section)"
-              ],
-              "missing_documentation": [
-                "Dedicated security documentation"
-              ]
-            }
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -1032,13 +846,14 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:35.280Z",
+            "scan_date": "2025-07-15T09:34:36.650Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
               "details": "ESLint security scanning not available",
               "score": 70,
               "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": []
             },
             "dependency_scan": {
@@ -1055,24 +870,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 78,
-            "container_scan": {
-              "status": "pass",
-              "details": "Container configuration appears secure",
-              "score": 100,
-              "issues_found": 0,
-              "security_issues": []
-            },
-            "security_documentation": {
-              "status": "pass",
-              "details": "Security documentation is adequate",
-              "score": 100,
-              "documentation_found": [
-                "SECURITY.md",
-                "README.md (security section)"
-              ],
-              "missing_documentation": []
-            }
+            "overall_score": 77
           },
           "vulnerabilities": []
         }
@@ -1106,15 +904,16 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:35.608Z",
+            "scan_date": "2025-07-15T09:34:36.985Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "warning",
-              "details": "Bandit found 269 potential security issue(s)",
-              "score": 60,
-              "issues_found": 269,
+              "status": "fail",
+              "details": "Found 9 critical security issue(s)",
+              "score": 50,
+              "issues_found": 9,
+              "critical_issues": 9,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -1131,25 +930,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 86,
-            "container_scan": {
-              "status": "pass",
-              "details": "Container configuration appears secure",
-              "score": 100,
-              "issues_found": 0,
-              "security_issues": []
-            },
-            "security_documentation": {
-              "status": "warning",
-              "details": "No dedicated security documentation found",
-              "score": 80,
-              "documentation_found": [
-                "README.md (security section)"
-              ],
-              "missing_documentation": [
-                "Dedicated security documentation"
-              ]
-            }
+            "overall_score": 86
           },
           "vulnerabilities": []
         }
@@ -1180,18 +961,19 @@
         {
           "version": "1.2.0",
           "release_date": "2024-12-10",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-07-14T06:02:37.815Z",
+            "scan_date": "2025-07-15T09:34:40.145Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
               "details": "Bandit completed but output could not be parsed",
               "score": 70,
               "issues_found": 0,
+              "critical_issues": 0,
               "tools_used": [
-                "bandit"
+                "bandit-critical"
               ]
             },
             "dependency_scan": {
@@ -1208,23 +990,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 83,
-            "container_scan": {
-              "status": "not-applicable",
-              "details": "No container configurations found",
-              "score": 50
-            },
-            "security_documentation": {
-              "status": "warning",
-              "details": "No dedicated security documentation found",
-              "score": 80,
-              "documentation_found": [
-                "README.md (security section)"
-              ],
-              "missing_documentation": [
-                "Dedicated security documentation"
-              ]
-            }
+            "overall_score": 89
           },
           "vulnerabilities": []
         }

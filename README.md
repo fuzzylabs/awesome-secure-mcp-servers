@@ -28,43 +28,43 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2025-07-14 06:03 UTC  
+**Last Updated:** 2025-07-15 09:35 UTC  
 **Total Servers:** 16
 
 ### Official Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-everything-reference)) | Reference server demonstrating all MCP features |
-| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-fetch)) | Web content fetching and conversion for efficient LLM usage |
-| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-filesystem)) | Secure file operations with configurable access controls |
-| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-git)) | Tools to read, search, and manipulate Git repositories |
-| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-memory)) | Persistent memory using a local knowledge graph |
-| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-sequential-thinking)) | Dynamic and reflective problem-solving through thought sequences |
-| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | ⚠️ Conditional ([📊 Score: 73/100](#security-details-time)) | Time and timezone conversion capabilities |
+| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-everything-reference)) | Reference server demonstrating all MCP features |
+| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-fetch)) | Web content fetching and conversion for efficient LLM usage |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-filesystem)) | Secure file operations with configurable access controls |
+| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-git)) | Tools to read, search, and manipulate Git repositories |
+| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-memory)) | Persistent memory using a local knowledge graph |
+| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-sequential-thinking)) | Dynamic and reflective problem-solving through thought sequences |
+| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-time)) | Time and timezone conversion capabilities |
 
 ### Enterprise Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [AWS MCP Server](https://github.com/awslabs/mcp) | 1.2.0 | ⚠️ Conditional ([📊 Score: 83/100](#security-details-aws)) | AWS service integration with IAM controls |
-| [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | ⚠️ Conditional ([📊 Score: 83/100](#security-details-docker-server)) | Docker container management with security controls |
-| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional ([📊 Score: 78/100](#security-details-github)) | GitHub's official MCP Server for repository management |
-| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional ([📊 Score: 83/100](#security-details-notion)) | Notion official MCP server for workspace integration |
-| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-stripe)) | Interact with Stripe API for payments and financial data |
+| [AWS MCP Server](https://github.com/awslabs/mcp) | 1.2.0 | 🛡️ Verified Secure ([📊 Score: 89/100](#security-details-aws)) | AWS service integration with IAM controls |
+| [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | 🛡️ Verified Secure ([📊 Score: 91/100](#security-details-docker-server)) | Docker container management with security controls |
+| [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional ([📊 Score: 81/100](#security-details-github)) | GitHub's official MCP Server for repository management |
+| [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-notion)) | Notion official MCP server for workspace integration |
+| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 91/100](#security-details-stripe)) | Interact with Stripe API for payments and financial data |
 
 ### Security Tools
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 90/100](#security-details-nuclei-scanner)) | Template-based vulnerability scanner with extensive security checks |
+| [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-nuclei-scanner)) | Template-based vulnerability scanner with extensive security checks |
 
 ### Community Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [PostgreSQL MCP Server](https://github.com/crystaldba/postgres-mcp) | 0.4.2 | 🛡️ Verified Secure ([📊 Score: 86/100](#security-details-postgresql)) | PostgreSQL database operations and query execution |
-| [Slack MCP Server](https://github.com/korotovsky/slack-mcp-server) | 1.0.3 | ⚠️ Conditional ([📊 Score: 78/100](#security-details-slack)) | Slack workspace integration for messaging and collaboration |
+| [Slack MCP Server](https://github.com/korotovsky/slack-mcp-server) | 1.0.3 | ⚠️ Conditional ([📊 Score: 77/100](#security-details-slack)) | Slack workspace integration for messaging and collaboration |
 
 ### Under Review
 
@@ -81,7 +81,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-aws">
 <summary><strong>AWS MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -101,25 +101,13 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **0 potential issues found**
 - Bandit completed but output could not be parsed
 
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 80/100 ⚠️
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-⚠️ **0 potential issues found**
-- No dedicated security documentation found
-
 
 </details>
 
 <details id="security-details-docker-server">
 <summary><strong>Docker Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -133,23 +121,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - No recognized dependency files found
 
-**🐛 Code Security Analysis**: 80/100 ⚠️
+**🐛 Code Security Analysis**: 85/100 ⚠️
 *Static analysis for common security vulnerabilities in source code*
 
 ⚠️ **1 potential issues found**
-- Bandit found 1 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 60/100 ⚠️
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-⚠️ **0 potential issues found**
-- No security documentation found
+- Found 1 critical security issue(s)
 
 
 </details>
@@ -157,7 +133,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-everything-reference">
 <summary><strong>Everything (Reference Server)</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -171,23 +147,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -195,7 +159,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-fetch">
 <summary><strong>Fetch Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -209,23 +173,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -233,7 +185,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-filesystem">
 <summary><strong>Filesystem Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -247,23 +199,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -271,7 +211,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-git">
 <summary><strong>Git Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -285,23 +225,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -309,7 +237,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-github">
 <summary><strong>GitHub MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -323,23 +251,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - Go dependency scanning not yet implemented
 
-**🐛 Code Security Analysis**: 70/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **6 potential issues found**
-- Semgrep found 6 potential security issue(s)
-
-**🐳 Container Security**: 100/100 ✅
-*Analyzes Dockerfile and container configurations for security issues*
-
 ✅ **No issues found**
-- Container configuration appears secure
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -347,7 +263,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-memory">
 <summary><strong>Memory Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -361,23 +277,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -385,7 +289,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-notion">
 <summary><strong>Notion MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -405,25 +309,13 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - ESLint security scanning not available
 
-**🐳 Container Security**: 100/100 ✅
-*Analyzes Dockerfile and container configurations for security issues*
-
-✅ **No issues found**
-- Container configuration appears secure
-
-**📋 Security Documentation**: 80/100 ⚠️
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-⚠️ **0 potential issues found**
-- No dedicated security documentation found
-
 
 </details>
 
 <details id="security-details-nuclei-scanner">
 <summary><strong>Nuclei Security Scanner</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -443,25 +335,13 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - ESLint security scanning not available
 
-**🐳 Container Security**: 100/100 ✅
-*Analyzes Dockerfile and container configurations for security issues*
-
-✅ **No issues found**
-- Container configuration appears secure
-
-**📋 Security Documentation**: 80/100 ⚠️
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-⚠️ **0 potential issues found**
-- No dedicated security documentation found
-
 
 </details>
 
 <details id="security-details-postgresql">
 <summary><strong>PostgreSQL MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -475,23 +355,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - No recognized dependency files found
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 50/100 ❌
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **269 potential issues found**
-- Bandit found 269 potential security issue(s)
-
-**🐳 Container Security**: 100/100 ✅
-*Analyzes Dockerfile and container configurations for security issues*
-
-✅ **No issues found**
-- Container configuration appears secure
-
-**📋 Security Documentation**: 80/100 ⚠️
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-⚠️ **0 potential issues found**
-- No dedicated security documentation found
+❌ **9 critical issues found**
+- Found 9 critical security issue(s)
 
 
 </details>
@@ -499,7 +367,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-sequential-thinking">
 <summary><strong>Sequential Thinking Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -513,23 +381,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
@@ -537,7 +393,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-slack">
 <summary><strong>Slack MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -557,25 +413,13 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - ESLint security scanning not available
 
-**🐳 Container Security**: 100/100 ✅
-*Analyzes Dockerfile and container configurations for security issues*
-
-✅ **No issues found**
-- Container configuration appears secure
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-✅ **No issues found**
-- Security documentation is adequate
-
 
 </details>
 
 <details id="security-details-stripe">
 <summary><strong>Stripe MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -589,23 +433,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ➖ **Not applicable**
 - No recognized dependency files found
 
-**🐛 Code Security Analysis**: 80/100 ⚠️
+**🐛 Code Security Analysis**: 85/100 ⚠️
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **2 potential issues found**
-- Bandit found 2 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
-✅ **No issues found**
-- Security documentation is adequate
+⚠️ **1 potential issues found**
+- Found 1 critical security issue(s)
 
 
 </details>
@@ -613,7 +445,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-time">
 <summary><strong>Time Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-07-14
+### Security Assessment: 2025-07-15
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -627,26 +459,15 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ⚠️ **4 potential issues found**
 - Found 4 vulnerability/vulnerabilities in dependencies
 
-**🐛 Code Security Analysis**: 60/100 ⚠️
+**🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
 
-⚠️ **24 potential issues found**
-- Bandit found 24 potential security issue(s)
-
-**🐳 Container Security**: 50/100 ➖
-*Analyzes Dockerfile and container configurations for security issues*
-
-➖ **Not applicable**
-- No container configurations found
-
-**📋 Security Documentation**: 100/100 ✅
-*Checks for security guidelines, vulnerability reporting, and usage instructions*
-
 ✅ **No issues found**
-- Security documentation is adequate
+- No critical security vulnerabilities found
 
 
 </details>
+
 
 
 
