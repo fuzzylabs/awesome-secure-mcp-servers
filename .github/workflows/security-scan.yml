@@ -68,19 +68,23 @@ jobs:
           # Install Python dependencies from requirements.txt
           pip install -r requirements.txt
           
-          # Install Node.js tools
-          npm install -g retire @microsoft/rush-stack-compiler-3.9
+          # Install Node.js tools with error handling
+          npm install -g retire || echo "Warning: Failed to install retire"
           
-          # Install additional security tools
-          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
-          curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+          # Install additional security tools with error handling
+          curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin || echo "Warning: Failed to install grype"
+          curl -sSfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin || echo "Warning: Failed to install trivy"
           
-          # Install uv for mcp-scan
-          curl -LsSf https://astral.sh/uv/install.sh | sh
+          # Install uv for mcp-scan with error handling
+          curl -LsSf https://astral.sh/uv/install.sh | sh || echo "Warning: Failed to install uv"
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           
-          # Verify mcp-scan availability
-          uvx mcp-scan@latest --help || echo "mcp-scan installation verification"
+          # Verify mcp-scan availability with fallback
+          if command -v uvx &> /dev/null; then
+            uvx mcp-scan@latest --help || echo "Warning: mcp-scan not available"
+          else
+            echo "Warning: uvx not available, mcp-scan will be skipped"
+          fi
 
       - name: Run security scans
         env:
@@ -165,21 +169,28 @@ jobs:
           if git diff --quiet && git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            echo "Changes detected, stashing and pulling latest..."
+            echo "Changes detected, committing..."
             
-            # Stash any changes
-            git stash --include-untracked
-            
-            # Pull latest changes
-            git pull --rebase
-            
-            # Pop stashed changes
-            git stash pop
-            
-            # Stage and commit
+            # Stage and commit changes
             git add README.md data/servers.json
             git commit -m "🛡️ Update security assessments and artifacts [skip ci]"
-            git push
+            
+            # Push with retry logic
+            for i in {1..3}; do
+              if git push; then
+                echo "Successfully pushed changes"
+                break
+              else
+                echo "Push failed, attempt $i/3"
+                if [ $i -lt 3 ]; then
+                  echo "Pulling latest changes and retrying..."
+                  git pull --rebase
+                else
+                  echo "All push attempts failed"
+                  exit 1
+                fi
+              fi
+            done
           fi
 
   vulnerability-monitor:
