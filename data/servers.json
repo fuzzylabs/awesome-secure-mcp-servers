@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-10-20T06:02:56Z",
+  "last_updated": "2025-10-27T06:03:16Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,7 +20,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:53.726Z",
+            "scan_date": "2025-10-27T06:02:12.623Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -33,11 +33,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -46,7 +53,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -80,7 +87,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:55.193Z",
+            "scan_date": "2025-10-27T06:02:14.449Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -93,11 +100,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -106,7 +120,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -139,7 +153,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:56.548Z",
+            "scan_date": "2025-10-27T06:02:15.756Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -162,8 +176,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-pxc26_u4/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-pxc26_u4/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-pxc26_u4/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-for-security-1b1bbpj2/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-1b1bbpj2/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-1b1bbpj2/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -200,7 +214,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:58.440Z",
+            "scan_date": "2025-10-27T06:02:17.492Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -259,7 +273,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:58.859Z",
+            "scan_date": "2025-10-27T06:02:17.864Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -309,7 +323,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:01:59.302Z",
+            "scan_date": "2025-10-27T06:02:18.343Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -322,11 +336,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -335,7 +356,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -369,7 +390,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:00.666Z",
+            "scan_date": "2025-10-27T06:02:19.653Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -382,11 +403,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -395,7 +423,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -429,7 +457,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:02.050Z",
+            "scan_date": "2025-10-27T06:02:20.995Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -442,11 +470,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -455,7 +490,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -489,7 +524,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:03.419Z",
+            "scan_date": "2025-10-27T06:02:22.344Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -502,11 +537,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -515,7 +557,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -549,7 +591,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:04.758Z",
+            "scan_date": "2025-10-27T06:02:23.676Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -562,11 +604,18 @@
               ]
             },
             "dependency_scan": {
-              "status": "pass",
-              "details": "No vulnerabilities found in NPM dependencies",
-              "score": 100,
-              "issues_found": 0,
-              "vulnerabilities": []
+              "status": "warning",
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
+              "vulnerabilities": {
+                "info": 0,
+                "low": 0,
+                "moderate": 2,
+                "high": 0,
+                "critical": 0,
+                "total": 2
+              }
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -575,7 +624,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 94
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -609,7 +658,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:06.165Z",
+            "scan_date": "2025-10-27T06:02:25.057Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -634,8 +683,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-github-mcp-server-dxux4c3q/server.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-dxux4c3q/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-dxux4c3q/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-github-mcp-server-fryad8e5/server.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-fryad8e5/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-fryad8e5/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -673,7 +722,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:12.508Z",
+            "scan_date": "2025-10-27T06:02:31.061Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -733,7 +782,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:13.422Z",
+            "scan_date": "2025-10-27T06:02:31.913Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -750,8 +799,8 @@
               "issues_found": 8,
               "vulnerabilities": {
                 "info": 0,
-                "low": 2,
-                "moderate": 0,
+                "low": 1,
+                "moderate": 1,
                 "high": 1,
                 "critical": 1,
                 "total": 4
@@ -798,7 +847,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:15.204Z",
+            "scan_date": "2025-10-27T06:02:33.503Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -856,7 +905,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:15.682Z",
+            "scan_date": "2025-10-27T06:02:33.978Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -916,7 +965,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-10-20T06:02:18.543Z",
+            "scan_date": "2025-10-27T06:02:36.962Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -941,8 +990,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-s78vn09x/src/healthlake-mcp-server/examples/mcp_config.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-s78vn09x/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-s78vn09x/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-tposd1mb/src/healthlake-mcp-server/examples/mcp_config.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-tposd1mb/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-tposd1mb/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
