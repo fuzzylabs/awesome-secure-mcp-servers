@@ -28,7 +28,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2025-10-27 06:03 UTC  
+**Last Updated:** 2025-11-03 06:03 UTC  
 **Total Servers:** 16
 
 ### Official Servers
@@ -51,7 +51,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | 🛡️ Verified Secure ([📊 Score: 91/100](#security-details-docker-server)) | Docker container management with security controls |
 | [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional ([📊 Score: 84/100](#security-details-github)) | GitHub's official MCP Server for repository management |
 | [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional ([📊 Score: 74/100](#security-details-notion)) | Notion official MCP server for workspace integration |
-| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 91/100](#security-details-stripe)) | Interact with Stripe API for payments and financial data |
+| [Stripe MCP Server](https://github.com/stripe/agent-toolkit) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 94/100](#security-details-stripe)) | Interact with Stripe API for payments and financial data |
 
 ### Security Tools
 
@@ -81,7 +81,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-aws">
 <summary><strong>AWS MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -107,7 +107,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-docker-server">
 <summary><strong>Docker Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -133,7 +133,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-everything-reference">
 <summary><strong>Everything (Reference Server)</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -159,7 +159,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-fetch">
 <summary><strong>Fetch Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -185,7 +185,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-filesystem">
 <summary><strong>Filesystem Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -211,7 +211,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-git">
 <summary><strong>Git Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -237,7 +237,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-github">
 <summary><strong>GitHub MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -263,7 +263,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-memory">
 <summary><strong>Memory Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -289,7 +289,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-notion">
 <summary><strong>Notion MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -315,7 +315,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-nuclei-scanner">
 <summary><strong>Nuclei Security Scanner</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -341,7 +341,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-postgresql">
 <summary><strong>PostgreSQL MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -367,7 +367,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-sequential-thinking">
 <summary><strong>Sequential Thinking Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -393,7 +393,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-slack">
 <summary><strong>Slack MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -419,13 +419,13 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-stripe">
 <summary><strong>Stripe MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
-**🔍 MCP-Specific Security**: 90/100 ✅
+**🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
 
 ✅ **No issues found**
-- No tool poisoning indicators found (basic check)
+- MCP-scan found no security issues in 1 configuration file(s)
 
 **📦 Third-Party Dependencies**: 100/100 ➖
 *Scans package.json, requirements.txt, etc. for known CVEs*
@@ -445,7 +445,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-time">
 <summary><strong>Time Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2025-10-27
+### Security Assessment: 2025-11-03
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -467,6 +467,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 
 </details>
+
 
 
 
