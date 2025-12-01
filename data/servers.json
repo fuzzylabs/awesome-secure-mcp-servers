@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-11-24T06:02:54Z",
+  "last_updated": "2025-12-01T06:03:00Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -17,10 +17,10 @@
         {
           "version": "0.5.0",
           "release_date": "2024-12-01",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:42.412Z",
+            "scan_date": "2025-12-01T06:01:45.682Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -34,26 +34,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-8wtfuqc8/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8wtfuqc8/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8wtfuqc8/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -84,10 +88,10 @@
         {
           "version": "0.4.1",
           "release_date": "2024-11-20",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:44.173Z",
+            "scan_date": "2025-12-01T06:01:48.233Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -101,26 +105,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-v2cle5n4/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-v2cle5n4/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-v2cle5n4/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -153,7 +161,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:45.533Z",
+            "scan_date": "2025-12-01T06:01:50.427Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -176,8 +184,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-1d1xarb3/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-1d1xarb3/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-1d1xarb3/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -214,7 +222,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:46.776Z",
+            "scan_date": "2025-12-01T06:01:51.605Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -273,7 +281,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:47.180Z",
+            "scan_date": "2025-12-01T06:01:51.990Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -320,10 +328,10 @@
         {
           "version": "0.3.2",
           "release_date": "2024-12-01",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:47.590Z",
+            "scan_date": "2025-12-01T06:01:52.403Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -337,26 +345,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-c9v0f9ik/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-c9v0f9ik/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-c9v0f9ik/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -387,10 +399,10 @@
         {
           "version": "0.2.1",
           "release_date": "2024-11-25",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:48.990Z",
+            "scan_date": "2025-12-01T06:01:54.599Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -404,26 +416,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-jb3h2nau/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jb3h2nau/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jb3h2nau/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -454,10 +470,10 @@
         {
           "version": "0.1.3",
           "release_date": "2024-11-20",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:50.398Z",
+            "scan_date": "2025-12-01T06:01:56.792Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -471,26 +487,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-lh_3x0r3/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-lh_3x0r3/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-lh_3x0r3/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -521,10 +541,10 @@
         {
           "version": "0.1.0",
           "release_date": "2024-11-15",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:51.768Z",
+            "scan_date": "2025-12-01T06:01:59.023Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -538,26 +558,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-jsfz1bzw/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jsfz1bzw/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jsfz1bzw/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -588,10 +612,10 @@
         {
           "version": "0.1.2",
           "release_date": "2024-11-10",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:53.130Z",
+            "scan_date": "2025-12-01T06:02:01.238Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -605,26 +629,30 @@
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 6 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 6,
+              "details": "Found 4 vulnerability/vulnerabilities in dependencies",
+              "score": 80,
+              "issues_found": 4,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 2,
-                "high": 1,
+                "high": 0,
                 "critical": 0,
-                "total": 3
+                "total": 2
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "No tool poisoning indicators found (basic check)",
-              "score": 90,
+              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "score": 95,
               "issues_found": 0,
-              "suspicious_patterns": []
+              "scan_results": {
+                "/tmp/mcp-scan-servers-xzgvpncf/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xzgvpncf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xzgvpncf/.mcp.json: error: unrecognized arguments: --local-only"
+                }
+              }
             },
-            "overall_score": 84
+            "overall_score": 92
           },
           "vulnerabilities": []
         }
@@ -658,7 +686,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:01:54.679Z",
+            "scan_date": "2025-12-01T06:02:03.614Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -683,8 +711,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-github-mcp-server-7h3s2bck/server.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-7h3s2bck/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-7h3s2bck/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-github-mcp-server-38htz1fj/server.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-38htz1fj/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-38htz1fj/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -722,7 +750,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:02:00.584Z",
+            "scan_date": "2025-12-01T06:02:09.155Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -747,8 +775,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-agent-toolkit-bocs_mw8/tools/modelcontextprotocol/server.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-bocs_mw8/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-bocs_mw8/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -786,7 +814,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:02:02.328Z",
+            "scan_date": "2025-12-01T06:02:10.832Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -798,16 +826,16 @@
             },
             "dependency_scan": {
               "status": "fail",
-              "details": "Found 12 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 14 vulnerability/vulnerabilities in dependencies",
               "score": 40,
-              "issues_found": 12,
+              "issues_found": 14,
               "vulnerabilities": {
                 "info": 0,
                 "low": 1,
-                "moderate": 2,
+                "moderate": 3,
                 "high": 2,
                 "critical": 1,
-                "total": 6
+                "total": 7
               }
             },
             "tool_poisoning_check": {
@@ -851,7 +879,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:02:03.820Z",
+            "scan_date": "2025-12-01T06:02:12.401Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -909,7 +937,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:02:04.242Z",
+            "scan_date": "2025-12-01T06:02:12.803Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -969,7 +997,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-11-24T06:02:07.651Z",
+            "scan_date": "2025-12-01T06:02:16.430Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -994,8 +1022,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-7d_b37rf/src/healthlake-mcp-server/examples/mcp_config.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-7d_b37rf/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-7d_b37rf/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
