@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2025-12-01T06:03:00Z",
+  "last_updated": "2025-12-08T06:02:52Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,7 +20,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:45.682Z",
+            "scan_date": "2025-12-08T06:01:36.588Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -52,8 +52,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-8wtfuqc8/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8wtfuqc8/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8wtfuqc8/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-xe3ekl45/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xe3ekl45/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xe3ekl45/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -91,7 +91,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:48.233Z",
+            "scan_date": "2025-12-08T06:01:39.012Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -123,8 +123,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-v2cle5n4/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-v2cle5n4/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-v2cle5n4/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-8iccms84/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8iccms84/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-8iccms84/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -161,7 +161,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:50.427Z",
+            "scan_date": "2025-12-08T06:01:41.053Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -184,8 +184,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-377xejja/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-for-security-cig_591t/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-cig_591t/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-cig_591t/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -222,7 +222,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:51.605Z",
+            "scan_date": "2025-12-08T06:01:42.142Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -281,7 +281,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:51.990Z",
+            "scan_date": "2025-12-08T06:01:42.457Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -331,7 +331,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:52.403Z",
+            "scan_date": "2025-12-08T06:01:42.707Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -363,8 +363,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-c9v0f9ik/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-c9v0f9ik/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-c9v0f9ik/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-ircap6tl/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-ircap6tl/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-ircap6tl/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -402,7 +402,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:54.599Z",
+            "scan_date": "2025-12-08T06:01:44.810Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -434,8 +434,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-jb3h2nau/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jb3h2nau/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jb3h2nau/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-34glhuzf/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-34glhuzf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-34glhuzf/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -473,7 +473,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:56.792Z",
+            "scan_date": "2025-12-08T06:01:46.893Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -505,8 +505,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-lh_3x0r3/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-lh_3x0r3/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-lh_3x0r3/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-4x02b9p7/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-4x02b9p7/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-4x02b9p7/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -544,7 +544,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:01:59.023Z",
+            "scan_date": "2025-12-08T06:01:48.971Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -576,8 +576,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-jsfz1bzw/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jsfz1bzw/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-jsfz1bzw/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-5kd73k0n/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-5kd73k0n/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-5kd73k0n/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -615,7 +615,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:01.238Z",
+            "scan_date": "2025-12-08T06:01:51.057Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -647,8 +647,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-xzgvpncf/.mcp.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xzgvpncf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xzgvpncf/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-o9y27ubf/.mcp.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-o9y27ubf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-o9y27ubf/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -686,7 +686,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:03.614Z",
+            "scan_date": "2025-12-08T06:01:53.297Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -711,8 +711,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-github-mcp-server-38htz1fj/server.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-38htz1fj/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-38htz1fj/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-github-mcp-server-uuchaqmx/server.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-uuchaqmx/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-uuchaqmx/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -750,7 +750,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:09.155Z",
+            "scan_date": "2025-12-08T06:01:58.869Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -775,8 +775,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-s3xkjdlq/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-w6l79xci/tools/modelcontextprotocol/server.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-w6l79xci/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-w6l79xci/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -811,10 +811,10 @@
         {
           "version": "0.3.1",
           "release_date": "2024-11-20",
-          "security_status": "conditional",
+          "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:10.832Z",
+            "scan_date": "2025-12-08T06:02:00.368Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -825,18 +825,11 @@
               "tools_used": []
             },
             "dependency_scan": {
-              "status": "fail",
-              "details": "Found 14 vulnerability/vulnerabilities in dependencies",
-              "score": 40,
-              "issues_found": 14,
-              "vulnerabilities": {
-                "info": 0,
-                "low": 1,
-                "moderate": 3,
-                "high": 2,
-                "critical": 1,
-                "total": 7
-              }
+              "status": "pass",
+              "details": "No vulnerabilities found in NPM dependencies",
+              "score": 100,
+              "issues_found": 0,
+              "vulnerabilities": []
             },
             "tool_poisoning_check": {
               "status": "pass",
@@ -845,7 +838,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 74
+            "overall_score": 89
           },
           "vulnerabilities": []
         }
@@ -879,7 +872,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:12.401Z",
+            "scan_date": "2025-12-08T06:02:01.225Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -937,7 +930,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:12.803Z",
+            "scan_date": "2025-12-08T06:02:01.488Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -997,7 +990,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2025-12-01T06:02:16.430Z",
+            "scan_date": "2025-12-08T06:02:04.877Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -1022,8 +1015,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json": {
-                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-ybgl8u8_/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-uwx4uu1f/src/healthlake-mcp-server/examples/mcp_config.json": {
+                  "error": "Scan failed: usage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-uwx4uu1f/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-uwx4uu1f/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
