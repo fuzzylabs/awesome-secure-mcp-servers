@@ -174,7 +174,7 @@ class MCPServerDiscovery:
                 'description': repo.get('description', ''),
                 'stars': repo.get('stargazers_count', 0),
                 'forks': repo.get('forks_count', 0),
-                'language': repo.get('language', 'unknown'),
+                'language': repo.get('language') or 'unknown',
                 'topics': repo.get('topics', []),
                 'updated_at': repo.get('updated_at'),
                 'latest_version': latest_version,
@@ -432,7 +432,7 @@ class MCPServerDiscovery:
                 score += 15
             
             # Language preference (TypeScript/Python preferred for MCP)
-            language = server.get('language', '').lower()
+            language = (server.get('language') or '').lower()
             if language in ['typescript', 'python']:
                 score += 10
             elif language in ['javascript']:

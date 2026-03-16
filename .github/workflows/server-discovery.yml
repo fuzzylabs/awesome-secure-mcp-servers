@@ -144,7 +144,27 @@ jobs:
       - name: Update discovery tracking
         run: |
           # Create or update discovery tracking file
-          echo '{"last_discovery": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'", "total_discovered": '${{ fromJson(hashFiles('security/discovered-servers.json') && 'fromJsonFile("security/discovered-servers.json").total_discovered') || 0 }}'}' > security/discovery-tracking.json
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          discovered_path = Path('security/discovered-servers.json')
+          total_discovered = 0
+
+          if discovered_path.exists():
+              with discovered_path.open() as discovered_file:
+                  discovered = json.load(discovered_file)
+              total_discovered = discovered.get('total_discovered', 0)
+
+          tracking = {
+              'last_discovery': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'total_discovered': total_discovered,
+          }
+
+          with open('security/discovery-tracking.json', 'w') as tracking_file:
+              json.dump(tracking, tracking_file)
+          PY
           
           git config --local user.email "action@github.com"
           git config --local user.name "Discovery Bot"

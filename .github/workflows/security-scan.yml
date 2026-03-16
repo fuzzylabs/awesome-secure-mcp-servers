@@ -228,12 +228,18 @@ jobs:
             const vulns = JSON.parse(fs.readFileSync('security/new-vulnerabilities.json', 'utf8'));
             
             for (const vuln of vulns) {
+              const severity = (vuln.severity || 'unknown').toLowerCase();
+              const references = Array.isArray(vuln.references) ? vuln.references : [];
+              const labelSeverity = ['low', 'medium', 'moderate', 'high', 'critical', 'unknown'].includes(severity)
+                ? severity
+                : 'unknown';
+
               await github.rest.issues.create({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: `🚨 Security Vulnerability: ${vuln.server} v${vuln.version}`,
-                body: `## Vulnerability Details\n\n**Server**: ${vuln.server}\n**Version**: ${vuln.version}\n**Severity**: ${vuln.severity}\n**Description**: ${vuln.description}\n\n**References**: ${vuln.references.join(', ')}\n\n---\n\n*This issue was automatically created by the vulnerability monitoring system.*`,
-                labels: ['security', 'vulnerability', vuln.severity]
+                body: `## Vulnerability Details\n\n**Server**: ${vuln.server}\n**Version**: ${vuln.version}\n**Severity**: ${severity}\n**Description**: ${vuln.description || 'No description provided.'}\n\n**Source**: ${vuln.source || 'unknown'}\n**Advisory ID**: ${vuln.advisory_id || 'unknown'}\n**Published At**: ${vuln.published_at || 'unknown'}\n**References**: ${references.length > 0 ? references.join(', ') : 'None provided'}\n\n---\n\n*This issue was automatically created by the vulnerability monitoring system.*`,
+                labels: ['security', 'vulnerability', labelSeverity]
               });
             }
 
