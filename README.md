@@ -65,6 +65,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 |--------|---------|----------------|-------------|
 | [PostgreSQL MCP Server](https://github.com/crystaldba/postgres-mcp) | 0.4.2 | 🛡️ Verified Secure ([📊 Score: 86/100](#security-details-postgresql)) | PostgreSQL database operations and query execution |
 | [Slack MCP Server](https://github.com/korotovsky/slack-mcp-server) | 1.0.3 | ⚠️ Conditional ([📊 Score: 77/100](#security-details-slack)) | Slack workspace integration for messaging and collaboration |
+| [EnigmAgent](https://github.com/Agnuxo1/EnigmAgent) | 1.0.0 | 🔐 Security-First | AES-256-GCM + Argon2id encrypted local vault. Resolves `{{PLACEHOLDER}}` secrets at runtime so API keys never appear in prompts, logs, or LLM context |
 
 ### Under Review
 
