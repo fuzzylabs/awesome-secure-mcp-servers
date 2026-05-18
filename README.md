@@ -28,20 +28,20 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2026-05-11 07:02 UTC  
+**Last Updated:** 2026-05-18 07:13 UTC  
 **Total Servers:** 16
 
 ### Official Servers
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
-| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-everything-reference)) | Reference server demonstrating all MCP features |
-| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-fetch)) | Web content fetching and conversion for efficient LLM usage |
-| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-filesystem)) | Secure file operations with configurable access controls |
-| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-git)) | Tools to read, search, and manipulate Git repositories |
-| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-memory)) | Persistent memory using a local knowledge graph |
-| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-sequential-thinking)) | Dynamic and reflective problem-solving through thought sequences |
-| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | 🛡️ Verified Secure ([📊 Score: 87/100](#security-details-time)) | Time and timezone conversion capabilities |
+| [Everything (Reference Server)](https://github.com/modelcontextprotocol/servers/tree/main/src/everything) | 0.5.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-everything-reference)) | Reference server demonstrating all MCP features |
+| [Fetch Server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) | 0.3.2 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-fetch)) | Web content fetching and conversion for efficient LLM usage |
+| [Filesystem Server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | 0.4.1 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-filesystem)) | Secure file operations with configurable access controls |
+| [Git Server](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | 0.2.1 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-git)) | Tools to read, search, and manipulate Git repositories |
+| [Memory Server](https://github.com/modelcontextprotocol/servers/tree/main/src/memory) | 0.1.3 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-memory)) | Persistent memory using a local knowledge graph |
+| [Sequential Thinking Server](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) | 0.1.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-sequential-thinking)) | Dynamic and reflective problem-solving through thought sequences |
+| [Time Server](https://github.com/modelcontextprotocol/servers/tree/main/src/time) | 0.1.2 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-time)) | Time and timezone conversion capabilities |
 
 ### Enterprise Servers
 
@@ -81,7 +81,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-aws">
 <summary><strong>AWS MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -107,7 +107,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-docker-server">
 <summary><strong>Docker Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -133,7 +133,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-everything-reference">
 <summary><strong>Everything (Reference Server)</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -141,11 +141,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -159,7 +159,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-fetch">
 <summary><strong>Fetch Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -167,11 +167,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -185,7 +185,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-filesystem">
 <summary><strong>Filesystem Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -193,11 +193,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -211,7 +211,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-git">
 <summary><strong>Git Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -219,11 +219,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -237,7 +237,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-github">
 <summary><strong>GitHub MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -263,7 +263,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-memory">
 <summary><strong>Memory Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -271,11 +271,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -289,7 +289,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-notion">
 <summary><strong>Notion MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -315,7 +315,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-nuclei-scanner">
 <summary><strong>Nuclei Security Scanner</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -341,7 +341,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-postgresql">
 <summary><strong>PostgreSQL MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -367,7 +367,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-sequential-thinking">
 <summary><strong>Sequential Thinking Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -375,11 +375,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -393,7 +393,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-slack">
 <summary><strong>Slack MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 90/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -419,7 +419,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-stripe">
 <summary><strong>Stripe MCP Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -445,7 +445,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 <details id="security-details-time">
 <summary><strong>Time Server</strong> Security Assessment</summary>
 
-### Security Assessment: 2026-05-11
+### Security Assessment: 2026-05-18
 
 **🔍 MCP-Specific Security**: 95/100 ✅
 *Scans for MCP-specific threats like tool poisoning attacks*
@@ -453,11 +453,11 @@ _Click on server scores above to jump to detailed security breakdowns:_
 ✅ **No issues found**
 - MCP-scan found no security issues in 1 configuration file(s)
 
-**📦 Third-Party Dependencies**: 60/100 ⚠️
+**📦 Third-Party Dependencies**: 80/100 ⚠️
 *Scans package.json, requirements.txt, etc. for known CVEs*
 
-⚠️ **36 potential issues found**
-- Found 36 vulnerability/vulnerabilities in dependencies
+⚠️ **12 potential issues found**
+- Found 12 vulnerability/vulnerabilities in dependencies
 
 **🐛 Code Security Analysis**: 100/100 ✅
 *Static analysis for common security vulnerabilities in source code*
@@ -467,6 +467,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 
 </details>
+
 
 
 
