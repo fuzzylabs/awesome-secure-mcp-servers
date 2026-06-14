@@ -28,8 +28,8 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2026-06-08 07:31 UTC  
-**Total Servers:** 16
+**Last Updated:** 2026-06-14 12:06 UTC
+**Total Servers:** 17
 
 ### Official Servers
 
@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [Xquik MCP Server](https://github.com/Xquik-dev/x-twitter-scraper) | 2.4.16 | ⏳ Awaiting Scan | First-party remote MCP server for X data workflows through Xquik API tools |
 
 ---
 
@@ -467,9 +468,6 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 
 </details>
-
-
-
 
 
 
