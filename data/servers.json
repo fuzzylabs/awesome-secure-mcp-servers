@@ -1008,6 +1008,57 @@
         "iam",
         "enterprise"
       ]
+    },
+    {
+      "name": "Xquik MCP Server",
+      "slug": "xquik",
+      "repository": "https://github.com/Xquik-dev/x-twitter-scraper",
+      "category": "under-review",
+      "description": "First-party remote MCP server for X data workflows through Xquik API tools",
+      "maintainer": {
+        "name": "Xquik-dev",
+        "type": "organization",
+        "contact": "https://github.com/Xquik-dev"
+      },
+      "versions": [
+        {
+          "version": "2.4.16",
+          "release_date": "2026-06-05",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-06-15T11:05:00Z",
+            "scanner_version": "pending",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Awaiting project security validation",
+              "score": 50
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Awaiting project security validation",
+              "score": 50
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "Awaiting project security validation",
+              "score": 50
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2025-12-11"
+      ],
+      "tags": [
+        "x",
+        "twitter",
+        "social-data",
+        "remote-mcp",
+        "api"
+      ]
     }
   ]
 }
