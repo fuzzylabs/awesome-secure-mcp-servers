@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-07-13T07:00:02Z",
+  "last_updated": "2026-07-20T06:58:31Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -20,7 +20,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:20.740Z",
+            "scan_date": "2026-07-20T06:56:54.877Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -45,8 +45,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-qbxhbpd3/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-qbxhbpd3/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-qbxhbpd3/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-ay7skxyo/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-ay7skxyo/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-ay7skxyo/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -84,7 +84,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:23.732Z",
+            "scan_date": "2026-07-20T06:56:57.059Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -109,8 +109,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-j277aggv/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j277aggv/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j277aggv/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-g3wotbo5/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-g3wotbo5/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-g3wotbo5/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -147,7 +147,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:26.134Z",
+            "scan_date": "2026-07-20T06:56:59.173Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -170,8 +170,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-smcz3nht/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-smcz3nht/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-smcz3nht/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-for-security-5wv6_vot/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-5wv6_vot/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-5wv6_vot/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -208,7 +208,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:27.757Z",
+            "scan_date": "2026-07-20T06:57:00.441Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -267,7 +267,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:28.191Z",
+            "scan_date": "2026-07-20T06:57:00.739Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -317,7 +317,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:28.720Z",
+            "scan_date": "2026-07-20T06:57:01.029Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -342,8 +342,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-h2la1tg7/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-h2la1tg7/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-h2la1tg7/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-vq7z_xih/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-vq7z_xih/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-vq7z_xih/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -381,7 +381,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:31.200Z",
+            "scan_date": "2026-07-20T06:57:03.497Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -406,8 +406,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-a2rmz5rh/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-a2rmz5rh/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-a2rmz5rh/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-yqyc6nxs/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-yqyc6nxs/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-yqyc6nxs/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -445,7 +445,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:33.660Z",
+            "scan_date": "2026-07-20T06:57:05.984Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -470,8 +470,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-t3vcrxkf/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t3vcrxkf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t3vcrxkf/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-j2et9yvd/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j2et9yvd/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j2et9yvd/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -509,7 +509,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:36.305Z",
+            "scan_date": "2026-07-20T06:57:08.128Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -534,8 +534,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-j_h39lbh/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j_h39lbh/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j_h39lbh/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-o3dg5z3h/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-o3dg5z3h/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-o3dg5z3h/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -573,7 +573,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:38.728Z",
+            "scan_date": "2026-07-20T06:57:10.255Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "pass",
@@ -598,8 +598,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-wi6dd8bk/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-wi6dd8bk/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-wi6dd8bk/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-4e06ihhf/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-4e06ihhf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-4e06ihhf/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -637,7 +637,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:41.138Z",
+            "scan_date": "2026-07-20T06:57:12.398Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -660,8 +660,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-github-mcp-server-kkzbj5_a/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-kkzbj5_a/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-kkzbj5_a/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-github-mcp-server-_wq39xbd/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-_wq39xbd/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-_wq39xbd/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -699,7 +699,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:43.377Z",
+            "scan_date": "2026-07-20T06:57:14.094Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -720,18 +720,21 @@
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 3 configuration file(s)",
+              "details": "MCP-scan found no security issues in 4 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/cursor/plugin/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/cursor/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/cursor/plugin/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-jdtvtj2v/tools/modelcontextprotocol/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/claude/plugin/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/claude/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/providers/claude/plugin/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/grok/plugin/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/grok/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/grok/plugin/.mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-jzb5qlw0/tools/modelcontextprotocol/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jzb5qlw0/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/cursor/plugin/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/cursor/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/cursor/plugin/mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/claude/plugin/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/claude/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-jdtvtj2v/providers/claude/plugin/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -769,7 +772,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:48.109Z",
+            "scan_date": "2026-07-20T06:57:19.188Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -827,7 +830,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:49.334Z",
+            "scan_date": "2026-07-20T06:57:19.965Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -885,7 +888,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:49.885Z",
+            "scan_date": "2026-07-20T06:57:20.233Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -945,7 +948,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-07-13T06:58:53.908Z",
+            "scan_date": "2026-07-20T06:57:23.655Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -970,26 +973,26 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-5w616zyt/src/healthlake-mcp-server/examples/mcp_config.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/healthlake-mcp-server/examples/mcp_config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/mysql-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/mysql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/mysql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/mysql-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/mysql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/mysql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/postgres-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/postgres-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/postgres-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/aurora-dsql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/skills/dsql-skill/mcp/.mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/aurora-dsql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/ecs-mcp-server/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/ecs-mcp-server/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/ecs-mcp-server/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/ecs-mcp-server/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/ecs-mcp-server/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/ecs-mcp-server/server.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-5w616zyt/src/postgres-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/postgres-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-5w616zyt/src/postgres-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-jmekfem8/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jmekfem8/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
