@@ -58,6 +58,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-nuclei-scanner)) | Template-based vulnerability scanner with extensive security checks |
+| [MCP Doctor](https://github.com/xlyoung/mcp-doctor) | 0.1.0 | 🛡️ Verified Secure ([📊 Score: 90/100](#security-details-mcp-doctor)) | Scan, score, and install MCP servers with 10 security checks and curated registry of 100+ servers |
 
 ### Community Servers
 
