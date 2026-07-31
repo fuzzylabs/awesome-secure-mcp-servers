@@ -21,6 +21,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 ## 📚 Table of Contents
 - [🏢 Official Servers](#official-servers) - Anthropic-maintained MCP servers
 - [🏭 Enterprise Servers](#enterprise-servers) - Company-backed integrations 
+| [Dark-Moon](https://github.com/ASCIT31/Dark-Moon) | GPL-3.0 | 🔍 Under Review | Autonomous AI pentest platform exposing a "Darkmoon CyberSecurity" MCP server (12 tools) that orchestrates offensive tooling across web, API, AD and Kubernetes; cloud or local LLMs with a local Privacy Gateway |
 - [🛡️ Security Tools](#security-tools) - Cybersecurity & vulnerability scanning
 - [👥 Community Servers](#community-servers) - Open source community projects
 - [🔄 Under Review](#under-review) - Servers currently being assessed
