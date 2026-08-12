@@ -11,6 +11,8 @@ on:
     paths:
       - 'data/servers.json'
       - 'README.md'
+      - 'scripts/**'
+      - 'tests/**'
   schedule:
     # Run weekly security scans on Mondays at 06:00 UTC
     - cron: '0 6 * * 1'
@@ -45,6 +47,9 @@ jobs:
 
       - name: Validate data
         run: python scripts/validate.py
+
+      - name: Test security scanner
+        run: python -m unittest discover -s tests
 
   security-scan:
     name: Automated Security Scanning

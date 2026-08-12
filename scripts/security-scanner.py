@@ -232,6 +232,7 @@ class SecurityScanner:
             return self._basic_tool_poisoning_check(repo_path)
         
         try:
+            successful_scan_count = 0
             # Run mcp-scan on found configuration files with enhanced options
             for config_file in mcp_config_files:
                 cmd = ['uvx', 'mcp-scan@latest', 'scan', '--json', '--local-only', '--verbose', config_file]
@@ -242,8 +243,9 @@ class SecurityScanner:
                         scan_output = json.loads(result.stdout)
                         
                         # Parse mcp-scan results with severity breakdown
-                        if 'results' in scan_output:
+                        if isinstance(scan_output.get('results'), list):
                             config_results = scan_output['results']
+                            successful_scan_count += 1
                             issues_found = 0
                             critical_issues = 0
                             high_issues = 0
@@ -276,6 +278,11 @@ class SecurityScanner:
                             }
                             
                             results['issues_found'] += issues_found
+                        else:
+                            logger.warning(f"MCP-scan returned an unexpected payload for {config_file}")
+                            results['scan_results'][config_file] = {
+                                'error': 'Scan output did not contain a results list'
+                            }
                     
                     except json.JSONDecodeError:
                         logger.warning(f"Could not parse mcp-scan output for {config_file}")
@@ -290,6 +297,19 @@ class SecurityScanner:
                     results['scan_results'][config_file] = {
                         'error': f'Scan failed: {error_msg}'
                     }
+
+            failed_scan_count = len(mcp_config_files) - successful_scan_count
+            if successful_scan_count == 0:
+                fallback = self._basic_tool_poisoning_check(repo_path)
+                fallback['details'] = (
+                    f'MCP-scan failed for all {failed_scan_count} configuration file(s); '
+                    f"{fallback['details']}"
+                )
+                fallback['scan_results'] = results['scan_results']
+                if fallback['status'] == 'pass':
+                    fallback['status'] = 'warning'
+                    fallback['score'] = min(fallback['score'], 70)
+                return fallback
             
             # Calculate severity-weighted score
             total_critical = sum(config.get('critical_issues', 0) for config in results['scan_results'].values() if isinstance(config, dict))
@@ -326,6 +346,12 @@ class SecurityScanner:
                     'details': f'MCP-scan found only low-severity issues ({total_issues} total)',
                     'score': max(80, score)
                 })
+
+            if failed_scan_count:
+                results['details'] += f'; {failed_scan_count} configuration scan(s) failed'
+                if results['status'] == 'pass':
+                    results['status'] = 'warning'
+                    results['score'] = min(results['score'], 75)
         
         except subprocess.TimeoutExpired:
             results.update({
