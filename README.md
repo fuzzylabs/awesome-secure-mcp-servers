@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [MandateGuard](https://github.com/ezequiellich44-cmd/MandateGuard) | 1.0.0 | ⏳ Awaiting Scan | Deterministic payment policy enforcement for AI agents: pre-action gate enforcing budgets, allowlists, rate limits, and signed Ed25519 mandates with zero LLM in the decision path. Official MCP server on the Model Context Protocol Registry |
 
 ---
 

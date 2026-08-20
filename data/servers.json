@@ -1067,6 +1067,37 @@
         "iam",
         "enterprise"
       ]
+    },
+    {
+      "name": "MandateGuard",
+      "slug": "mandateguard",
+      "repository": "https://github.com/ezequiellich44-cmd/MandateGuard",
+      "category": "community",
+      "description": "Deterministic payment policy enforcement for AI agents: pre-action gate enforcing budgets, allowlists, rate limits, and signed Ed25519 mandates with zero LLM in the decision path. Official MCP server on the Model Context Protocol Registry.",
+      "maintainer": {
+        "name": "Ezequiel Lech",
+        "type": "community",
+        "contact": "https://github.com/ezequiellich44-cmd"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "release_date": "2026-08-01",
+          "security_status": "awaiting-scan",
+          "is_recommended": false
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05",
+        "2025-03-26"
+      ],
+      "tags": [
+        "security",
+        "payments",
+        "policy",
+        "guardrails",
+        "python"
+      ]
     }
   ]
 }
