@@ -58,6 +58,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Nuclei Security Scanner](https://github.com/cyproxio/mcp-for-security/tree/main/nuclei) | 0.2.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-nuclei-scanner)) | Template-based vulnerability scanner with extensive security checks |
+| [AgentAvow](https://github.com/AgentAvow/AgentAvow) | 0.4.2 | ⏳ Awaiting Scan | Signed, independently-recomputable safety scores for MCP servers, packages, and tools — a 0–100 score + an Ed25519 attestation you can recompute offline, plus a README badge and a CI gate on a minimum score. Free, no account. |
 
 ### Community Servers
 
