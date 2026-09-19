@@ -70,6 +70,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
+| [Statsnet MCP](https://github.com/usenetstate/statsnet-mcp) | remote | ⏳ Awaiting Scan | Background check any company in the world: registration, executives, courts and finances. Endpoint: `https://statsnet.co/mcp` |
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
 
 ---
