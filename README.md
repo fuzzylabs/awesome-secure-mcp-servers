@@ -28,8 +28,8 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 ## Security Status by Category
 
-**Last Updated:** 2026-09-28 06:04 UTC  
-**Total Servers:** 16
+**Last Updated:** 2026-09-30 18:36 UTC  
+**Total Servers:** 25
 
 ### Official Servers
 
@@ -47,7 +47,9 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
+| [@modelcontextprotocol/sdk](https://github.com/modelcontextprotocol/typescript-sdk) | 2.0.0-alpha.0 | 🔄 Under Review ([📊 Score: 50/100](#security-details-modelcontextprotocol-sdk)) | The official TypeScript SDK for Model Context Protocol servers and clients |
 | [AWS MCP Server](https://github.com/awslabs/mcp) | 1.2.0 | 🛡️ Verified Secure ([📊 Score: 92/100](#security-details-aws)) | AWS service integration with IAM controls |
+| [chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 1.10.1 | 🔄 Under Review ([📊 Score: 50/100](#security-details-chrome-devtools-mcp)) | Chrome DevTools for coding agents |
 | [Docker Server](https://github.com/QuantGeekDev/docker-mcp) | 1.5.2 | 🛡️ Verified Secure ([📊 Score: 91/100](#security-details-docker-server)) | Docker container management with security controls |
 | [GitHub MCP Server](https://github.com/github/github-mcp-server) | 1.0.0 | ⚠️ Conditional ([📊 Score: 80/100](#security-details-github)) | GitHub's official MCP Server for repository management |
 | [Notion MCP Server](https://github.com/makenotion/notion-mcp-server) | 0.3.1 | ⚠️ Conditional ([📊 Score: 79/100](#security-details-notion)) | Notion official MCP server for workspace integration |
@@ -63,6 +65,13 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
+| [@marketnow/trust-mcp-middleware](https://github.com/alicelabs-llc/universal-trust-adapter) | 1.0.2 | 🔄 Under Review ([📊 Score: 50/100](#security-details-marketnow-trust-mcp-middleware)) | UTA MCP middleware — wraps Anthropic MCP tools/call with TrustGateway enforcement |
+| [@ui5/mcp-server](https://github.com/UI5/mcp-server) | 0.3.1 | 🔄 Under Review ([📊 Score: 50/100](#security-details-ui5-mcp-server)) | The UI5 MCP server improves the developer experience when working with agentic AI and the UI5 framework. |
+| [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | 0.1.0 | 🔄 Under Review ([📊 Score: 50/100](#security-details-awesome-mcp-servers)) | A collection of MCP servers. |
+| [codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp) | 0.1.0 | 🔄 Under Review ([📊 Score: 50/100](#security-details-codebase-memory-mcp)) | High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies. |
+| [ECC](https://github.com/affaan-m/ECC) | 2.2.2 | 🔄 Under Review ([📊 Score: 50/100](#security-details-ecc)) | The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond. |
+| [headroom](https://github.com/headroomlabs-ai/headroom) | 0.1.0 | 🔄 Under Review ([📊 Score: 50/100](#security-details-headroom)) | Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server. |
+| [mcp-chrome](https://github.com/hangwin/mcp-chrome) | 1.0.0 | 🔄 Under Review ([📊 Score: 50/100](#security-details-mcp-chrome)) | Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search. |
 | [PostgreSQL MCP Server](https://github.com/crystaldba/postgres-mcp) | 0.4.2 | 🛡️ Verified Secure ([📊 Score: 86/100](#security-details-postgresql)) | PostgreSQL database operations and query execution |
 | [Slack MCP Server](https://github.com/korotovsky/slack-mcp-server) | 1.0.3 | ⚠️ Conditional ([📊 Score: 77/100](#security-details-slack)) | Slack workspace integration for messaging and collaboration |
 
@@ -77,6 +86,110 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 ## 📊 Detailed Security Assessments
 
 _Click on server scores above to jump to detailed security breakdowns:_
+
+<details id="security-details-marketnow-trust-mcp-middleware">
+<summary><strong>@marketnow/trust-mcp-middleware</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
+<details id="security-details-modelcontextprotocol-sdk">
+<summary><strong>@modelcontextprotocol/sdk</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
+<details id="security-details-ui5-mcp-server">
+<summary><strong>@ui5/mcp-server</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
+<details id="security-details-awesome-mcp-servers">
+<summary><strong>awesome-mcp-servers</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
 
 <details id="security-details-aws">
 <summary><strong>AWS MCP Server</strong> Security Assessment</summary>
@@ -104,6 +217,58 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 </details>
 
+<details id="security-details-chrome-devtools-mcp">
+<summary><strong>chrome-devtools-mcp</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
+<details id="security-details-codebase-memory-mcp">
+<summary><strong>codebase-memory-mcp</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
 <details id="security-details-docker-server">
 <summary><strong>Docker Server</strong> Security Assessment</summary>
 
@@ -126,6 +291,32 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 ⚠️ **1 potential issues found**
 - Found 1 critical security issue(s)
+
+
+</details>
+
+<details id="security-details-ecc">
+<summary><strong>ECC</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
 
 
 </details>
@@ -256,6 +447,58 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 ➖ **Not applicable**
 - ESLint security scanning not available
+
+
+</details>
+
+<details id="security-details-headroom">
+<summary><strong>headroom</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
+
+
+</details>
+
+<details id="security-details-mcp-chrome">
+<summary><strong>mcp-chrome</strong> Security Assessment</summary>
+
+### Security Assessment: 2026-09-30
+
+**🔍 MCP-Specific Security**: 50/100 ➖
+*Scans for MCP-specific threats like tool poisoning attacks*
+
+➖ **Not applicable**
+- MCP security scan not yet performed
+
+**📦 Third-Party Dependencies**: 50/100 ➖
+*Scans package.json, requirements.txt, etc. for known CVEs*
+
+➖ **Not applicable**
+- Dependency scan not yet performed
+
+**🐛 Code Security Analysis**: 50/100 ➖
+*Static analysis for common security vulnerabilities in source code*
+
+➖ **Not applicable**
+- Security scan not yet performed
 
 
 </details>
@@ -467,6 +710,7 @@ _Click on server scores above to jump to detailed security breakdowns:_
 
 
 </details>
+
 
 
 
