@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-09-28T06:04:11Z",
+  "last_updated": "2026-09-30T18:36:23Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -1066,6 +1066,554 @@
         "infrastructure",
         "iam",
         "enterprise"
+      ]
+    },
+    {
+      "name": "headroom",
+      "slug": "headroom",
+      "repository": "https://github.com/headroomlabs-ai/headroom",
+      "category": "community",
+      "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+      "maintainer": {
+        "name": "headroomlabs-ai",
+        "type": "organization",
+        "contact": "https://github.com/headroomlabs-ai"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 95.0",
+                "score": 80
+              },
+              "notes": "Automatically discovered from github"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "python",
+        "discovered-github"
+      ]
+    },
+    {
+      "name": "@modelcontextprotocol/sdk",
+      "slug": "modelcontextprotocol-sdk",
+      "repository": "https://github.com/modelcontextprotocol/typescript-sdk",
+      "category": "enterprise",
+      "description": "The official TypeScript SDK for Model Context Protocol servers and clients",
+      "maintainer": {
+        "name": "modelcontextprotocol",
+        "type": "organization",
+        "contact": "https://github.com/modelcontextprotocol"
+      },
+      "versions": [
+        {
+          "version": "2.0.0-alpha.0",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 95.0",
+                "score": 80
+              },
+              "notes": "Automatically discovered from npm"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "typescript",
+        "discovered-npm"
+      ]
+    },
+    {
+      "name": "chrome-devtools-mcp",
+      "slug": "chrome-devtools-mcp",
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "category": "enterprise",
+      "description": "Chrome DevTools for coding agents",
+      "maintainer": {
+        "name": "ChromeDevTools",
+        "type": "organization",
+        "contact": "https://github.com/ChromeDevTools"
+      },
+      "versions": [
+        {
+          "version": "1.10.1",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 95.0",
+                "score": 80
+              },
+              "notes": "Automatically discovered from npm"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "typescript",
+        "discovered-npm"
+      ]
+    },
+    {
+      "name": "ECC",
+      "slug": "ecc",
+      "repository": "https://github.com/affaan-m/ECC",
+      "category": "community",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "maintainer": {
+        "name": "affaan-m",
+        "type": "individual",
+        "contact": "https://github.com/affaan-m"
+      },
+      "versions": [
+        {
+          "version": "2.2.2",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 75.0",
+                "score": 80
+              },
+              "notes": "Automatically discovered from github"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "javascript",
+        "discovered-github"
+      ]
+    },
+    {
+      "name": "mcp-chrome",
+      "slug": "mcp-chrome",
+      "repository": "https://github.com/hangwin/mcp-chrome",
+      "category": "community",
+      "description": "Chrome MCP Server is a Chrome extension-based Model Context Protocol (MCP) server that exposes your Chrome browser functionality to AI assistants like Claude, enabling complex browser automation, content analysis, and semantic search.",
+      "maintainer": {
+        "name": "hangwin",
+        "type": "individual",
+        "contact": "https://github.com/hangwin"
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 71.1",
+                "score": 80
+              },
+              "notes": "Automatically discovered from github"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "typescript",
+        "discovered-github"
+      ]
+    },
+    {
+      "name": "codebase-memory-mcp",
+      "slug": "codebase-memory-mcp",
+      "repository": "https://github.com/DeusData/codebase-memory-mcp",
+      "category": "community",
+      "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+      "maintainer": {
+        "name": "DeusData",
+        "type": "individual",
+        "contact": "https://github.com/DeusData"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 70.0",
+                "score": 80
+              },
+              "notes": "Automatically discovered from github"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "c",
+        "discovered-github"
+      ]
+    },
+    {
+      "name": "awesome-mcp-servers",
+      "slug": "awesome-mcp-servers",
+      "repository": "https://github.com/punkpeye/awesome-mcp-servers",
+      "category": "community",
+      "description": "A collection of MCP servers.",
+      "maintainer": {
+        "name": "punkpeye",
+        "type": "individual",
+        "contact": "https://github.com/punkpeye"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 69.9",
+                "score": 80
+              },
+              "notes": "Automatically discovered from github"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "discovered-github"
+      ]
+    },
+    {
+      "name": "@ui5/mcp-server",
+      "slug": "ui5-mcp-server",
+      "repository": "https://github.com/UI5/mcp-server",
+      "category": "community",
+      "description": "The UI5 MCP server improves the developer experience when working with agentic AI and the UI5 framework.",
+      "maintainer": {
+        "name": "UI5",
+        "type": "organization",
+        "contact": "https://github.com/UI5"
+      },
+      "versions": [
+        {
+          "version": "0.3.1",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 55.2",
+                "score": 77.0
+              },
+              "notes": "Automatically discovered from npm"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "typescript",
+        "discovered-npm"
+      ]
+    },
+    {
+      "name": "@marketnow/trust-mcp-middleware",
+      "slug": "marketnow-trust-mcp-middleware",
+      "repository": "https://github.com/alicelabs-llc/universal-trust-adapter",
+      "category": "community",
+      "description": "UTA MCP middleware — wraps Anthropic MCP tools/call with TrustGateway enforcement",
+      "maintainer": {
+        "name": "alicelabs-llc",
+        "type": "organization",
+        "contact": "https://github.com/alicelabs-llc"
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "release_date": "2026-09-30",
+          "security_status": "under-review",
+          "is_recommended": false,
+          "security_scan": {
+            "scan_date": "2026-09-30T18:36:18Z",
+            "scanner_version": "1.2.0",
+            "static_analysis": {
+              "status": "not-applicable",
+              "details": "Security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "dependency_scan": {
+              "status": "not-applicable",
+              "details": "Dependency scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "tool_poisoning_check": {
+              "status": "not-applicable",
+              "details": "MCP security scan not yet performed",
+              "score": 50,
+              "issues_found": 0
+            },
+            "manual_review": {
+              "reviewer": "automated-discovery",
+              "review_date": "2026-09-30",
+              "architecture_review": {
+                "status": "pass",
+                "details": "Discovered via automated system - discovery score: 45.0",
+                "score": 72.0
+              },
+              "notes": "Automatically discovered from npm"
+            },
+            "overall_score": 50
+          },
+          "vulnerabilities": []
+        }
+      ],
+      "mcp_protocol_versions": [
+        "2024-11-05"
+      ],
+      "tags": [
+        "python",
+        "discovered-npm"
       ]
     }
   ]

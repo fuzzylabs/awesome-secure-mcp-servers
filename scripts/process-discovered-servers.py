@@ -216,10 +216,22 @@ def determine_category(server: Dict, maintainer: Dict) -> str:
     maintainer_name = maintainer.get('name', '').lower()
     repo_url = server.get('repository', '').lower()
     
-    # Official/Enterprise indicators
-    official_orgs = ['anthropic', 'github', 'microsoft', 'google', 'aws', 'stripe', 'notion']
+    # Official/Enterprise indicators -- matched against the repository
+    # OWNER, not the raw URL: every GitHub repository URL contains
+    # "github", so substring-matching the full URL classified every
+    # GitHub-hosted server as enterprise (observed in the interrupted
+    # discovery run tracked in issue #493).
+    owner_login = ''
+    m = re.match(r'https?://(?:www\.)?github\.com/([^/]+)', repo_url)
+    if m:
+        owner_login = m.group(1)
     
-    if any(org in maintainer_name or org in repo_url for org in official_orgs):
+    official_orgs = [
+        'anthropic', 'github', 'microsoft', 'google', 'aws', 'stripe',
+        'notion', 'modelcontextprotocol', 'chromedevtools',
+    ]
+    
+    if any(org == owner_login or org == maintainer_name for org in official_orgs):
         return 'enterprise'
     
     # High-quality community projects
