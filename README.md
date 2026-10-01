@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [MarketNow Trust MCP Middleware](https://github.com/alicelabs-llc/universal-trust-adapter) | 1.0.2 | ⏳ Awaiting Scan | MCP middleware wrapping `tools/call` with trust-gateway enforcement: signed trust-cards (Ed25519/JCS), observed-vs-verified verdicts, revocation checks, quarantine partition |
 
 ---
 
