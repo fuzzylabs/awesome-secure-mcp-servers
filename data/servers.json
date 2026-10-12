@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "last_updated": "2026-10-05T06:08:04Z",
+  "last_updated": "2026-10-12T06:06:54Z",
   "servers": [
     {
       "name": "Everything (Reference Server)",
@@ -17,47 +17,50 @@
         {
           "version": "0.5.0",
           "release_date": "2024-12-01",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:15.247Z",
+            "scan_date": "2026-10-12T06:04:54.362Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-0gq4mro0/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-0gq4mro0/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-0gq4mro0/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-7jzhawsb/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-7jzhawsb/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-7jzhawsb/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-7jzhawsb/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-7jzhawsb/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-7jzhawsb/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -88,47 +91,50 @@
         {
           "version": "0.4.1",
           "release_date": "2024-11-20",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:18.456Z",
+            "scan_date": "2026-10-12T06:04:58.507Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-1532480u/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-1532480u/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-1532480u/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-d3omrncf/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-d3omrncf/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-d3omrncf/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-d3omrncf/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-d3omrncf/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-d3omrncf/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -161,7 +167,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:21.009Z",
+            "scan_date": "2026-10-12T06:05:02.797Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -184,8 +190,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-for-security-tj0sekla/smuggler-mcp/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-tj0sekla/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-tj0sekla/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-for-security-m1frvt42/smuggler-mcp/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-m1frvt42/smuggler-mcp/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-for-security-m1frvt42/smuggler-mcp/mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -222,7 +228,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:22.667Z",
+            "scan_date": "2026-10-12T06:05:04.315Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -281,7 +287,7 @@
           "security_status": "under-review",
           "is_recommended": false,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:23.067Z",
+            "scan_date": "2026-10-12T06:05:04.673Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -328,47 +334,50 @@
         {
           "version": "0.3.2",
           "release_date": "2024-12-01",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:23.629Z",
+            "scan_date": "2026-10-12T06:05:05.312Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-671uu11o/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-671uu11o/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-671uu11o/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-xk7v4595/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xk7v4595/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xk7v4595/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-xk7v4595/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xk7v4595/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xk7v4595/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -399,47 +408,50 @@
         {
           "version": "0.2.1",
           "release_date": "2024-11-25",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:26.254Z",
+            "scan_date": "2026-10-12T06:05:09.318Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-a4uff5v7/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-a4uff5v7/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-a4uff5v7/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-er6g82xi/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-er6g82xi/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-er6g82xi/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-er6g82xi/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-er6g82xi/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-er6g82xi/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -470,47 +482,50 @@
         {
           "version": "0.1.3",
           "release_date": "2024-11-20",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:29.404Z",
+            "scan_date": "2026-10-12T06:05:13.255Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-sys9b9d4/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-sys9b9d4/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-sys9b9d4/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-t_lwmcmm/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t_lwmcmm/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t_lwmcmm/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-t_lwmcmm/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t_lwmcmm/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-t_lwmcmm/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -541,47 +556,50 @@
         {
           "version": "0.1.0",
           "release_date": "2024-11-15",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:32.496Z",
+            "scan_date": "2026-10-12T06:05:17.205Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-j84bb2vo/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j84bb2vo/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-j84bb2vo/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-xdhx9yob/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xdhx9yob/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xdhx9yob/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-xdhx9yob/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xdhx9yob/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-xdhx9yob/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -612,47 +630,50 @@
         {
           "version": "0.1.2",
           "release_date": "2024-11-10",
-          "security_status": "verified-secure",
+          "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:35.100Z",
+            "scan_date": "2026-10-12T06:05:21.096Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
-              "status": "pass",
-              "details": "No critical security vulnerabilities found",
-              "score": 100,
-              "issues_found": 0,
-              "critical_issues": 0,
+              "status": "warning",
+              "details": "Found 1 critical security issue(s)",
+              "score": 85,
+              "issues_found": 1,
+              "critical_issues": 1,
               "tools_used": [
                 "bandit-critical"
               ]
             },
             "dependency_scan": {
               "status": "warning",
-              "details": "Found 28 vulnerability/vulnerabilities in dependencies",
+              "details": "Found 10 vulnerability/vulnerabilities in dependencies",
               "score": 60,
-              "issues_found": 28,
+              "issues_found": 10,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
-                "moderate": 5,
-                "high": 9,
+                "moderate": 0,
+                "high": 5,
                 "critical": 0,
-                "total": 14
+                "total": 5
               }
             },
             "tool_poisoning_check": {
               "status": "pass",
-              "details": "MCP-scan found no security issues in 1 configuration file(s)",
+              "details": "MCP-scan found no security issues in 2 configuration file(s)",
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-servers-de_jb03g/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-de_jb03g/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-de_jb03g/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-servers-rf3p5d4k/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-rf3p5d4k/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-rf3p5d4k/.mcp.json: error: unrecognized arguments: --local-only"
+                },
+                "/tmp/mcp-scan-servers-rf3p5d4k/.changeset/config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-rf3p5d4k/.changeset/config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-servers-rf3p5d4k/.changeset/config.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
-            "overall_score": 87
+            "overall_score": 84
           },
           "vulnerabilities": []
         }
@@ -686,7 +707,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:37.588Z",
+            "scan_date": "2026-10-12T06:05:24.757Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -709,8 +730,8 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-github-mcp-server-zx_zxx5f/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-zx_zxx5f/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-zx_zxx5f/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-github-mcp-server-okspk_sh/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-okspk_sh/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-github-mcp-server-okspk_sh/server.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -748,7 +769,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:39.645Z",
+            "scan_date": "2026-10-12T06:05:26.973Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -773,20 +794,20 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-agent-toolkit-ccspszt4/tools/modelcontextprotocol/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-yg982ms0/tools/modelcontextprotocol/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/tools/modelcontextprotocol/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/tools/modelcontextprotocol/server.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-ccspszt4/providers/agent-plugins/plugin/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/agent-plugins/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/agent-plugins/plugin/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-yg982ms0/providers/agent-plugins/plugin/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/agent-plugins/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/agent-plugins/plugin/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-ccspszt4/providers/cursor/plugin/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/cursor/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/cursor/plugin/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-yg982ms0/providers/cursor/plugin/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/cursor/plugin/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/cursor/plugin/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-ccspszt4/providers/claude/plugin/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/claude/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/claude/plugin/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-yg982ms0/providers/claude/plugin/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/claude/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/claude/plugin/.mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-agent-toolkit-ccspszt4/providers/grok/plugin/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/grok/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-ccspszt4/providers/grok/plugin/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-agent-toolkit-yg982ms0/providers/grok/plugin/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/grok/plugin/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-agent-toolkit-yg982ms0/providers/grok/plugin/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
@@ -824,7 +845,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:46.622Z",
+            "scan_date": "2026-10-12T06:05:34.000Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -835,17 +856,17 @@
               "tools_used": []
             },
             "dependency_scan": {
-              "status": "warning",
-              "details": "Found 24 vulnerability/vulnerabilities in dependencies",
-              "score": 60,
-              "issues_found": 24,
+              "status": "fail",
+              "details": "Found 30 vulnerability/vulnerabilities in dependencies",
+              "score": 40,
+              "issues_found": 30,
               "vulnerabilities": {
                 "info": 0,
                 "low": 0,
                 "moderate": 7,
-                "high": 5,
-                "critical": 0,
-                "total": 12
+                "high": 7,
+                "critical": 1,
+                "total": 15
               }
             },
             "tool_poisoning_check": {
@@ -855,7 +876,7 @@
               "issues_found": 0,
               "suspicious_patterns": []
             },
-            "overall_score": 79
+            "overall_score": 74
           },
           "vulnerabilities": []
         }
@@ -889,7 +910,7 @@
           "security_status": "conditional",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:48.008Z",
+            "scan_date": "2026-10-12T06:05:35.917Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "not-applicable",
@@ -947,7 +968,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:48.566Z",
+            "scan_date": "2026-10-12T06:05:36.578Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "fail",
@@ -1007,7 +1028,7 @@
           "security_status": "verified-secure",
           "is_recommended": true,
           "security_scan": {
-            "scan_date": "2026-10-05T06:06:52.825Z",
+            "scan_date": "2026-10-12T06:05:40.507Z",
             "scanner_version": "1.2.0",
             "static_analysis": {
               "status": "warning",
@@ -1032,23 +1053,23 @@
               "score": 95,
               "issues_found": 0,
               "scan_results": {
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/postgres-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/postgres-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/postgres-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/postgres-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/postgres-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/postgres-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/mysql-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/mysql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/mysql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/mysql-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/mysql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/mysql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/ecs-mcp-server/server.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/ecs-mcp-server/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/ecs-mcp-server/server.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/ecs-mcp-server/server.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/ecs-mcp-server/server.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/ecs-mcp-server/server.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/healthlake-mcp-server/examples/mcp_config.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/healthlake-mcp-server/examples/mcp_config.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/healthlake-mcp-server/examples/mcp_config.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/healthlake-mcp-server/examples/mcp_config.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/aurora-dsql-mcp-server/kiro_power/mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/aurora-dsql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/aurora-dsql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/aurora-dsql-mcp-server/kiro_power/mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/aurora-dsql-mcp-server/kiro_power/mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/aurora-dsql-mcp-server/kiro_power/mcp.json: error: unrecognized arguments: --local-only"
                 },
-                "/tmp/mcp-scan-mcp-jz21_v4d/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json": {
-                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-jz21_v4d/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json: error: unrecognized arguments: --local-only"
+                "/tmp/mcp-scan-mcp-la7qx9za/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json": {
+                  "error": "Scan failed: \u001b[33mWARNING: The 'mcp-scan' package has been renamed to 'snyk-agent-scan'.\nPlease update your installation and use 'uvx snyk-agent-scan@latest' instead.\nusage: /home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json\n       [-h] COMMAND ...\n/home/runner/.local/bin/uv tool uvx mcp-scan@latest scan --json --local-only --verbose /tmp/mcp-scan-mcp-la7qx9za/src/cloudwatch-mcp-server/skills/agentcore-investigation/mcp/.mcp.json: error: unrecognized arguments: --local-only"
                 }
               }
             },
