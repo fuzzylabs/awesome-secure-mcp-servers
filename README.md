@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [PickySteve](https://github.com/KernelLord/pickysteve) | 0.1.0 | ⏳ Awaiting Scan | Skill router and context picker for coding agents with dual-scan prompt-injection gating |
 
 ---
 
