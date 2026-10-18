@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [lockfile-guardian](https://github.com/Baneado98/lockfile-guardian) | 0.1.0 | ⏳ Awaiting Scan | Audits a package-lock.json (v2/v3) before npm install: registry integrity-mismatch detection, hidden install/native-build scripts, and freshly-published deps |
 
 ---
 
