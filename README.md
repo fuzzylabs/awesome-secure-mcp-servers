@@ -70,6 +70,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
+| [Agent Payment Node](https://github.com/nuanu-ai/agent-payment-node) | 0.5.76 | ⏳ Awaiting Scan | Local stdio payment tools for x402 offers, bounded preparation, status and receipts; Apple Silicon macOS and Node 24 only |
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
 
 ---
