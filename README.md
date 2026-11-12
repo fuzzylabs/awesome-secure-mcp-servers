@@ -71,6 +71,7 @@ Find **secure MCP servers** for your agentic AI applications with confidence. Mo
 | Server | Version | Security Status | Description |
 |--------|---------|----------------|-------------|
 | [Anthropic Computer Use](https://github.com/anthropics/anthropic-computer-use) | 0.1.0 | ⏳ Awaiting Scan | Desktop automation with screen capture and input control |
+| [Excession Labs CVE intelligence (docs and schemas)](https://github.com/Excession-Labs/mcp-servers) | 1.3.0 | ⏳ Awaiting Scan | Hosted CVE intelligence with six public read-only tools at [the remote endpoint](https://excessionlabs.ai/mcp/cve); private implementation, documentation/schema repository only. |
 
 ---
 
